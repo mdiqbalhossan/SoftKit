@@ -1,0 +1,43 @@
+name: Deploy Laravel to Azure VM
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy to Azure VM
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
+            cd /var/www/laravel-app
+
+            echo "Pulling latest code..."
+            git pull origin main
+
+            echo "Installing dependencies..."
+            composer install --no-dev --optimize-autoloader
+
+            echo "Running migrations..."
+            php artisan migrate --force
+
+            echo "Caching config..."
+            php artisan config:clear
+            php artisan cache:clear
+            php artisan config:cache
+
+            echo "Restarting services..."
+            sudo systemctl restart nginx
+            sudo systemctl restart php8.1-fpm
+          EOF
