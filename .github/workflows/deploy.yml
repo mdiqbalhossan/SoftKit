@@ -45,5 +45,5 @@ jobs:
 
             echo "Restarting services..."
             sudo systemctl restart nginx
-            sudo systemctl restart php8.1-fpm
+            sudo systemctl restart php8.4-fpm
           EOF
