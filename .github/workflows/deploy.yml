@@ -32,6 +32,12 @@ jobs:
             echo "Running migrations..."
             php artisan migrate --force
 
+            echo "Installing Node js Dependecies..."
+            npm install
+
+            echo "Building assets..."
+            npm run build
+
             echo "Caching config..."
             php artisan config:clear
             php artisan cache:clear
