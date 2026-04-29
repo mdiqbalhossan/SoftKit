@@ -1,121 +1,179 @@
-import { Form, Head } from '@inertiajs/react';
-import InputError from '@/components/input-error';
-import PasswordInput from '@/components/password-input';
-import TextLink from '@/components/text-link';
-import { Button } from '@/components/ui/button';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Spinner } from '@/components/ui/spinner';
-import { register } from '@/routes';
-import { store } from '@/routes/login';
-import { request } from '@/routes/password';
+import React, { useEffect, useState } from 'react';
+import GuestLayout from '../../Layouts/GuestLayout';
+import { Head, Link, useForm } from '@inertiajs/react';
+import logoLight from "../../../images/logo-light.png";
+import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
+import { useVelzonToastFromStatus, useVelzonToastFromValidationErrors } from '../../Components/Common/VelzonToast';
 
-type Props = {
-    status?: string;
-    canResetPassword: boolean;
-    canRegister: boolean;
-};
+export default function Login({ status, canResetPassword }: any) {
 
-export default function Login({
-    status,
-    canResetPassword,
-    canRegister,
-}: Props) {
+    const [passwordShow, setPasswordShow] = useState<boolean>(false);
+    const { data, setData, post, processing, errors, reset } = useForm({
+        email: 'admin@themesbrand.com' || '',
+        password: '12345678' || '',
+        remember: false,
+    });
+
+    useVelzonToastFromStatus(status, 'generic');
+    useVelzonToastFromValidationErrors(errors);
+
+    useEffect(() => {
+        return () => {
+            reset('password');
+        };
+    }, []);
+
+    const submit = (e: any) => {
+        e.preventDefault();
+
+        post(route('login'));
+    };
+
     return (
-        <>
-            <Head title="Log in" />
-
-            <Form
-                {...store.form()}
-                resetOnSuccess={['password']}
-                className="flex flex-col gap-6"
-            >
-                {({ processing, errors }) => (
-                    <>
-                        <div className="grid gap-6">
-                            <div className="grid gap-2">
-                                <Label htmlFor="email">Email address</Label>
-                                <Input
-                                    id="email"
-                                    type="email"
-                                    name="email"
-                                    required
-                                    autoFocus
-                                    tabIndex={1}
-                                    autoComplete="email"
-                                    placeholder="email@example.com"
-                                />
-                                <InputError message={errors.email} />
-                            </div>
-
-                            <div className="grid gap-2">
-                                <div className="flex items-center">
-                                    <Label htmlFor="password">Password</Label>
-                                    {canResetPassword && (
-                                        <TextLink
-                                            href={request()}
-                                            className="ml-auto text-sm"
-                                            tabIndex={5}
-                                        >
-                                            Forgot password?
-                                        </TextLink>
-                                    )}
+        <React.Fragment>
+            <GuestLayout>
+                <Head title="Basic SignIn | Velzon - React Admin & Dashboard Template" />
+                <div className="auth-page-content mt-lg-5">
+                    <Container>
+                        <Row>
+                            <Col lg={12}>
+                                <div className="text-center mt-sm-5 mb-4 text-white-50">
+                                    <div>
+                                        <Link href='/' className="d-inline-block auth-logo">
+                                            <img src={logoLight} alt="" height="20" />
+                                        </Link>
+                                    </div>
+                                    <p className="mt-3 fs-15 fw-medium">Premium Admin & Dashboard Template</p>
                                 </div>
-                                <PasswordInput
-                                    id="password"
-                                    name="password"
-                                    required
-                                    tabIndex={2}
-                                    autoComplete="current-password"
-                                    placeholder="Password"
-                                />
-                                <InputError message={errors.password} />
-                            </div>
+                            </Col>
+                        </Row>
 
-                            <div className="flex items-center space-x-3">
-                                <Checkbox
-                                    id="remember"
-                                    name="remember"
-                                    tabIndex={3}
-                                />
-                                <Label htmlFor="remember">Remember me</Label>
-                            </div>
+                        <Row className="justify-content-center">
+                            <Col md={8} lg={6} xl={5}>
+                                <Card className="mt-4">
+                                    <Card.Body className='p-4'>
+                                        <div className="text-center mt-2">
+                                            <h5 className="text-primary">Welcome Back !</h5>
+                                            <p className="text-muted">Sign in to continue to Velzon.</p>
+                                        </div>
+                                        {status && <div className="mb-4 font-medium text-sm text-green-600">{status}</div>}
+                                        <div className='p-2 mt-4'>
+                                            <Form onSubmit={submit}>
+                                                <div className='mb-3'>
+                                                    <Form.Label className='form-label' htmlFor="email" value="Email" > Email </Form.Label>
+                                                    <span className="text-danger ms-1">*</span>
+                                                    <Form.Control
+                                                        id="email"
+                                                        type="email"
+                                                        name="email"
+                                                        placeholder="Enter email"
+                                                        value={data.email}
+                                                        className={'mb-1 ' + (errors.email ? 'is-invalid' : ' ')}
+                                                        autoComplete="username"
+                                                        autoFocus
+                                                        required
+                                                        onChange={(e: any) => setData('email', e.target.value)}
+                                                    />
 
-                            <Button
-                                type="submit"
-                                className="mt-4 w-full"
-                                tabIndex={4}
-                                disabled={processing}
-                                data-test="login-button"
-                            >
-                                {processing && <Spinner />}
-                                Log in
-                            </Button>
-                        </div>
+                                                    <Form.Control.Feedback type="invalid" className='d-block mt-2'> {errors.email} </Form.Control.Feedback>
+                                                </div>
 
-                        {canRegister && (
-                            <div className="text-center text-sm text-muted-foreground">
-                                Don't have an account?{' '}
-                                <TextLink href={register()} tabIndex={5}>
-                                    Sign up
-                                </TextLink>
-                            </div>
-                        )}
-                    </>
-                )}
-            </Form>
+                                                <div className="mb-3">
+                                                    <div className="float-end">
 
-            {status && (
-                <div className="mb-4 text-center text-sm font-medium text-green-600">
-                    {status}
+                                                        {canResetPassword && (
+                                                            <Link href={route('password.request')} className="text-muted">Forgot password?</Link>
+                                                        )}
+                                                    </div>
+
+                                                    <Form.Label className='form-label' htmlFor="password" value="Password" > Password </Form.Label>
+                                                    <span className="text-danger ms-1">*</span>
+                                                    <div className="position-relative auth-pass-inputgroup mb-3">
+
+                                                        <Form.Control
+                                                            id="password"
+                                                            type={passwordShow ? "text" : "password"}
+                                                            name="password"
+                                                            value={data.password}
+                                                            placeholder="Enter Password"
+                                                            required
+                                                            className={'mt-1 ' + (errors.password ? 'is-invalid' : ' ')}
+                                                            autoComplete="current-password"
+                                                            onChange={(e: any) => setData('password', e.target.value)}
+                                                        />
+                                                       
+                                                        <Form.Control.Feedback type="invalid" className='d-block mt-2'> {errors.password} </Form.Control.Feedback>
+                                                        <button className="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted" type="button" id="password-addon" onClick={() => setPasswordShow(!passwordShow)}><i className="ri-eye-fill align-middle"></i></button>
+                                                    </div>
+                                                </div>
+
+                                                <div className="block mt-4">
+                                                    <label className="flex items-center">
+                                                        <Form.Check.Input
+                                                            className='form-check-input'
+                                                            name="remember"
+                                                            checked={data.remember}
+                                                            onChange={(e: any) => setData('remember', e.target.checked)}
+                                                        />
+                                                        <Form.Check.Label className="form-check-label" htmlFor="auth-remember-check">
+                                                            <span className='ms-2'>Remember me</span>
+                                                        </Form.Check.Label>
+                                                    </label>
+                                                </div>
+
+                                                <div className="mt-4 d-flex flex-column gap-2">
+
+                                                    <Button type="submit" className="btn btn-success w-100" disabled={processing}>
+                                                        <i className="ri-login-box-line align-middle me-1"></i>
+                                                        Sign In
+                                                    </Button>
+                                                    <Link href="/" className="btn btn-light w-100">
+                                                        <i className="ri-close-line align-middle me-1"></i>
+                                                        Cancel
+                                                    </Link>
+                                                </div>
+
+                                                <div className="mt-4 text-center">
+                                                    <div className="signin-other-title">
+                                                        <h5 className="fs-13 mb-4 title">Sign In with</h5>
+                                                    </div>
+                                                    <div>
+                                                        <Link
+                                                            href="#"
+                                                            className="btn btn-primary btn-icon me-1"
+
+                                                        >
+                                                            <i className="ri-facebook-fill fs-16" />
+                                                        </Link>
+                                                        <Link
+                                                            href="#"
+                                                            className="btn btn-danger btn-icon me-1"
+
+                                                        >
+                                                            <i className="ri-google-fill fs-16" />
+                                                        </Link>
+                                                        <Button variant="dark" className="btn-icon btn-dark">
+                                                            <i className="ri-github-fill fs-16"></i>
+                                                        </Button>{" "}
+                                                        <Button variant="info" className="btn-icon btn-info">
+                                                            <i className="ri-twitter-fill fs-16"></i>
+                                                        </Button>
+                                                    </div>
+                                                </div>
+                                            </Form>
+                                        </div>
+                                    </Card.Body>
+                                </Card>
+                                <div className="mt-4 text-center">
+                                    <p className="mb-0">Don't have an account ? <Link href={route('register')} className="fw-semibold text-primary text-decoration-underline"> Signup </Link> </p>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Container>
                 </div>
-            )}
-        </>
+
+            </GuestLayout>
+        </React.Fragment>
     );
 }
 
-Login.layout = {
-    title: 'Log in to your account',
-    description: 'Enter your email and password below to log in',
-};
