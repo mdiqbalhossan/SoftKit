@@ -1,26 +1,26 @@
 // Import Images
-import smallImage1 from '../../../images/small/img-1.jpg';
-import smallImage2 from '../../../images/small/img-2.jpg';
-import smallImage3 from '../../../images/small/img-3.jpg';
-import smallImage4 from '../../../images/small/img-4.jpg';
-import smallImage5 from '../../../images/small/img-5.jpg';
-import smallImage6 from '../../../images/small/img-6.jpg';
-import smallImage7 from '../../../images/small/img-7.jpg';
-import smallImage8 from '../../../images/small/img-8.jpg';
-import smallImage9 from '../../../images/small/img-9.jpg';
-import smallImage10 from '../../../images/small/img-10.jpg';
-import smallImage11 from '../../../images/small/img-11.jpg';
-import smallImage12 from '../../../images/small/img-12.jpg';
+import smallImage1 from "../../../images/small/img-1.jpg";
+import smallImage2 from "../../../images/small/img-2.jpg";
+import smallImage3 from "../../../images/small/img-3.jpg";
+import smallImage4 from "../../../images/small/img-4.jpg";
+import smallImage5 from "../../../images/small/img-5.jpg";
+import smallImage6 from "../../../images/small/img-6.jpg";
+import smallImage7 from "../../../images/small/img-7.jpg";
+import smallImage8 from "../../../images/small/img-8.jpg";
+import smallImage9 from "../../../images/small/img-9.jpg";
+import smallImage10 from "../../../images/small/img-10.jpg";
+import smallImage11 from "../../../images/small/img-11.jpg";
+import smallImage12 from "../../../images/small/img-12.jpg";
 
 //User Images
-import avatar1 from '../../../images/users/avatar-1.jpg';
-import avatar2 from '../../../images/users/avatar-2.jpg';
-import avatar3 from '../../../images/users/avatar-3.jpg';
-import avatar5 from '../../../images/users/avatar-5.jpg';
-import avatar4 from '../../../images/users/avatar-4.jpg';
-import avatar6 from '../../../images/users/avatar-6.jpg';
-import avatar7 from '../../../images/users/avatar-7.jpg';
-import avatar8 from '../../../images/users/avatar-8.jpg';
+import avatar1 from "../../../images/users/avatar-1.jpg";
+import avatar2 from "../../../images/users/avatar-2.jpg";
+import avatar3 from "../../../images/users/avatar-3.jpg";
+import avatar5 from "../../../images/users/avatar-5.jpg";
+import avatar4 from "../../../images/users/avatar-4.jpg";
+import avatar6 from "../../../images/users/avatar-6.jpg";
+import avatar7 from "../../../images/users/avatar-7.jpg";
+import avatar8 from "../../../images/users/avatar-8.jpg";
 
 const gallery = [
     {
@@ -30,7 +30,7 @@ const gallery = [
         auther: "Ron Mackie",
         likes: "2.2K",
         comments: "1.3K",
-        category: "Project"
+        category: "Project",
     },
     {
         id: 2,
@@ -39,7 +39,7 @@ const gallery = [
         auther: "Nancy Martino",
         likes: "2.2K",
         comments: "1.3K",
-        category: "Project"
+        category: "Project",
     },
     {
         id: 3,
@@ -48,7 +48,7 @@ const gallery = [
         auther: "Elwood Arter",
         likes: "2.2K",
         comments: "1.3K",
-        category: "Project"
+        category: "Project",
     },
     {
         id: 4,
@@ -57,7 +57,7 @@ const gallery = [
         auther: "Jason McQuaid",
         likes: "2.2K",
         comments: "1.3K",
-        category: "Project"
+        category: "Project",
     },
     {
         id: 5,
@@ -66,7 +66,7 @@ const gallery = [
         auther: "Henry Baird",
         likes: "2.2K",
         comments: "1.3K",
-        category: "Project"
+        category: "Project",
     },
     {
         id: 6,
@@ -75,7 +75,7 @@ const gallery = [
         auther: "Erica Kernan",
         likes: "2.2K",
         comments: "1.3K",
-        category: "Designing"
+        category: "Designing",
     },
     {
         id: 7,
@@ -84,7 +84,7 @@ const gallery = [
         auther: "James Ballard",
         likes: "2.2K",
         comments: "1.3K",
-        category: "Development"
+        category: "Development",
     },
     {
         id: 8,
@@ -93,7 +93,7 @@ const gallery = [
         auther: "Ruby Griffin",
         likes: "2.2K",
         comments: "1.3K",
-        category: "Designing"
+        category: "Designing",
     },
     {
         id: 9,
@@ -102,7 +102,7 @@ const gallery = [
         auther: "Ron Mackie",
         likes: "2.2K",
         comments: "1.3K",
-        category: "Photography"
+        category: "Photography",
     },
     {
         id: 10,
@@ -111,7 +111,7 @@ const gallery = [
         auther: "Henry Baird",
         likes: "2.2K",
         comments: "1.3K",
-        category: "Development"
+        category: "Development",
     },
     {
         id: 11,
@@ -120,7 +120,7 @@ const gallery = [
         auther: "Nancy Martino",
         likes: "2.2K",
         comments: "1.3K",
-        category: "Designing"
+        category: "Designing",
     },
     {
         id: 12,
@@ -129,7 +129,7 @@ const gallery = [
         auther: "Erica Kernan",
         likes: "2.2K",
         comments: "1.3K",
-        category: "Designing"
+        category: "Designing",
     },
     {
         id: 13,
@@ -138,7 +138,7 @@ const gallery = [
         auther: "Ruby Griffin",
         likes: "2.2K",
         comments: "1.3K",
-        category: "Photography"
+        category: "Photography",
     },
 ];
 
@@ -147,7 +147,8 @@ const pricing1 = [
         id: 1,
         type: "Starter",
         rate: 19,
-        description: "The perfect way to get started and get used to our tools.",
+        description:
+            "The perfect way to get started and get used to our tools.",
         projects: 3,
         Customers: 299,
         FTP: 5,
@@ -163,13 +164,14 @@ const pricing1 = [
         btnstatus: " disabled ",
         rateYear: "$171",
         delrateYear: "$228",
-        storage:"Unlimited",
+        storage: "Unlimited",
     },
     {
         id: 2,
         type: "Professional",
         rate: 29,
-        description: "Excellent for scalling teams to build culture. Special plan for professional business.",
+        description:
+            "Excellent for scalling teams to build culture. Special plan for professional business.",
         projects: 8,
         Customers: 499,
         FTP: 7,
@@ -184,13 +186,14 @@ const pricing1 = [
         btntxt: "Change Plan",
         rateYear: "261",
         delrateYear: "348",
-        storage:"Unlimited",
+        storage: "Unlimited",
     },
     {
         id: 3,
         type: "Enterprise",
         rate: 39,
-        description: "This plan is for those who have a team alredy and running a large business.",
+        description:
+            "This plan is for those who have a team alredy and running a large business.",
         projects: 15,
         Customers: "Unlimited",
         FTP: 12,
@@ -205,7 +208,7 @@ const pricing1 = [
         btntxt: "Change Plan",
         rateYear: "351",
         delrateYear: "468",
-        storage:"35GB",
+        storage: "35GB",
     },
     {
         id: 4,
@@ -226,7 +229,7 @@ const pricing1 = [
         btntxt: "Change Plan",
         rateYear: "441",
         delrateYear: "588",
-        storage:"Unlimited",
+        storage: "Unlimited",
     },
 ];
 
@@ -249,7 +252,7 @@ const pricing2 = [
         ribbon: false,
         planButtonClassname: "soft-success",
         icon: "ri-book-mark-line",
-        btntxt: "Sign up free"
+        btntxt: "Sign up free",
     },
     {
         id: 2,
@@ -269,7 +272,7 @@ const pricing2 = [
         ribbon: true,
         planButtonClassname: "success",
         icon: "ri-medal-line",
-        btntxt: "Get started"
+        btntxt: "Get started",
     },
     {
         id: 3,
@@ -289,7 +292,7 @@ const pricing2 = [
         ribbon: false,
         planButtonClassname: "soft-success",
         icon: "ri-stack-line",
-        btntxt: "Get started"
+        btntxt: "Get started",
     },
 ];
 
@@ -303,7 +306,7 @@ const pricing3 = [
         storage: "01",
         domain: "No",
         support: "No",
-        ribbon: false
+        ribbon: false,
     },
     {
         id: 2,
@@ -314,7 +317,7 @@ const pricing3 = [
         storage: "10",
         domain: "Yes",
         support: "No",
-        ribbon: true
+        ribbon: true,
     },
     {
         id: 3,
@@ -325,7 +328,7 @@ const pricing3 = [
         storage: "20",
         domain: "Yes",
         support: "Yes",
-        ribbon: true
+        ribbon: true,
     },
     {
         id: 4,
@@ -336,7 +339,7 @@ const pricing3 = [
         storage: "40",
         domain: "Yes",
         support: "Yes",
-        ribbon: false
+        ribbon: false,
     },
 ];
 
@@ -350,20 +353,20 @@ const projects = [
         member: [
             {
                 id: 1,
-                img: avatar1
+                img: avatar1,
             },
             {
                 id: 2,
-                img: avatar3
-            }
+                img: avatar3,
+            },
         ],
         cardBorderColor: "warning",
         memberName: [
             {
                 id: 1,
-                memberText: "J"
-            }
-        ]
+                memberText: "J",
+            },
+        ],
     },
     {
         id: 2,
@@ -374,24 +377,24 @@ const projects = [
         member: [
             {
                 id: 1,
-                img: avatar8
+                img: avatar8,
             },
             {
                 id: 2,
-                img: avatar7
+                img: avatar7,
             },
             {
                 id: 3,
-                img: avatar6
+                img: avatar6,
             },
         ],
         cardBorderColor: "success",
         memberName: [
             {
                 id: 1,
-                memberText: "2+"
-            }
-        ]
+                memberText: "2+",
+            },
+        ],
     },
     {
         id: 3,
@@ -402,21 +405,20 @@ const projects = [
         member: [
             {
                 id: 1,
-                img: avatar4
+                img: avatar4,
             },
             {
                 id: 2,
-                img: avatar3
+                img: avatar3,
             },
-
         ],
         cardBorderColor: "info",
         memberName: [
             {
                 id: 1,
-                memberText: "M"
-            }
-        ]
+                memberText: "M",
+            },
+        ],
     },
     {
         id: 4,
@@ -427,13 +429,12 @@ const projects = [
         member: [
             {
                 id: 1,
-                img: avatar7
+                img: avatar7,
             },
             {
                 id: 2,
-                img: avatar5
+                img: avatar5,
             },
-
         ],
         cardBorderColor: "primary",
     },
@@ -446,21 +447,20 @@ const projects = [
         member: [
             {
                 id: 1,
-                img: avatar7
+                img: avatar7,
             },
             {
                 id: 2,
-                img: avatar6
+                img: avatar6,
             },
-
         ],
         cardBorderColor: "danger",
         memberName: [
             {
                 id: 1,
-                memberText: "E"
-            }
-        ]
+                memberText: "E",
+            },
+        ],
     },
     {
         id: 6,
@@ -471,20 +471,20 @@ const projects = [
         member: [
             {
                 id: 1,
-                img: avatar3
+                img: avatar3,
             },
             {
                 id: 2,
-                img: avatar8
+                img: avatar8,
             },
         ],
         memberName: [
             {
                 id: 1,
-                memberText: "R"
-            }
+                memberText: "R",
+            },
         ],
-        cardBorderColor: "primary"
+        cardBorderColor: "primary",
     },
     {
         id: 7,
@@ -495,18 +495,18 @@ const projects = [
         member: [
             {
                 id: 1,
-                img: avatar6
+                img: avatar6,
             },
             {
                 id: 2,
-                img: avatar5
+                img: avatar5,
             },
             {
                 id: 3,
-                img: avatar4
+                img: avatar4,
             },
         ],
-        cardBorderColor: "warning"
+        cardBorderColor: "warning",
     },
     {
         id: 8,
@@ -517,10 +517,10 @@ const projects = [
         member: [
             {
                 id: 1,
-                img: avatar1
-            }
+                img: avatar1,
+            },
         ],
-        cardBorderColor: "success"
+        cardBorderColor: "success",
     },
     {
         id: 9,
@@ -531,24 +531,24 @@ const projects = [
         member: [
             {
                 id: 1,
-                img: avatar2
+                img: avatar2,
             },
             {
                 id: 2,
-                img: avatar3
+                img: avatar3,
             },
             {
                 id: 3,
-                img: avatar4
-            }
+                img: avatar4,
+            },
         ],
         cardBorderColor: "info",
         memberName: [
             {
                 id: 1,
-                memberText: "2+"
-            }
-        ]
+                memberText: "2+",
+            },
+        ],
     },
     {
         id: 10,
@@ -559,16 +559,16 @@ const projects = [
         member: [
             {
                 id: 1,
-                img: avatar7
-            }
+                img: avatar7,
+            },
         ],
         memberName: [
             {
                 id: 1,
-                memberText: "A"
-            }
+                memberText: "A",
+            },
         ],
-        cardBorderColor: "success"
+        cardBorderColor: "success",
     },
     {
         id: 11,
@@ -579,24 +579,24 @@ const projects = [
         member: [
             {
                 id: 1,
-                img: avatar7
+                img: avatar7,
             },
             {
                 id: 2,
-                img: avatar6
+                img: avatar6,
             },
             {
                 id: 3,
-                img: avatar5
-            }
+                img: avatar5,
+            },
         ],
         cardBorderColor: "danger",
         memberName: [
             {
                 id: 1,
-                memberText: "2+"
-            }
-        ]
+                memberText: "2+",
+            },
+        ],
     },
     {
         id: 12,
@@ -607,12 +607,11 @@ const projects = [
         member: [
             {
                 id: 1,
-                img: avatar7
-            }
+                img: avatar7,
+            },
         ],
-        cardBorderColor: "primary"
+        cardBorderColor: "primary",
     },
-
 ];
 
 const documents = [
@@ -623,7 +622,7 @@ const documents = [
         fileName: "Artboard-documents.zip",
         fileType: "Zip File",
         fileSize: "4.57 MB",
-        updatedDate: "12 Dec 2021"
+        updatedDate: "12 Dec 2021",
     },
     {
         id: 2,
@@ -632,7 +631,7 @@ const documents = [
         fileName: "Bank Management System",
         fileType: "PDF File",
         fileSize: "8.89 MB",
-        updatedDate: "24 Nov 2021"
+        updatedDate: "24 Nov 2021",
     },
     {
         id: 3,
@@ -641,7 +640,7 @@ const documents = [
         fileName: "Tour-video.mp4",
         fileType: "MP4 File",
         fileSize: "14.62 MB",
-        updatedDate: "19 Nov 2021"
+        updatedDate: "19 Nov 2021",
     },
     {
         id: 4,
@@ -650,7 +649,7 @@ const documents = [
         fileName: "Tour-video.mp4",
         fileType: "XSL File",
         fileSize: "2.38 KB",
-        updatedDate: "14 Nov 2021"
+        updatedDate: "14 Nov 2021",
     },
     {
         id: 5,
@@ -659,7 +658,7 @@ const documents = [
         fileName: "Project Screenshots Collection",
         fileType: "Folder File",
         fileSize: "87.24 MB",
-        updatedDate: "08 Nov 2021"
+        updatedDate: "08 Nov 2021",
     },
     {
         id: 6,
@@ -668,7 +667,7 @@ const documents = [
         fileName: "Velzon-logo.png",
         fileType: "PNG File",
         fileSize: "879 KB",
-        updatedDate: "02 Nov 2021"
+        updatedDate: "02 Nov 2021",
     },
 ];
 
@@ -679,7 +678,7 @@ const SearchGallery = [
         title: "Glasses and laptop from above",
         auther: "Ron Mackie",
         likes: "2.2K",
-        comments: "1.3K"
+        comments: "1.3K",
     },
     {
         id: 2,
@@ -687,7 +686,7 @@ const SearchGallery = [
         title: "Working at a coffee shop",
         auther: "Nancy Martino",
         likes: "2.2K",
-        comments: "1.3K"
+        comments: "1.3K",
     },
     {
         id: 3,
@@ -695,7 +694,7 @@ const SearchGallery = [
         title: "Photo was taken in Beach",
         auther: "Elwood Arter",
         likes: "2.2K",
-        comments: "1.3K"
+        comments: "1.3K",
     },
     {
         id: 4,
@@ -703,7 +702,7 @@ const SearchGallery = [
         title: "Drawing a sketch",
         auther: "Jason McQuaid",
         likes: "2.2K",
-        comments: "1.3K"
+        comments: "1.3K",
     },
     {
         id: 5,
@@ -711,7 +710,7 @@ const SearchGallery = [
         title: "Working from home little spot",
         auther: "Henry Baird",
         likes: "2.2K",
-        comments: "1.3K"
+        comments: "1.3K",
     },
     {
         id: 6,
@@ -719,7 +718,7 @@ const SearchGallery = [
         title: "Glasses and laptop from above",
         auther: "Erica Kernan",
         likes: "2.2K",
-        comments: "1.3K"
+        comments: "1.3K",
     },
     {
         id: 7,
@@ -727,7 +726,7 @@ const SearchGallery = [
         title: "Sunrise above a beach",
         auther: "James Ballard",
         likes: "2.2K",
-        comments: "1.3K"
+        comments: "1.3K",
     },
     {
         id: 8,
@@ -735,7 +734,7 @@ const SearchGallery = [
         title: "Project discussion with team",
         auther: "Ruby Griffin",
         likes: "2.2K",
-        comments: "1.3K"
+        comments: "1.3K",
     },
     {
         id: 9,
@@ -743,7 +742,7 @@ const SearchGallery = [
         title: "Dramatic clouds at the Golden Gate Bridge",
         auther: "Ron Mackie",
         likes: "2.2K",
-        comments: "1.3K"
+        comments: "1.3K",
     },
     {
         id: 10,
@@ -751,7 +750,7 @@ const SearchGallery = [
         title: "Fun day at the Hill Station",
         auther: "Henry Baird",
         likes: "2.2K",
-        comments: "1.3K"
+        comments: "1.3K",
     },
     {
         id: 11,
@@ -759,7 +758,7 @@ const SearchGallery = [
         title: "Cycling in the countryside",
         auther: "Nancy Martino",
         likes: "2.2K",
-        comments: "1.3K"
+        comments: "1.3K",
     },
     {
         id: 12,
@@ -767,9 +766,8 @@ const SearchGallery = [
         title: "A mix of friends and strangers heading off to find an adventure.",
         auther: "Erica Kernan",
         likes: "2.2K",
-        comments: "1.3K"
+        comments: "1.3K",
     },
-
 ];
 
 const news = [
@@ -780,7 +778,7 @@ const news = [
         badgeText: "Business",
         title: "A mix of friends and strangers heading off to find an adventure",
         auther: "James Ballard",
-        date: "23 Nov, 2021"
+        date: "23 Nov, 2021",
     },
     {
         id: 2,
@@ -789,7 +787,7 @@ const news = [
         badgeText: "Development",
         title: "How to get creative in your work ?",
         auther: "Ruby Griffin",
-        date: "23 Nov, 2021"
+        date: "23 Nov, 2021",
     },
     {
         id: 3,
@@ -798,7 +796,7 @@ const news = [
         badgeText: "Fashion",
         title: "How to become a best sale marketer in a year!",
         auther: "Elwood Arter",
-        date: "23 Nov, 2021"
+        date: "23 Nov, 2021",
     },
     {
         id: 4,
@@ -807,7 +805,7 @@ const news = [
         badgeText: "Product",
         title: "Manage white space in responsive layouts ?",
         auther: "Nancy Martino",
-        date: "23 Nov, 2021"
+        date: "23 Nov, 2021",
     },
     {
         id: 5,
@@ -816,7 +814,7 @@ const news = [
         badgeText: "Business",
         title: "Stack designer Olivia Murphy offers freelancing advice",
         auther: "Erica Kernan",
-        date: "11 Nov, 2021"
+        date: "11 Nov, 2021",
     },
     {
         id: 6,
@@ -825,7 +823,7 @@ const news = [
         badgeText: "Design",
         title: "A day in the of a professional fashion designer",
         auther: "Jason McQuaid",
-        date: "14 Nov, 2021"
+        date: "14 Nov, 2021",
     },
     {
         id: 7,
@@ -834,7 +832,7 @@ const news = [
         badgeText: "Design",
         title: "Design your apps in your own way",
         auther: "Henry Baird",
-        date: "19 Nov, 2021"
+        date: "19 Nov, 2021",
     },
     {
         id: 8,
@@ -843,7 +841,7 @@ const news = [
         badgeText: "Development",
         title: "How apps is changing the IT world",
         auther: "Elwood Arter",
-        date: "10 Aug, 2021"
+        date: "10 Aug, 2021",
     },
 ];
 
@@ -853,78 +851,81 @@ const video = [
         title: "Admin dashboard templates - Material Design for Velzon",
         siteLink: "https://themesbrand.com/velzon/index.html",
         videoLink: "https://www.youtube.com/embed/GfSZtaoc5bw",
-        description: "Velzon admin is super flexible, powerful, clean, modern & responsive admin template based on bootstrap 5 stable with unlimited possibilities. You can simply change to any layout or mode by changing a couple of lines of code. You can start small and large projects or update design in your existing project using Velzon it is very quick and easy as it is beautiful, adroit, and delivers the ultimate user experience.",
+        description:
+            "Velzon admin is super flexible, powerful, clean, modern & responsive admin template based on bootstrap 5 stable with unlimited possibilities. You can simply change to any layout or mode by changing a couple of lines of code. You can start small and large projects or update design in your existing project using Velzon it is very quick and easy as it is beautiful, adroit, and delivers the ultimate user experience.",
         likes: 335,
         comments: 102,
-        auther: "Themesbrand"
+        auther: "Themesbrand",
     },
     {
         id: 2,
         title: "Create Responsive Admin Dashboard using Html CSS",
         siteLink: "https://themesbrand.com/velzon/index.html",
         videoLink: "https://www.youtube.com/embed/Z-fV2lGKnnU",
-        description: "Velzon admin is super flexible, powerful, clean, modern & responsive admin template based on bootstrap 5 stable with unlimited possibilities. You can simply change to any layout or mode by changing a couple of lines of code. You can start small and large projects or update design in your existing project using Velzon it is very quick and easy as it is beautiful, adroit, and delivers the ultimate user experience.",
+        description:
+            "Velzon admin is super flexible, powerful, clean, modern & responsive admin template based on bootstrap 5 stable with unlimited possibilities. You can simply change to any layout or mode by changing a couple of lines of code. You can start small and large projects or update design in your existing project using Velzon it is very quick and easy as it is beautiful, adroit, and delivers the ultimate user experience.",
         likes: 485,
         comments: 167,
-        auther: "Themesbrand"
+        auther: "Themesbrand",
     },
     {
         id: 3,
         title: "Velzon - The Most Popular Bootstrap 5 HTML, Angular & React Js Admin",
         siteLink: "https://themesbrand.com/velzon/index.html",
         videoLink: "https://www.youtube.com/embed/1y_kfWUCFDQ",
-        description: "Velzon admin is super flexible, powerful, clean, modern & responsive admin template based on bootstrap 5 stable with unlimited possibilities. You can simply change to any layout or mode by changing a couple of lines of code. You can start small and large projects or update design in your existing project using Velzon it is very quick and easy as it is beautiful, adroit, and delivers the ultimate user experience.",
+        description:
+            "Velzon admin is super flexible, powerful, clean, modern & responsive admin template based on bootstrap 5 stable with unlimited possibilities. You can simply change to any layout or mode by changing a couple of lines of code. You can start small and large projects or update design in your existing project using Velzon it is very quick and easy as it is beautiful, adroit, and delivers the ultimate user experience.",
         likes: 122,
         comments: 51,
-        auther: "Themesbrand"
-    }
+        auther: "Themesbrand",
+    },
 ];
 
 const swiper = [
     {
         id: 1,
         img: smallImage12,
-        title: "Bootstrap"
+        title: "Bootstrap",
     },
     {
         id: 2,
         img: smallImage11,
-        title: "Website"
+        title: "Website",
     },
     {
         id: 3,
         img: smallImage10,
-        title: "Responsive"
+        title: "Responsive",
     },
     {
         id: 4,
         img: smallImage9,
-        title: "Design"
+        title: "Design",
     },
     {
         id: 5,
         img: smallImage8,
-        title: "eCommerce"
+        title: "eCommerce",
     },
     {
         id: 6,
         img: smallImage7,
-        title: "Templates"
+        title: "Templates",
     },
     {
         id: 7,
         img: smallImage6,
-        title: "Admin Panel"
+        title: "Admin Panel",
     },
     {
         id: 8,
         img: smallImage5,
-        title: "Simple"
+        title: "Simple",
     },
     {
         id: 9,
         img: smallImage3,
-        title: "Dark"
+        title: "Dark",
     },
 ];
 
@@ -936,7 +937,7 @@ const team = [
         name: "Nancy Martino",
         designation: "Team Leader & HR",
         projectCount: 225,
-        taskCount: 197
+        taskCount: 197,
     },
     {
         id: 2,
@@ -957,7 +958,7 @@ const team = [
         name: "Frank Hook",
         designation: "Project Manager",
         projectCount: 162,
-        taskCount: 192
+        taskCount: 192,
     },
     {
         id: 4,
@@ -966,8 +967,7 @@ const team = [
         name: "Jennifer Carter",
         designation: "UI/UX Designer",
         projectCount: 241,
-        taskCount: 205
-
+        taskCount: 205,
     },
     {
         id: 5,
@@ -980,7 +980,6 @@ const team = [
         taskCount: 263,
         bgColor: "success",
         textColor: "success",
-
     },
     {
         id: 6,
@@ -989,8 +988,7 @@ const team = [
         name: "Alexis Clarke",
         designation: "Backend Developer",
         projectCount: 132,
-        taskCount: 147
-
+        taskCount: 147,
     },
     {
         id: 7,
@@ -1011,7 +1009,7 @@ const team = [
         name: "Joseph Parker",
         designation: "Full Stack Developer",
         projectCount: 64,
-        taskCount: 93
+        taskCount: 93,
     },
     {
         id: 9,
@@ -1020,7 +1018,7 @@ const team = [
         name: "Erica Kernan",
         designation: "Web Designer",
         projectCount: 345,
-        taskCount: 298
+        taskCount: 298,
     },
     {
         id: 10,
@@ -1033,7 +1031,6 @@ const team = [
         taskCount: 135,
         bgColor: "light",
         textColor: "primary",
-
     },
     {
         id: 11,
@@ -1042,8 +1039,7 @@ const team = [
         name: "Jack Gough",
         designation: "React Js Developer",
         projectCount: 87,
-        taskCount: 121
-
+        taskCount: 121,
     },
     {
         id: 12,
@@ -1056,10 +1052,19 @@ const team = [
         taskCount: 210,
         bgColor: "success",
         textColor: "success",
-
     },
-
 ];
 
-
-export { gallery, pricing1, pricing2, pricing3, projects, documents, SearchGallery, news, video, swiper, team };
+export {
+    gallery,
+    pricing1,
+    pricing2,
+    pricing3,
+    projects,
+    documents,
+    SearchGallery,
+    news,
+    video,
+    swiper,
+    team,
+};

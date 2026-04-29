@@ -1,6 +1,6 @@
-import React from 'react';
-import { Card, Col } from 'react-bootstrap';
-import { recentOrders } from '../../common/data';
+import React from "react";
+import { Card, Col } from "react-bootstrap";
+import { recentOrders } from "../../common/data";
 
 const RecentOrders = () => {
     return (
@@ -8,10 +8,16 @@ const RecentOrders = () => {
             <Col xl={8}>
                 <Card>
                     <Card.Header className="align-items-center d-flex">
-                        <h4 className="card-title mb-0 flex-grow-1">Recent Orders</h4>
+                        <h4 className="card-title mb-0 flex-grow-1">
+                            Recent Orders
+                        </h4>
                         <div className="flex-shrink-0">
-                            <button type="button" className="btn btn-soft-info btn-sm">
-                                <i className="ri-file-list-3-line align-middle"></i> Generate Report
+                            <button
+                                type="button"
+                                className="btn btn-soft-info btn-sm"
+                            >
+                                <i className="ri-file-list-3-line align-middle"></i>{" "}
+                                Generate Report
                             </button>
                         </div>
                     </Card.Header>
@@ -31,30 +37,56 @@ const RecentOrders = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {(recentOrders || []).map((item, key) => (<tr key={key}>
-                                        <td>
-                                            <span className="fw-medium">{item.orderId}</span>
-                                        </td>
-                                        <td>
-                                            <div className="d-flex align-items-center">
-                                                <div className="flex-shrink-0 me-2">
-                                                    <img src={item.img} alt="" className="avatar-xs rounded-circle" />
+                                    {(recentOrders || []).map((item, key) => (
+                                        <tr key={key}>
+                                            <td>
+                                                <span className="fw-medium">
+                                                    {item.orderId}
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <div className="d-flex align-items-center">
+                                                    <div className="flex-shrink-0 me-2">
+                                                        <img
+                                                            src={item.img}
+                                                            alt=""
+                                                            className="avatar-xs rounded-circle"
+                                                        />
+                                                    </div>
+                                                    <div className="flex-grow-1">
+                                                        {item.name}
+                                                    </div>
                                                 </div>
-                                                <div className="flex-grow-1">{item.name}</div>
-                                            </div>
-                                        </td>
-                                        <td>{item.product}</td>
-                                        <td>
-                                            <span className="text-success">${item.amount}.00</span>
-                                        </td>
-                                        <td>{item.vendor}</td>
-                                        <td>
-                                            <span className={"badge bg-" + item.statusClass+"-subtle text-"+item.statusClass}>{item.status}</span>
-                                        </td>
-                                        <td>
-                                            <h5 className="fs-14 fw-medium mb-0">{item.rating}<span className="text-muted fs-11 ms-1">({item.votes} votes)</span></h5>
-                                        </td>
-                                    </tr>))}
+                                            </td>
+                                            <td>{item.product}</td>
+                                            <td>
+                                                <span className="text-success">
+                                                    ${item.amount}.00
+                                                </span>
+                                            </td>
+                                            <td>{item.vendor}</td>
+                                            <td>
+                                                <span
+                                                    className={
+                                                        "badge bg-" +
+                                                        item.statusClass +
+                                                        "-subtle text-" +
+                                                        item.statusClass
+                                                    }
+                                                >
+                                                    {item.status}
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <h5 className="fs-14 fw-medium mb-0">
+                                                    {item.rating}
+                                                    <span className="text-muted fs-11 ms-1">
+                                                        ({item.votes} votes)
+                                                    </span>
+                                                </h5>
+                                            </td>
+                                        </tr>
+                                    ))}
                                 </tbody>
                             </table>
                         </div>

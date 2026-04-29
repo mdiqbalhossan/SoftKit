@@ -1,13 +1,13 @@
-import { Link } from '@inertiajs/react';
-import React from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Link } from "@inertiajs/react";
+import React from "react";
+import { Col, Row } from "react-bootstrap";
 
 interface BreadCrumbProps {
     title: string;
-    pageTitle : string;
+    pageTitle: string;
 }
 
-const BreadCrumb = ({ title, pageTitle } : BreadCrumbProps) => {
+const BreadCrumb = ({ title, pageTitle }: BreadCrumbProps) => {
     return (
         <React.Fragment>
             <Row>
@@ -17,11 +17,14 @@ const BreadCrumb = ({ title, pageTitle } : BreadCrumbProps) => {
 
                         <div className="page-title-right">
                             <ol className="breadcrumb m-0">
-                                <li className="breadcrumb-item"><Link href="#">{pageTitle}</Link></li>
-                                <li className="breadcrumb-item active">{title}</li>
+                                <li className="breadcrumb-item">
+                                    <Link href="#">{pageTitle}</Link>
+                                </li>
+                                <li className="breadcrumb-item active">
+                                    {title}
+                                </li>
                             </ol>
                         </div>
-
                     </div>
                 </Col>
             </Row>

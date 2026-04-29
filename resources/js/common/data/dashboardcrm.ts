@@ -17,7 +17,7 @@ const crmWidgets = [
         counter: 197,
         decimals: 0,
         suffix: "",
-        prefix: ""
+        prefix: "",
     },
     {
         id: 2,
@@ -27,7 +27,7 @@ const crmWidgets = [
         counter: 489.4,
         decimals: 1,
         suffix: "k",
-        prefix: "$"
+        prefix: "$",
     },
     {
         id: 3,
@@ -37,7 +37,7 @@ const crmWidgets = [
         counter: 32.89,
         decimals: 2,
         suffix: "%",
-        prefix: ""
+        prefix: "",
     },
     {
         id: 4,
@@ -48,7 +48,7 @@ const crmWidgets = [
         decimals: 1,
         prefix: "$",
         separator: ",",
-        suffix: ""
+        suffix: "",
     },
     {
         id: 5,
@@ -59,7 +59,7 @@ const crmWidgets = [
         decimals: 0,
         separator: ",",
         suffix: "",
-        prefix: ""
+        prefix: "",
     },
 ];
 
@@ -165,9 +165,10 @@ const activities = [
         subItem: [
             { id: 1, img: avatar1 },
             { id: 2, img: avatar2 },
-            { id: 3, img: avatar3 }],
+            { id: 3, img: avatar3 },
+        ],
         imgNumber: "5",
-        bgcolor: "bg-info"
+        bgcolor: "bg-info",
     },
     {
         id: 2,
@@ -179,9 +180,10 @@ const activities = [
             { id: 1, img: avatar4 },
             { id: 2, img: avatar5 },
             { id: 3, img: avatar6 },
-            { id: 4, img: avatar7 }],
+            { id: 4, img: avatar7 },
+        ],
         imgNumber: "3",
-        bgcolor: "bg-success"
+        bgcolor: "bg-success",
     },
     {
         id: 3,
@@ -192,9 +194,10 @@ const activities = [
         subItem: [
             { id: 1, img: avatar8 },
             { id: 2, img: avatar1 },
-            { id: 3, img: avatar2 }],
+            { id: 3, img: avatar2 },
+        ],
         imgNumber: "4",
-        bgcolor: "bg-primary"
+        bgcolor: "bg-primary",
     },
     {
         id: 4,
@@ -205,9 +208,10 @@ const activities = [
         subItem: [
             { id: 1, img: avatar1 },
             { id: 2, img: avatar5 },
-            { id: 3, img: avatar2 }],
+            { id: 3, img: avatar2 },
+        ],
         imgNumber: "9",
-        bgcolor: "bg-warning"
+        bgcolor: "bg-warning",
     },
 ];
 
@@ -254,138 +258,188 @@ const closingDeals = [
     },
 ];
 
-const todayBalanceData :any= [{
-    name: 'Revenue',
-    data: [10, 45, 30, 35, 50, 55, 70, 120, 150, 160, 210, 240]
-}, {
-    name: 'Expenses',
-    data: [12, 17, 75, 82, 44, 35, 52, 75, 112, 108, 56, 289]
-}];
+const todayBalanceData: any = [
+    {
+        name: "Revenue",
+        data: [10, 45, 30, 35, 50, 55, 70, 120, 150, 160, 210, 240],
+    },
+    {
+        name: "Expenses",
+        data: [12, 17, 75, 82, 44, 35, 52, 75, 112, 108, 56, 289],
+    },
+];
 
-const lastWeekBalanceData :any= [{
-    name: 'Revenue',
-    data: [40, 55, 40, 35, 20, 35, 40, 70, 110, 140, 230, 210]
-}, {
-    name: 'Expenses',
-    data: [32, 37, 65, 22, 44, 85, 42, 75, 122, 118, 156, 199]
-}];
+const lastWeekBalanceData: any = [
+    {
+        name: "Revenue",
+        data: [40, 55, 40, 35, 20, 35, 40, 70, 110, 140, 230, 210],
+    },
+    {
+        name: "Expenses",
+        data: [32, 37, 65, 22, 44, 85, 42, 75, 122, 118, 156, 199],
+    },
+];
 
-const lastMonthBalanceData :any= [{
-    name: 'Revenue',
-    data: [40, 35, 20, 65, 80, 65, 120, 90, 50, 80, 170, 150]
-}, {
-    name: 'Expenses',
-    data: [22, 37, 25, 62, 34, 75, 142, 145, 122, 108, 136, 199]
-}];
+const lastMonthBalanceData: any = [
+    {
+        name: "Revenue",
+        data: [40, 35, 20, 65, 80, 65, 120, 90, 50, 80, 170, 150],
+    },
+    {
+        name: "Expenses",
+        data: [22, 37, 25, 62, 34, 75, 142, 145, 122, 108, 136, 199],
+    },
+];
 
-const currentYearBalanceData :any= [{
-    name: 'Revenue',
-    data: [20, 25, 30, 35, 40, 55, 70, 110, 150, 180, 210, 250]
-}, {
-    name: 'Expenses',
-    data: [12, 17, 45, 42, 24, 35, 42, 75, 102, 108, 156, 199]
-}];
+const currentYearBalanceData: any = [
+    {
+        name: "Revenue",
+        data: [20, 25, 30, 35, 40, 55, 70, 110, 150, 180, 210, 250],
+    },
+    {
+        name: "Expenses",
+        data: [12, 17, 45, 42, 24, 35, 42, 75, 102, 108, 156, 199],
+    },
+];
 
 // Deal Type
 
-const todayDealData :any= [{
-    name: 'Pending',
-    data: [40, 25, 15, 20, 50, 10],
-},
-{
-    name: 'Loss',
-    data: [40, 60, 80, 100, 40, 100],
-},
-{
-    name: 'Won',
-    data: [22, 37, 39, 3, 23, 5],
-}
+const todayDealData: any = [
+    {
+        name: "Pending",
+        data: [40, 25, 15, 20, 50, 10],
+    },
+    {
+        name: "Loss",
+        data: [40, 60, 80, 100, 40, 100],
+    },
+    {
+        name: "Won",
+        data: [22, 37, 39, 3, 23, 5],
+    },
 ];
 
-const weeklyDealData :any= [{
-    name: 'Pending',
-    data: [40, 25, 30, 40, 100, 20],
-},
-{
-    name: 'Loss',
-    data: [40, 60, 20, 40, 10, 50],
-},
-{
-    name: 'Won',
-    data: [24, 56, 58, 43, 23, 30],
-}
+const weeklyDealData: any = [
+    {
+        name: "Pending",
+        data: [40, 25, 30, 40, 100, 20],
+    },
+    {
+        name: "Loss",
+        data: [40, 60, 20, 40, 10, 50],
+    },
+    {
+        name: "Won",
+        data: [24, 56, 58, 43, 23, 30],
+    },
 ];
 
-const monthlyDealData :any= [{
-    name: 'Pending',
-    data: [80, 50, 30, 40, 100, 20],
-},
-{
-    name: 'Loss',
-    data: [20, 30, 40, 80, 20, 80],
-},
-{
-    name: 'Won',
-    data: [44, 76, 78, 13, 43, 10],
-}
+const monthlyDealData: any = [
+    {
+        name: "Pending",
+        data: [80, 50, 30, 40, 100, 20],
+    },
+    {
+        name: "Loss",
+        data: [20, 30, 40, 80, 20, 80],
+    },
+    {
+        name: "Won",
+        data: [44, 76, 78, 13, 43, 10],
+    },
 ];
 
-const yealyDealData :any= [{
-    name: 'Pending',
-    data: [140, 70, 50, 60, 120, 120],
-},
-{
-    name: 'Loss',
-    data: [70, 60, 50, 70, 60, 40],
-},
-{
-    name: 'Won',
-    data: [14, 56, 48, 33, 63, 50],
-}
+const yealyDealData: any = [
+    {
+        name: "Pending",
+        data: [140, 70, 50, 60, 120, 120],
+    },
+    {
+        name: "Loss",
+        data: [70, 60, 50, 70, 60, 40],
+    },
+    {
+        name: "Won",
+        data: [14, 56, 48, 33, 63, 50],
+    },
 ];
 
-const octData :any= [{
-    name: 'Goal',
-    data: [17]
-}, {
-    name: 'Pending Forcast',
-    data: [6]
-}, {
-    name: 'Revenue',
-    data: [37]
-}];
+const octData: any = [
+    {
+        name: "Goal",
+        data: [17],
+    },
+    {
+        name: "Pending Forcast",
+        data: [6],
+    },
+    {
+        name: "Revenue",
+        data: [37],
+    },
+];
 
-const novData :any= [{
-    name: 'Goal',
-    data: [37]
-}, {
-    name: 'Pending Forcast',
-    data: [12]
-}, {
-    name: 'Revenue',
-    data: [18]
-}];
+const novData: any = [
+    {
+        name: "Goal",
+        data: [37],
+    },
+    {
+        name: "Pending Forcast",
+        data: [12],
+    },
+    {
+        name: "Revenue",
+        data: [18],
+    },
+];
 
-const decData :any= [{
-    name: 'Goal',
-    data: [25]
-}, {
-    name: 'Pending Forcast',
-    data: [20]
-}, {
-    name: 'Revenue',
-    data: [27]
-}];
+const decData: any = [
+    {
+        name: "Goal",
+        data: [25],
+    },
+    {
+        name: "Pending Forcast",
+        data: [20],
+    },
+    {
+        name: "Revenue",
+        data: [27],
+    },
+];
 
-const janData :any= [{
-    name: 'Goal',
-    data: [7]
-}, {
-    name: 'Pending Forcast',
-    data: [5]
-}, {
-    name: 'Revenue',
-    data: [32]
-}];
+const janData: any = [
+    {
+        name: "Goal",
+        data: [7],
+    },
+    {
+        name: "Pending Forcast",
+        data: [5],
+    },
+    {
+        name: "Revenue",
+        data: [32],
+    },
+];
 
-export { crmWidgets, dealsStatus, tasks, activities, closingDeals, todayBalanceData, lastWeekBalanceData, lastMonthBalanceData, currentYearBalanceData, todayDealData, weeklyDealData, monthlyDealData, yealyDealData, octData, novData, decData, janData };
+export {
+    crmWidgets,
+    dealsStatus,
+    tasks,
+    activities,
+    closingDeals,
+    todayBalanceData,
+    lastWeekBalanceData,
+    lastMonthBalanceData,
+    currentYearBalanceData,
+    todayDealData,
+    weeklyDealData,
+    monthlyDealData,
+    yealyDealData,
+    octData,
+    novData,
+    decData,
+    janData,
+};

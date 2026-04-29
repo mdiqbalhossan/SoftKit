@@ -1,11 +1,6 @@
-import { Link } from '@inertiajs/react';
-import React, { useState } from 'react';
-import {
-    Col,
-    Row,
-    Button,
-   Dropdown,
-} from "react-bootstrap";
+import { Link } from "@inertiajs/react";
+import React, { useState } from "react";
+import { Col, Row, Button, Dropdown } from "react-bootstrap";
 import Flatpickr from "react-flatpickr";
 import Select from "react-select";
 
@@ -29,7 +24,7 @@ const ProductsGlobalFilter = () => {
 const CustomersGlobalFilter = () => {
     const [customerStatus, setcustomerStatus] = useState<any>(null);
 
-    function handlecustomerStatus(customerStatus : any) {
+    function handlecustomerStatus(customerStatus: any) {
         setcustomerStatus(customerStatus);
     }
 
@@ -67,7 +62,7 @@ const CustomersGlobalFilter = () => {
                         <div>
                             <Select
                                 value={customerStatus}
-                                onChange={(e : any) => {
+                                onChange={(e: any) => {
                                     handlecustomerStatus(e.value);
                                 }}
                                 options={customerstatus}
@@ -99,15 +94,15 @@ const OrderGlobalFilter = () => {
     const [orderStatus, setorderStatus] = useState<any>([]);
     const [orderPayement, setorderPayement] = useState<any>(null);
 
-    function handleorderStatus(orderstatus : any) {
+    function handleorderStatus(orderstatus: any) {
         setorderStatus(orderstatus);
     }
 
-    function handleorderPayement(orderPayement : any) {
+    function handleorderPayement(orderPayement: any) {
         setorderPayement(orderPayement);
     }
 
-    const orderstatus : any = [
+    const orderstatus: any = [
         {
             options: [
                 { label: "Status", value: "Status" },
@@ -156,7 +151,7 @@ const OrderGlobalFilter = () => {
                 <div>
                     <Select
                         value={orderStatus}
-                        onChange={(e : any) => {
+                        onChange={(e: any) => {
                             handleorderStatus(e.target.value);
                         }}
                         options={orderstatus}
@@ -170,7 +165,7 @@ const OrderGlobalFilter = () => {
                 <div>
                     <Select
                         value={orderPayement}
-                        onChange={(e : any) => {
+                        onChange={(e: any) => {
                             handleorderPayement(e.target.value);
                         }}
                         options={orderpayement}
@@ -195,47 +190,47 @@ const OrderGlobalFilter = () => {
 
 const ContactsGlobalFilter = () => {
     const [sortBy, setSortBy] = useState<any>(null);
-  
-    function handleSortBy(selectedOption : any) {
-      setSortBy(selectedOption);
+
+    function handleSortBy(selectedOption: any) {
+        setSortBy(selectedOption);
     }
-  
+
     const sortOptions = [
-      {
-        options: [
-          { label: 'Owner', value: 'Owner' },
-          { label: 'Company', value: 'Company' },
-          { label: 'Location', value: 'Location' }
-        ]
-      }
+        {
+            options: [
+                { label: "Owner", value: "Owner" },
+                { label: "Company", value: "Company" },
+                { label: "Location", value: "Location" },
+            ],
+        },
     ];
-  
+
     return (
-      <React.Fragment>
-        <div className="col-md-auto ms-auto">
-          <div className="d-flex align-items-center gap-2">
-            <span className="text-muted">Sort by: </span>
-            <Select
-              className="mb-0"
-              value={sortBy}
-              onChange={handleSortBy}
-              options={sortOptions}
-              id="choices-single-default"
-            />
-          </div>
-        </div>
-      </React.Fragment>
+        <React.Fragment>
+            <div className="col-md-auto ms-auto">
+                <div className="d-flex align-items-center gap-2">
+                    <span className="text-muted">Sort by: </span>
+                    <Select
+                        className="mb-0"
+                        value={sortBy}
+                        onChange={handleSortBy}
+                        options={sortOptions}
+                        id="choices-single-default"
+                    />
+                </div>
+            </div>
+        </React.Fragment>
     );
-  };
+};
 
 const CompaniesGlobalFilter = () => {
     const [sortBy, setsortBy] = useState<any>("Owner");
 
-    function handlesortBy(sortBy : any) {
+    function handlesortBy(sortBy: any) {
         setsortBy(sortBy);
     }
 
-    const sortbyname : any = [
+    const sortbyname: any = [
         {
             options: [
                 { label: "Owner", value: "Owner" },
@@ -252,7 +247,7 @@ const CompaniesGlobalFilter = () => {
                     <Select
                         className="mb-0"
                         value={sortBy}
-                        onChange={(e : any) => {
+                        onChange={(e: any) => {
                             handlesortBy(e.target.value);
                         }}
                         options={sortbyname}
@@ -269,28 +264,40 @@ const CryptoOrdersGlobalFilter = () => {
         <React.Fragment>
             <Col xl={2} md={6}>
                 <div className="input-group">
-                    <span className="input-group-text" id="basic-addon1"><i className="ri-calendar-2-line"></i></span>
+                    <span className="input-group-text" id="basic-addon1">
+                        <i className="ri-calendar-2-line"></i>
+                    </span>
                     <Flatpickr
                         placeholder="Select date"
                         className="form-control"
                         options={{
                             mode: "range",
-                            dateFormat: "d M, Y"
+                            dateFormat: "d M, Y",
                         }}
                     />
                 </div>
             </Col>
             <Col xl={2} md={4}>
-                <select className="form-control" data-choices data-choices-search-false name="choices-single-default"
-                    id="choices-single-default">
+                <select
+                    className="form-control"
+                    data-choices
+                    data-choices-search-false
+                    name="choices-single-default"
+                    id="choices-single-default"
+                >
                     <option defaultValue="all">Select Type</option>
                     <option value="Buy">Sell</option>
                     <option value="Sell">Buy</option>
                 </select>
             </Col>
             <Col xl={2} md={4}>
-                <select className="form-control" data-choices data-choices-search-false name="choices-single-default2"
-                    id="choices-single-default2">
+                <select
+                    className="form-control"
+                    data-choices
+                    data-choices-search-false
+                    name="choices-single-default2"
+                    id="choices-single-default2"
+                >
                     <option defaultValue="all">Select Status</option>
                     <option value="Successful">Successful</option>
                     <option value="Cancelled">Cancelled</option>
@@ -307,8 +314,7 @@ const CryptoOrdersGlobalFilter = () => {
 const InvoiceListGlobalSearch = () => {
     const [isStatus, setisStatus] = useState<any>(null);
 
-
-    function handleisStatus(isStatus : any) {
+    function handleisStatus(isStatus: any) {
         setisStatus(isStatus);
     }
 
@@ -344,7 +350,7 @@ const InvoiceListGlobalSearch = () => {
                 <div className="input-light">
                     <Select
                         value={isStatus}
-                        onChange={(e : any) => {
+                        onChange={(e: any) => {
                             handleisStatus(e.target.value);
                         }}
                         options={allstatus}
@@ -360,7 +366,6 @@ const InvoiceListGlobalSearch = () => {
                     Filters
                 </Button>
             </Col>
-
         </React.Fragment>
     );
 };
@@ -374,13 +379,19 @@ const TicketsListGlobalFilter = () => {
                     placeholder="Select date range"
                     options={{
                         mode: "range",
-                        dateFormat: "d M, Y"
+                        dateFormat: "d M, Y",
                     }}
                 />
             </Col>
             <Col xxl={3} sm={4}>
                 <div className="input-light">
-                    <select className="form-control" data-choices data-choices-search-false name="choices-single-default" id="idStatus">
+                    <select
+                        className="form-control"
+                        data-choices
+                        data-choices-search-false
+                        name="choices-single-default"
+                        id="idStatus"
+                    >
                         <option value="">Status</option>
                         <option defaultValue="all">All</option>
                         <option value="Open">Open</option>
@@ -391,7 +402,9 @@ const TicketsListGlobalFilter = () => {
                 </div>
             </Col>
             <Col xxl={1} sm={4}>
-                <button type="button" className="btn btn-primary w-100"> <i className="ri-equalizer-fill me-1 align-bottom"></i>
+                <button type="button" className="btn btn-primary w-100">
+                    {" "}
+                    <i className="ri-equalizer-fill me-1 align-bottom"></i>
                     Filters
                 </button>
             </Col>
@@ -404,8 +417,16 @@ const NFTRankingGlobalFilter = () => {
         <React.Fragment>
             <Col xxl={2} sm={4} className="ms-auto">
                 <div>
-                    <select className="form-control" data-choices data-choices-search-false name="choices-single-default" id="idStatus">
-                        <option value="All Time" defaultValue="">All Time</option>
+                    <select
+                        className="form-control"
+                        data-choices
+                        data-choices-search-false
+                        name="choices-single-default"
+                        id="idStatus"
+                    >
+                        <option value="All Time" defaultValue="">
+                            All Time
+                        </option>
                         <option value="1 Day">1 Day</option>
                         <option value="7 Days">7 Days</option>
                         <option value="15 Days">15 Days</option>
@@ -427,16 +448,22 @@ const TaskListGlobalFilter = () => {
                     className="form-control bg-light border-light"
                     options={{
                         mode: "range",
-                        dateFormat: "d M, Y"
+                        dateFormat: "d M, Y",
                     }}
                 />
             </div>
 
             <div className="col-xxl-3 col-sm-4">
                 <div className="input-light">
-                    <select className="form-control" data-choices data-choices-search-false name="status" id="idStatus">
+                    <select
+                        className="form-control"
+                        data-choices
+                        data-choices-search-false
+                        name="status"
+                        id="idStatus"
+                    >
                         <option value="">Status</option>
-                        <option defaultValue="all"  >All</option>
+                        <option defaultValue="all">All</option>
                         <option value="New">New</option>
                         <option value="Pending">Pending</option>
                         <option value="Inprogress">Inprogress</option>
@@ -445,7 +472,9 @@ const TaskListGlobalFilter = () => {
                 </div>
             </div>
             <div className="col-xxl-1 col-sm-4">
-                <button type="button" className="btn btn-primary w-100"> <i className="ri-equalizer-fill me-1 align-bottom"></i>
+                <button type="button" className="btn btn-primary w-100">
+                    {" "}
+                    <i className="ri-equalizer-fill me-1 align-bottom"></i>
                     Filters
                 </button>
             </div>
@@ -453,16 +482,21 @@ const TaskListGlobalFilter = () => {
     );
 };
 
-
-const LeadsGlobalFilter = ({ onClickDelete } : any) => {
+const LeadsGlobalFilter = ({ onClickDelete }: any) => {
     return (
         <React.Fragment>
             <div className="col-sm-auto ms-auto">
                 <div className="hstack gap-2">
-                    <button className="btn btn-soft-danger" onClick={onClickDelete}
-                    ><i className="ri-delete-bin-2-line"></i></button>
-                    <button type="button" className="btn btn-info"
-                    //  onClick={toggleInfo}
+                    <button
+                        className="btn btn-soft-danger"
+                        onClick={onClickDelete}
+                    >
+                        <i className="ri-delete-bin-2-line"></i>
+                    </button>
+                    <button
+                        type="button"
+                        className="btn btn-info"
+                        //  onClick={toggleInfo}
                     >
                         <i className="ri-filter-3-line align-bottom me-1"></i>{" "}
                         Fliters
@@ -471,7 +505,7 @@ const LeadsGlobalFilter = ({ onClickDelete } : any) => {
                         type="button"
                         className="btn btn-success add-btn"
                         id="create-btn"
-                    // onClick={() => { setIsEdit(false); toggle(); }}
+                        // onClick={() => { setIsEdit(false); toggle(); }}
                     >
                         <i className="ri-add-line align-bottom me-1"></i> Add
                         Leads
@@ -486,22 +520,15 @@ const LeadsGlobalFilter = ({ onClickDelete } : any) => {
                         >
                             <i className="ri-settings-4-line"></i>
                         </Dropdown.Toggle>
-                        <Dropdown.Menu
-                        >
+                        <Dropdown.Menu>
                             <li>
-                                <Dropdown.Item>
-                                    Copy
-                                </Dropdown.Item>
+                                <Dropdown.Item>Copy</Dropdown.Item>
                             </li>
                             <li>
-                                <Dropdown.Item>
-                                    Move to pipline
-                                </Dropdown.Item>
+                                <Dropdown.Item>Move to pipline</Dropdown.Item>
                             </li>
                             <li>
-                                <Dropdown.Item>
-                                    Add to exceptions
-                                </Dropdown.Item>
+                                <Dropdown.Item>Add to exceptions</Dropdown.Item>
                             </li>
                             <li>
                                 <Dropdown.Item>
@@ -532,5 +559,5 @@ export {
     TicketsListGlobalFilter,
     NFTRankingGlobalFilter,
     TaskListGlobalFilter,
-    LeadsGlobalFilter
+    LeadsGlobalFilter,
 };

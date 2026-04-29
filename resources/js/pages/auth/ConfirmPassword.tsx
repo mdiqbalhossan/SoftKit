@@ -1,27 +1,27 @@
-import { useEffect } from 'react';
-import GuestLayout from '../../Layouts/GuestLayout';
-import { Head, Link, useForm } from '@inertiajs/react';
-import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap';
-import logoLight from '../../../images/logo-light.png';
-import avatar1 from '../../../images/users/avatar-1.jpg'
-import { useVelzonToastFromValidationErrors } from '../../Components/Common/VelzonToast';
+import { useEffect } from "react";
+import GuestLayout from "../../Layouts/GuestLayout";
+import { Head, Link, useForm } from "@inertiajs/react";
+import { Button, Card, Col, Container, Form, Row } from "react-bootstrap";
+import logoLight from "../../../images/logo-light.png";
+import avatar1 from "../../../images/users/avatar-1.jpg";
+import { useVelzonToastFromValidationErrors } from "../../Components/Common/VelzonToast";
 export default function ConfirmPassword() {
     const { data, setData, post, processing, errors, reset } = useForm({
-        password: '',
+        password: "",
     });
 
     useVelzonToastFromValidationErrors(errors);
 
     useEffect(() => {
         return () => {
-            reset('password');
+            reset("password");
         };
     }, []);
 
     const submit = (e: any) => {
         e.preventDefault();
 
-        post(route('password.confirm'));
+        post(route("password.confirm"));
     };
 
     return (
@@ -33,11 +33,20 @@ export default function ConfirmPassword() {
                         <Col lg={12}>
                             <div className="text-center mt-sm-5 mb-4 text-white-50">
                                 <div>
-                                    <Link href={route("/dashboard")} className="d-inline-block auth-logo">
-                                        <img src={logoLight} alt="" height="20" />
+                                    <Link
+                                        href={route("/dashboard")}
+                                        className="d-inline-block auth-logo"
+                                    >
+                                        <img
+                                            src={logoLight}
+                                            alt=""
+                                            height="20"
+                                        />
                                     </Link>
                                 </div>
-                                <p className="mt-3 fs-15 fw-medium">Premium Admin & Dashboard Template</p>
+                                <p className="mt-3 fs-15 fw-medium">
+                                    Premium Admin & Dashboard Template
+                                </p>
                             </div>
                         </Col>
                     </Row>
@@ -50,38 +59,77 @@ export default function ConfirmPassword() {
                         <Card.Body className="p-4">
                             <div className="text-center mt-2">
                                 <h5 className="text-primary">Lock Screen</h5>
-                                <p className="text-muted">Enter your password to unlock the screen!</p>
+                                <p className="text-muted">
+                                    Enter your password to unlock the screen!
+                                </p>
                             </div>
                             <div className="user-thumb text-center">
-                                <img src={avatar1} className="rounded-circle img-thumbnail avatar-lg" alt="thumbnail" />
-                                <h5 className="font-size-15 mt-3">Anna Adame</h5>
+                                <img
+                                    src={avatar1}
+                                    className="rounded-circle img-thumbnail avatar-lg"
+                                    alt="thumbnail"
+                                />
+                                <h5 className="font-size-15 mt-3">
+                                    Anna Adame
+                                </h5>
                             </div>
                             <div className="p-2 mt-4">
                                 <form onSubmit={submit}>
                                     <div className="mt-4">
-                                        <Form.Label htmlFor="password" value="Password" className='form-label'> Password </Form.Label>
-                                        <span className="text-danger ms-1">*</span>
+                                        <Form.Label
+                                            htmlFor="password"
+                                            value="Password"
+                                            className="form-label"
+                                        >
+                                            {" "}
+                                            Password{" "}
+                                        </Form.Label>
+                                        <span className="text-danger ms-1">
+                                            *
+                                        </span>
                                         <Form.Control
                                             id="password"
                                             type="password"
                                             name="password"
                                             placeholder="Enter Password"
                                             value={data.password}
-                                            className={"mt-1 form-control" + (errors.password ? 'is-invalid' : '')}
+                                            className={
+                                                "mt-1 form-control" +
+                                                (errors.password
+                                                    ? "is-invalid"
+                                                    : "")
+                                            }
                                             autoFocus
-                                            onChange={(e: any) => setData('password', e.target.value)}
+                                            onChange={(e: any) =>
+                                                setData(
+                                                    "password",
+                                                    e.target.value,
+                                                )
+                                            }
                                             required
                                         />
 
-                                        <Form.Control.Feedback type="invalid" className='mt-2 d-block'>{errors.password}</Form.Control.Feedback>
+                                        <Form.Control.Feedback
+                                            type="invalid"
+                                            className="mt-2 d-block"
+                                        >
+                                            {errors.password}
+                                        </Form.Control.Feedback>
                                     </div>
 
                                     <div className="d-flex flex-column gap-2 mt-4">
-                                        <Button type='submit' className="ml-4 btn btn-success w-100" disabled={processing}>
+                                        <Button
+                                            type="submit"
+                                            className="ml-4 btn btn-success w-100"
+                                            disabled={processing}
+                                        >
                                             <i className="ri-lock-unlock-line align-middle me-1"></i>
                                             Confirm
                                         </Button>
-                                        <Link href={route('login')} className="btn btn-light w-100 text-center">
+                                        <Link
+                                            href={route("login")}
+                                            className="btn btn-light w-100 text-center"
+                                        >
                                             <i className="ri-close-line align-middle me-1"></i>
                                             Cancel
                                         </Link>
@@ -91,7 +139,16 @@ export default function ConfirmPassword() {
                         </Card.Body>
                     </Card>
                     <div className="mt-4 text-center">
-                        <p className="mb-0">Not you ? return <Link href={route('login')} className="fw-semibold text-primary text-decoration-underline"> Signin </Link> </p>
+                        <p className="mb-0">
+                            Not you ? return{" "}
+                            <Link
+                                href={route("login")}
+                                className="fw-semibold text-primary text-decoration-underline"
+                            >
+                                {" "}
+                                Signin{" "}
+                            </Link>{" "}
+                        </p>
                     </div>
                 </Col>
             </Row>

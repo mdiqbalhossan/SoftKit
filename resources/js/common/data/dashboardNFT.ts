@@ -89,7 +89,7 @@ const topartWork = [
         series: [{ data: [45, 53, 24, 89, 63, 60, 36, 50] }],
     },
 ];
-const featuredNFTData :any= [
+const featuredNFTData: any = [
     {
         id: 1,
         img: "https://img.themesbrand.com/velzon/images/img-3.gif",
@@ -127,13 +127,13 @@ const featuredNFTData :any= [
         price: "3.167 ETH",
     },
 ];
-const popularityData :any= [
+const popularityData: any = [
     {
         id: 1,
         img: avatar10,
         author: "Herbert Stokes",
         username: "@herbert10",
-        price: "174.36 ETH",           
+        price: "174.36 ETH",
     },
     {
         id: 2,
@@ -176,79 +176,79 @@ const popularityData :any= [
         author: "Timothy Smith",
         username: "@timothy",
         price: "349.08 ETH",
-    },        
+    },
 ];
-const recentNFTsData :any= [
+const recentNFTsData: any = [
     {
-        id: 1, 
+        id: 1,
         img: Img1,
         title: "Abstract Face Painting",
         category: "Artworks",
         icon: btcCoin,
-        volume: "48,568.025",           
+        volume: "48,568.025",
         hours: 5.26,
         creators: "6.8K",
         items: "18.0K",
     },
     {
-        id: 2, 
+        id: 2,
         img: "https://img.themesbrand.com/velzon/images/img-5.gif",
         title: "Long-tailed Macaque",
         category: "Games",
         icon: ltcCoin,
-        volume: "87,142.027",           
+        volume: "87,142.027",
         hours: 3.07,
         creators: "2.6K",
         items: "6.3K",
         textColor: true,
     },
     {
-        id: 3, 
+        id: 3,
         img: Img6,
         title: "Robotic Body Art",
         category: "Photography",
         icon: etcCoin,
-        volume: "33,847.961",           
+        volume: "33,847.961",
         hours: 7.13,
         creators: "7.5K",
         items: "14.6K",
     },
     {
-        id: 4, 
+        id: 4,
         img: Img4,
         title: "Smillevers Crypto",
         category: "Artworks",
         icon: dashCoin,
-        volume: "73,654.421",           
+        volume: "73,654.421",
         hours: 0.97,
         creators: "5.3K",
         items: "36.4K",
     },
     {
-        id: 5, 
+        id: 5,
         img: Img3,
         title: "Creative Filtered Portrait",
         category: "3d Style",
         icon: bnbCoin,
-        volume: "66,742.077",           
+        volume: "66,742.077",
         hours: 1.08,
         creators: "3.1K",
         items: "12.4K",
         textColor: true,
     },
     {
-        id: 6, 
+        id: 6,
         img: Img2,
         title: "The Chirstoper",
         category: "Crypto Card",
         icon: usdtCoin,
-        volume: "34,736.209",           
+        volume: "34,736.209",
         hours: 4.52,
         creators: "7.2K",
         items: "25.0K",
     },
 ];
-const topCollectionData :any= [
+const topCollectionData: any = [
     {
         id: 1,
         img: Img3,
@@ -274,7 +274,7 @@ const topCollectionData :any= [
         items: "3468+",
     },
 ];
-const popularCreatorsData :any= [
+const popularCreatorsData: any = [
     {
         id: 1,
         img: Img2,
@@ -301,56 +301,75 @@ const popularCreatorsData :any= [
     },
 ];
 
-const allMarketplaceData :any= [{
-    name: "Artwork",
-    data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
-},
-{
-    name: "Auction",
-    data: [40, 120, 83, 45, 31, 74, 35, 34, 78]
-},
-{
-    name: "Creators",
-    data: [95, 35, 20, 130, 64, 22, 43, 45, 31]
-}];
+const allMarketplaceData: any = [
+    {
+        name: "Artwork",
+        data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
+    },
+    {
+        name: "Auction",
+        data: [40, 120, 83, 45, 31, 74, 35, 34, 78],
+    },
+    {
+        name: "Creators",
+        data: [95, 35, 20, 130, 64, 22, 43, 45, 31],
+    },
+];
 
-const monthMarketplaceData :any= [{
-    name: "Artwork",
-    data: [10, 21, 25, 31, 29, 42, 59, 51, 48]
-},
-{
-    name: "Auction",
-    data: [20, 20, 63, 25, 21, 54, 15, 14, 48]
-},
-{
-    name: "Creators",
-    data: [55, 55, 30, 150, 84, 52, 53, 65, 51]
-}];
+const monthMarketplaceData: any = [
+    {
+        name: "Artwork",
+        data: [10, 21, 25, 31, 29, 42, 59, 51, 48],
+    },
+    {
+        name: "Auction",
+        data: [20, 20, 63, 25, 21, 54, 15, 14, 48],
+    },
+    {
+        name: "Creators",
+        data: [55, 55, 30, 150, 84, 52, 53, 65, 51],
+    },
+];
 
-const halfyearMarketplaceData :any= [{
-    name: "Artwork",
-    data: [30, 51, 45, 71, 89, 82, 79, 81, 158]
-},
-{
-    name: "Auction",
-    data: [90, 140, 123, 75, 61, 94, 65, 64, 98]
-},
-{
-    name: "Creators",
-    data: [125, 95, 60, 150, 74, 32, 63, 65, 71]
-}];
+const halfyearMarketplaceData: any = [
+    {
+        name: "Artwork",
+        data: [30, 51, 45, 71, 89, 82, 79, 81, 158],
+    },
+    {
+        name: "Auction",
+        data: [90, 140, 123, 75, 61, 94, 65, 64, 98],
+    },
+    {
+        name: "Creators",
+        data: [125, 95, 60, 150, 74, 32, 63, 65, 71],
+    },
+];
 
-const yearMarketplaceData :any= [{
-    name: "Artwork",
-    data: [20, 61, 65, 71, 69, 82, 89, 121, 168]
-},
-{
-    name: "Auction",
-    data: [60, 140, 103, 65, 51, 84, 75, 94, 98]
-},
-{
-    name: "Creators",
-    data: [145, 75, 60, 150, 74, 52, 63, 65, 61]
-}];
+const yearMarketplaceData: any = [
+    {
+        name: "Artwork",
+        data: [20, 61, 65, 71, 69, 82, 89, 121, 168],
+    },
+    {
+        name: "Auction",
+        data: [60, 140, 103, 65, 51, 84, 75, 94, 98],
+    },
+    {
+        name: "Creators",
+        data: [145, 75, 60, 150, 74, 52, 63, 65, 61],
+    },
+];
 
-export { topartWork, featuredNFTData, popularityData, recentNFTsData, topCollectionData, popularCreatorsData, allMarketplaceData, monthMarketplaceData, halfyearMarketplaceData, yearMarketplaceData };
+export {
+    topartWork,
+    featuredNFTData,
+    popularityData,
+    recentNFTsData,
+    topCollectionData,
+    popularCreatorsData,
+    allMarketplaceData,
+    monthMarketplaceData,
+    halfyearMarketplaceData,
+    yearMarketplaceData,
+};

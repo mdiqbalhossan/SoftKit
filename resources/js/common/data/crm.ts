@@ -39,7 +39,7 @@ const crmcontacts = [
         score: "154",
         date: "15 Dec, 2021",
         time: "08:58AM",
-        tags: ["Lead", "Long-Term"]
+        tags: ["Lead", "Long-Term"],
     },
     {
         id: 2,
@@ -53,7 +53,7 @@ const crmcontacts = [
         score: "236",
         date: "17 Dec, 2021",
         time: "10:32AM",
-        tags:["Partner"],
+        tags: ["Partner"],
     },
     {
         id: 3,
@@ -67,7 +67,7 @@ const crmcontacts = [
         score: "197",
         date: "04 Dec, 2021",
         time: "01:36PM",
-        tags : ['Exiting'],
+        tags: ["Exiting"],
     },
     {
         id: 4,
@@ -81,7 +81,7 @@ const crmcontacts = [
         score: "369",
         date: "27 Oct, 2021",
         time: "03:47PM",
-        tags:[ 'Partner', 'Long Term']
+        tags: ["Partner", "Long Term"],
     },
     {
         id: 5,
@@ -95,7 +95,7 @@ const crmcontacts = [
         score: "81",
         date: "23 Oct, 2021",
         time: "03:47PM",
-        tags: ["Lead", "Exiting"]
+        tags: ["Lead", "Exiting"],
     },
     {
         id: 6,
@@ -109,7 +109,7 @@ const crmcontacts = [
         score: "643",
         date: "18 Oct, 2021",
         time: "11:08AM",
-        tags:["Lead", "Partner"]
+        tags: ["Lead", "Partner"],
     },
     {
         id: 7,
@@ -123,7 +123,7 @@ const crmcontacts = [
         score: "784",
         date: "01 Jan, 2022",
         time: "03:51PM",
-        tags: ["Exiting", "Long-term"]
+        tags: ["Exiting", "Long-term"],
     },
     {
         id: 8,
@@ -137,7 +137,7 @@ const crmcontacts = [
         score: "361",
         date: "20 Sep, 2021",
         time: "07:55AM",
-        tags : [ "Partner", "Exiting"],
+        tags: ["Partner", "Exiting"],
     },
     {
         id: 9,
@@ -151,7 +151,7 @@ const crmcontacts = [
         score: "732",
         date: "02 Jan, 2022",
         time: "09:32AM",
-        tags:[ 'Lead', 'Long Term']
+        tags: ["Lead", "Long Term"],
     },
     {
         id: 10,
@@ -165,8 +165,8 @@ const crmcontacts = [
         score: "500",
         date: "10 Jun, 2011",
         time: "4:00AM",
-        tags: ['Partner','Exiting'],
-    }
+        tags: ["Partner", "Exiting"],
+    },
 ];
 
 // COMPANIES
@@ -184,7 +184,7 @@ const companies = [
         employee: "11-50",
         website: "www.themesbrand.com",
         contact: "info@themesbrand.com",
-        since: "1995"
+        since: "1995",
     },
     {
         id: 2,
@@ -198,7 +198,7 @@ const companies = [
         employee: "11-50",
         website: "www.themesbrand.com",
         contact: "info@themesbrand.com",
-        since: "1995"
+        since: "1995",
     },
     {
         id: 3,
@@ -212,7 +212,7 @@ const companies = [
         employee: "11-50",
         website: "www.themesbrand.com",
         contact: "info@themesbrand.com",
-        since: "1995"
+        since: "1995",
     },
     {
         id: 4,
@@ -226,7 +226,7 @@ const companies = [
         employee: "11-50",
         website: "www.themesbrand.com",
         contact: "info@themesbrand.com",
-        since: "1995"
+        since: "1995",
     },
     {
         id: 5,
@@ -240,7 +240,7 @@ const companies = [
         employee: "11-50",
         website: "www.themesbrand.com",
         contact: "info@themesbrand.com",
-        since: "1995"
+        since: "1995",
     },
     {
         id: 6,
@@ -254,7 +254,7 @@ const companies = [
         employee: "11-50",
         website: "www.themesbrand.com",
         contact: "info@themesbrand.com",
-        since: "1995"
+        since: "1995",
     },
     {
         id: 7,
@@ -268,7 +268,7 @@ const companies = [
         employee: "11-50",
         website: "www.themesbrand.com",
         contact: "info@themesbrand.com",
-        since: "1995"
+        since: "1995",
     },
     {
         id: 8,
@@ -282,7 +282,7 @@ const companies = [
         employee: "11-50",
         website: "www.themesbrand.com",
         contact: "info@themesbrand.com",
-        since: "1995"
+        since: "1995",
     },
     {
         id: 9,
@@ -296,7 +296,7 @@ const companies = [
         employee: "11-50",
         website: "www.themesbrand.com",
         contact: "info@themesbrand.com",
-        since: "1995"
+        since: "1995",
     },
     {
         id: 10,
@@ -310,7 +310,7 @@ const companies = [
         employee: "11-50",
         website: "www.themesbrand.com",
         contact: "info@themesbrand.com",
-        since: "1995"
+        since: "1995",
     },
 ];
 
@@ -326,7 +326,7 @@ const leads = [
         phone: "580-464-4694",
         location: "Los Angeles, USA",
         date: "07 Apr, 2021",
-        tags: ["Lead", "Long-Term"]
+        tags: ["Lead", "Long-Term"],
     },
     {
         id: 2,
@@ -338,7 +338,7 @@ const leads = [
         phone: "863-577-5537",
         location: "Phoenix, USA",
         date: "15 Feb, 2021",
-        tags:["Partner"],
+        tags: ["Partner"],
     },
     {
         id: 3,
@@ -350,7 +350,7 @@ const leads = [
         phone: "786-253-9927",
         location: "London, UK",
         date: "02 Jan, 2022",
-        tags:["Exiting"]
+        tags: ["Exiting"],
     },
     {
         id: 4,
@@ -362,7 +362,7 @@ const leads = [
         phone: "786-253-9927",
         location: "Damascus, Syria",
         date: "19 May, 2021",
-        tags:["Partner","Long-Term"]
+        tags: ["Partner", "Long-Term"],
     },
     {
         id: 5,
@@ -374,7 +374,7 @@ const leads = [
         phone: "213-741-4294",
         location: "Bogota, Colombia",
         date: "14 Apr, 2021",
-        tags: ["Lead","Exiting"]
+        tags: ["Lead", "Exiting"],
     },
     {
         id: 6,
@@ -386,7 +386,7 @@ const leads = [
         phone: "414-453-5725",
         location: "Windhoek, Namibia",
         date: "07 Jun, 2022",
-        tags:["Lead","Partner"],
+        tags: ["Lead", "Partner"],
     },
     {
         id: 7,
@@ -398,7 +398,7 @@ const leads = [
         phone: "515-395-1069",
         location: "Berlin, Germany",
         date: "02 Nov, 2021",
-        tags : [ "Exiting","Long-Term"]
+        tags: ["Exiting", "Long-Term"],
     },
     {
         id: 8,
@@ -410,7 +410,7 @@ const leads = [
         phone: "231-480-8536",
         location: "Brasilia, Brazil",
         date: "25 Sep, 2021",
-        tags:[ "Partner","Exiting"]
+        tags: ["Partner", "Exiting"],
     },
     {
         id: 9,
@@ -422,7 +422,7 @@ const leads = [
         phone: "231-480-8536",
         location: "Windhoek, Namibia",
         date: "16 Sep, 2021",
-        tags: ["Lead","Long-Term"]
+        tags: ["Lead", "Long-Term"],
     },
     {
         id: 10,
@@ -434,7 +434,7 @@ const leads = [
         phone: "745-321-9874",
         location: "London, UK",
         date: "23 Nov, 2021",
-        tags:["Partner", "Exiting"]
+        tags: ["Partner", "Exiting"],
     },
     {
         id: 11,
@@ -446,7 +446,7 @@ const leads = [
         phone: "654-987-0123",
         location: "London, UK",
         date: "02 Jan, 2022",
-        tags : [ 'Partner', 'Exiting' ]
+        tags: ["Partner", "Exiting"],
     },
 ];
 

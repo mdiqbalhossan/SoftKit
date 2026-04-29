@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
-import { Spinner } from 'react-bootstrap';
+import React, { useEffect, useRef } from "react";
+import { Spinner } from "react-bootstrap";
 
-import { velzonNotifyError } from './VelzonToast';
+import { velzonNotifyError } from "./VelzonToast";
 
 const Loader = (props: any) => {
     const last = useRef<string | null>(null);

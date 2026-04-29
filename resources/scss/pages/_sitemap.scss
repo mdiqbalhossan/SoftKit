@@ -46,8 +46,8 @@
 
 .administration {
     .director {
-        >li {
-            >a {
+        > li {
+            > a {
                 width: 50%;
                 margin: 0 auto 0px auto;
                 border-radius: 4px;
@@ -69,7 +69,7 @@
             position: relative;
         }
 
-        >li {
+        > li {
             &:first-child {
                 width: 18.59%;
                 height: 64px;
@@ -91,7 +91,7 @@
 
     @media screen and (max-width: 767px) {
         .subdirector {
-            >li {
+            > li {
                 &:first-child {
                     width: 40%;
                     right: 10%;
@@ -109,7 +109,7 @@
 .departments {
     width: 100%;
 
-    >li {
+    > li {
         &:first-child {
             width: 18.59%;
             height: 64px;
@@ -149,11 +149,11 @@
         border-left: 2px dashed var(--#{$prefix}border-color);
         margin: 0 auto;
         top: 130px;
-        left: 9.1%
+        left: 9.1%;
     }
 
     @media screen and (max-width: 767px) {
-        >li {
+        > li {
             &:first-child {
                 width: 40%;
                 left: 10%;
@@ -189,7 +189,7 @@
         margin-left: -4px;
     }
 
-    >a {
+    > a {
         margin: 0 0 -26px -4px;
         z-index: 1;
     }
@@ -254,8 +254,6 @@
     }
 }
 
-
-
 // sitemap
 
 .hori-sitemap {
@@ -284,7 +282,7 @@
     }
 
     @media (max-width: 575.98px) {
-        >ul {
+        > ul {
             position: relative;
             li {
                 padding-top: 10px;
@@ -395,13 +393,11 @@
         color: var(--#{$prefix}body-color);
         padding: 4px 0px;
         display: block;
-
     }
 }
 
-
 // vertical sitemap
-.verti-sitemap { 
+.verti-sitemap {
     a {
         color: var(--#{$prefix}body-color);
         display: block;
@@ -431,7 +427,8 @@
             bottom: 0;
             left: 0;
         }
-        .list-wrap, li {
+        .list-wrap,
+        li {
             a {
                 position: relative;
                 padding: 10px 16px 4px 36px;
@@ -446,12 +443,13 @@
                 }
             }
         }
-        .second-list, .third-list {
+        .second-list,
+        .third-list {
             margin-left: 42px;
-            
         }
 
-        .third-list, .second-list {
+        .third-list,
+        .second-list {
             position: relative;
             li {
                 position: relative;
@@ -471,7 +469,7 @@
                 }
             }
         }
-        
+
         &:last-child {
             &::before {
                 height: 25px;
@@ -479,4 +477,3 @@
         }
     }
 }
-

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import { usePage } from '@inertiajs/react';
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import { usePage } from "@inertiajs/react";
 
 type SiteFooter = {
     title?: string;
@@ -17,33 +17,36 @@ type SiteFooter = {
     };
 };
 
-const SOCIAL_META: { key: keyof NonNullable<SiteFooter['social']>; icon: string; label: string }[] = [
-    { key: 'facebook', icon: 'ri-facebook-fill', label: 'Facebook' },
-    { key: 'twitter', icon: 'ri-twitter-x-fill', label: 'X (Twitter)' },
-    { key: 'linkedin', icon: 'ri-linkedin-fill', label: 'LinkedIn' },
-    { key: 'instagram', icon: 'ri-instagram-fill', label: 'Instagram' },
-    { key: 'youtube', icon: 'ri-youtube-fill', label: 'YouTube' },
-    { key: 'github', icon: 'ri-github-fill', label: 'GitHub' },
+const SOCIAL_META: {
+    key: keyof NonNullable<SiteFooter["social"]>;
+    icon: string;
+    label: string;
+}[] = [
+    { key: "facebook", icon: "ri-facebook-fill", label: "Facebook" },
+    { key: "twitter", icon: "ri-twitter-x-fill", label: "X (Twitter)" },
+    { key: "linkedin", icon: "ri-linkedin-fill", label: "LinkedIn" },
+    { key: "instagram", icon: "ri-instagram-fill", label: "Instagram" },
+    { key: "youtube", icon: "ri-youtube-fill", label: "YouTube" },
+    { key: "github", icon: "ri-github-fill", label: "GitHub" },
 ];
 
 const Footer = () => {
     const { site } = usePage().props as { site?: SiteFooter };
     const year = new Date().getFullYear();
-    const brand = site?.title || 'Velzon';
+    const brand = site?.title || "Velzon";
 
-    const copyrightTemplate = site?.footer_copyright?.trim() ?? '';
+    const copyrightTemplate = site?.footer_copyright?.trim() ?? "";
     const primaryLine = copyrightTemplate
-        ? copyrightTemplate.split('{year}').join(String(year))
+        ? copyrightTemplate.split("{year}").join(String(year))
         : `${year} © ${brand}.`;
 
     const creditLine =
-        site?.footer_credit?.trim() ||
-        'Design & Develop by Themesbrand';
+        site?.footer_credit?.trim() || "Design & Develop by Themesbrand";
 
     const social = site?.social ?? {};
     const socialNodes = SOCIAL_META.filter((s) => {
         const u = social[s.key];
-        return typeof u === 'string' && u.length > 0;
+        return typeof u === "string" && u.length > 0;
     });
 
     return (
@@ -52,7 +55,9 @@ const Footer = () => {
                 <Container fluid>
                     <Row className="align-items-center gy-2">
                         <Col md={true}>
-                            <span className="d-block d-md-inline">{primaryLine}</span>
+                            <span className="d-block d-md-inline">
+                                {primaryLine}
+                            </span>
                             {site?.contact_person ? (
                                 <span className="text-muted d-block d-md-inline ms-md-2">
                                     · Contact: {site.contact_person}

@@ -15,10 +15,10 @@ import avatar10 from "../../../images/users/avatar-10.jpg";
 const projectList = [
     {
         id: 1,
-        isDesign1 : true,
+        isDesign1: true,
         time: "Updated 3hrs ago",
         img: slack,
-        imgbgColor:"warning",
+        imgbgColor: "warning",
         label: "Slack brand logo design",
         caption: "Create a Brand logo design for a velzon admin.",
         number: "18/42",
@@ -28,14 +28,14 @@ const projectList = [
             { id: 2, imgNumber: "+" },
         ],
         date: "10 Jul, 2021",
-        ratingClass:""
+        ratingClass: "",
     },
     {
         id: 2,
-        isDesign1 : true,
+        isDesign1: true,
         time: "Last update : 08 May",
         img: dribbble,
-        imgbgColor:"danger",
+        imgbgColor: "danger",
         label: "Redesign - Landing page",
         caption: "Resign a landing page design. as per abc minimal design.",
         number: "22/56",
@@ -47,14 +47,14 @@ const projectList = [
             { id: 4, imgNumber: "+" },
         ],
         date: "18 May, 2021",
-        ratingClass:"active"
+        ratingClass: "active",
     },
     {
         id: 3,
-        isDesign1 : true,
+        isDesign1: true,
         time: "Updated 2hrs ago",
         img: mailChimp,
-        imgbgColor:"success",
+        imgbgColor: "success",
         label: "Chat Application",
         caption:
             "Create a Chat application for business messaging needs. Collaborate efficiently with secure direct messages and group chats.",
@@ -66,14 +66,14 @@ const projectList = [
             { id: 3, imgNumber: "+" },
         ],
         date: "21 Feb, 2021",
-        ratingClass:"active"
+        ratingClass: "active",
     },
     {
         id: 4,
-        isDesign1 : true,
+        isDesign1: true,
         time: "Last update : 21 Jun",
         img: dropbox,
-        imgbgColor:"info",
+        imgbgColor: "info",
         label: "Project App",
         caption:
             "Create a project application for a project management and task management.",
@@ -85,12 +85,12 @@ const projectList = [
             { id: 3, imgNumber: "+" },
         ],
         date: "03 Aug, 2021",
-        ratingClass:""
+        ratingClass: "",
     },
     //design 2
     {
         id: 5,
-        isDesign2 : true,
+        isDesign2: true,
         label: "Multipurpose landing template",
         status: "Inprogess",
         statusClass: "warning",
@@ -102,12 +102,12 @@ const projectList = [
             { id: 4, imgNumber: "+" },
         ],
         progressBar: "50%",
-        ratingClass:"active",
-        cardHeaderClass:"danger"
+        ratingClass: "active",
+        cardHeaderClass: "danger",
     },
     {
         id: 6,
-        isDesign2 : true,
+        isDesign2: true,
         label: "Dashboard UI",
         status: "Completed",
         statusClass: "success",
@@ -118,12 +118,12 @@ const projectList = [
             { id: 3, imgNumber: "+" },
         ],
         progressBar: "95%",
-        ratingClass:"active",
-        cardHeaderClass:"warning"
+        ratingClass: "active",
+        cardHeaderClass: "warning",
     },
     {
         id: 7,
-        isDesign2 : true,
+        isDesign2: true,
         label: "Vector Images",
         status: "Inprogess",
         statusClass: "warning",
@@ -133,12 +133,12 @@ const projectList = [
             { id: 2, imgNumber: "+" },
         ],
         progressBar: "41%",
-        ratingClass:"",
-        cardHeaderClass:"info"
+        ratingClass: "",
+        cardHeaderClass: "info",
     },
     {
         id: 8,
-        isDesign2 : true,
+        isDesign2: true,
         label: "Authentication",
         status: "Inprogess",
         statusClass: "warning",
@@ -148,13 +148,13 @@ const projectList = [
             { id: 2, imgNumber: "+" },
         ],
         progressBar: "35%",
-        ratingClass:"active",
-        cardHeaderClass:"success"
+        ratingClass: "active",
+        cardHeaderClass: "success",
     },
     //design 3
     {
         id: 9,
-        isDesign3 : true,
+        isDesign3: true,
         img: dribbble,
         label: "Kanban Board",
         status: "Inprogess",
@@ -167,12 +167,12 @@ const projectList = [
             { id: 2, imgTeam: avatar5 },
             { id: 3, imgNumber: "+" },
         ],
-        ratingClass:"active",
-        cardHeaderClass:"secondary-subtle"
+        ratingClass: "active",
+        cardHeaderClass: "secondary-subtle",
     },
     {
         id: 10,
-        isDesign3 : true,
+        isDesign3: true,
         img: slack,
         label: "Ecommerce app",
         status: "Inprogess",
@@ -185,12 +185,12 @@ const projectList = [
             { id: 2, imgTeam: avatar10 },
             { id: 3, imgNumber: "+" },
         ],
-        ratingClass:"",
-        cardHeaderClass:"light"
+        ratingClass: "",
+        cardHeaderClass: "light",
     },
     {
         id: 11,
-        isDesign3 : true,
+        isDesign3: true,
         img: dropbox,
         label: "Redesign - Landing page",
         status: "Inprogess",
@@ -204,12 +204,12 @@ const projectList = [
             { id: 3, imgTeam: avatar4 },
             { id: 4, imgNumber: "+" },
         ],
-        ratingClass:"",
-        cardHeaderClass:"primary-subtle"
+        ratingClass: "",
+        cardHeaderClass: "primary-subtle",
     },
     {
         id: 12,
-        isDesign3 : true,
+        isDesign3: true,
         img: mailChimp,
         label: "Multipurpose landing template",
         status: "Completed",
@@ -223,8 +223,8 @@ const projectList = [
             { id: 3, imgTeam: avatar6 },
             { id: 4, imgNumber: "+" },
         ],
-        ratingClass:"active",
-        cardHeaderClass:"danger-subtle"
+        ratingClass: "active",
+        cardHeaderClass: "danger-subtle",
     },
 ];
 export { projectList };

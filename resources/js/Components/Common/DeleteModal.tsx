@@ -3,10 +3,10 @@ import Swal from "sweetalert2";
 import { confirmDeleteSwal } from "../../utils/deleteConfirmationSwal";
 
 interface DeleteModalProps {
-  show?: boolean;
-  onDeleteClick?: () => void;
-  onCloseClick?: () => void;
-  recordId?: string;
+    show?: boolean;
+    onDeleteClick?: () => void;
+    onCloseClick?: () => void;
+    recordId?: string;
 }
 
 /**
@@ -15,46 +15,46 @@ interface DeleteModalProps {
  * Renders nothing — replaces the old Bootstrap modal for every consumer automatically.
  */
 const DeleteModal = ({
-  show,
-  onDeleteClick,
-  onCloseClick,
-  recordId,
+    show,
+    onDeleteClick,
+    onCloseClick,
+    recordId,
 }: DeleteModalProps) => {
-  const onDeleteRef = useRef(onDeleteClick);
-  const onCloseRef = useRef(onCloseClick);
+    const onDeleteRef = useRef(onDeleteClick);
+    const onCloseRef = useRef(onCloseClick);
 
-  onDeleteRef.current = onDeleteClick;
-  onCloseRef.current = onCloseClick;
+    onDeleteRef.current = onDeleteClick;
+    onCloseRef.current = onCloseClick;
 
-  const prevShowRef = useRef(false);
+    const prevShowRef = useRef(false);
 
-  useEffect(() => {
-    const risingEdge = Boolean(show) && !prevShowRef.current;
-    prevShowRef.current = Boolean(show);
+    useEffect(() => {
+        const risingEdge = Boolean(show) && !prevShowRef.current;
+        prevShowRef.current = Boolean(show);
 
-    if (!risingEdge) {
-      return;
-    }
+        if (!risingEdge) {
+            return;
+        }
 
-    let cancelled = false;
+        let cancelled = false;
 
-    void confirmDeleteSwal(recordId).then((confirmed) => {
-      if (cancelled) {
-        return;
-      }
-      if (confirmed) {
-        onDeleteRef.current?.();
-      }
-      onCloseRef.current?.();
-    });
+        void confirmDeleteSwal(recordId).then((confirmed) => {
+            if (cancelled) {
+                return;
+            }
+            if (confirmed) {
+                onDeleteRef.current?.();
+            }
+            onCloseRef.current?.();
+        });
 
-    return () => {
-      cancelled = true;
-      Swal.close();
-    };
-  }, [show, recordId]);
+        return () => {
+            cancelled = true;
+            Swal.close();
+        };
+    }, [show, recordId]);
 
-  return null;
+    return null;
 };
 
 export default DeleteModal;

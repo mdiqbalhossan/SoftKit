@@ -1,10 +1,10 @@
-// 
+//
 // _dropdown.scss
-// 
+//
 
 .dropdown-toggle::after {
     display: inline-block;
-    margin-left: .255em;
+    margin-left: 0.255em;
     font-size: 15px;
     line-height: 15px;
     content: "\F0140";
@@ -14,7 +14,7 @@
 .dropdown-menu {
     box-shadow: $box-shadow-lg;
     animation-name: DropDownSlide;
-    animation-duration: .3s;
+    animation-duration: 0.3s;
     animation-fill-mode: both;
     position: absolute;
     z-index: 1000;
@@ -73,7 +73,7 @@
     &:before {
         content: "";
         position: absolute;
-        background-color: rgba($white,0.12);
+        background-color: rgba($white, 0.12);
         top: calc(#{$btn-border-width} * -1);
         bottom: calc(#{$btn-border-width} * -1);
         right: calc(#{$btn-border-width} * -1);
@@ -87,8 +87,6 @@
 .dropdown-mega {
     position: static !important;
 }
-
-
 
 // Dropdown size
 
@@ -110,10 +108,10 @@
     }
 }
 // Custom Dropdown with Tabs
-.dropdown-head{
-    .nav-tabs-custom{
+.dropdown-head {
+    .nav-tabs-custom {
         border: 0;
-        .nav-link  {
+        .nav-link {
             &::after {
                 display: none;
             }
@@ -128,14 +126,13 @@
     }
 }
 
-@each $color,
-$value in $theme-colors {
+@each $color, $value in $theme-colors {
     .dropdownmenu-#{$color} {
-      .dropdown-item{
-        &:is(:focus, :hover, .active){
-          background-color: rgba(($value), 0.07);
-          color: $value;
+        .dropdown-item {
+            &:is(:focus, :hover, .active) {
+                background-color: rgba(($value), 0.07);
+                color: $value;
+            }
         }
-      }
     }
 }

@@ -2,7 +2,6 @@
 // _form-input-spin.scss
 //
 
-
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -75,8 +74,7 @@
     }
 }
 
-@each $color,
-$value in $theme-colors {
+@each $color, $value in $theme-colors {
     .input-step {
         &.step-#{$color} {
             button {

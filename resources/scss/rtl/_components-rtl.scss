@@ -8,7 +8,7 @@ ul {
     padding-left: auto;
 }
 
-.list-unstyled{
+.list-unstyled {
     padding-right: 0;
 }
 
@@ -28,11 +28,8 @@ ul {
     @include media-breakpoint-up($breakpoint) {
         $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-        @each $prop,
-        $abbrev in (margin: m, padding: p) {
-
-            @each $size,
-            $length in $spacers {
+        @each $prop, $abbrev in (margin: m, padding: p) {
+            @each $size, $length in $spacers {
                 .#{$abbrev}e#{$infix}-#{$size} {
                     #{$prop}-left: $length !important;
                     #{$prop}-right: 0 !important;
@@ -46,8 +43,7 @@ ul {
         }
 
         // Negative margins (e.g., where `.mb-n1` is negative version of `.mb-1`)
-        @each $size,
-        $length in $spacers {
+        @each $size, $length in $spacers {
             @if $size !=0 {
                 .me#{$infix}-n#{$size} {
                     margin-right: -$length !important;
@@ -72,7 +68,7 @@ ul {
 }
 
 .me-2 {
-    margin-right: 0.5rem ;
+    margin-right: 0.5rem;
 }
 
 // badge-border
@@ -81,7 +77,6 @@ ul {
     border-right: 2px solid;
     border-left: 0;
 }
-
 
 // Responsive alignment
 
@@ -103,7 +98,6 @@ ul {
     }
 }
 
-
 // Float
 
 @each $breakpoint in map-keys($grid-breakpoints) {
@@ -124,10 +118,9 @@ ul {
     }
 }
 
-
 // alert-label-icon
 
-.alert-additional { 
+.alert-additional {
     padding: 0 !important;
 }
 
@@ -140,14 +133,11 @@ ul {
 
 // alert-label-icon
 
-
-.rounded-label .label-icon{
+.rounded-label .label-icon {
     border-radius: 30px 0px 0px 30px;
 }
 
-
 @each $color, $value in $theme-colors {
-
     .label-arrow {
         &.alert-#{$color} {
             .label-icon {
@@ -173,14 +163,12 @@ ul {
         }
     }
 
-
-
-  // alert border left
-  .alert-border-left {
-    &.alert-#{$color} {
-        border-right-color: $value;
+    // alert border left
+    .alert-border-left {
+        &.alert-#{$color} {
+            border-right-color: $value;
+        }
     }
-}
 }
 
 .alert-label-icon {
@@ -205,18 +193,15 @@ ul {
     }
 }
 
-
-
-
 .alert-dismissible {
     padding-left: $alert-dismissible-padding-r;
     padding-right: $alert-padding-x;
     // Adjust close link position
     .btn-close {
-      left: 0;
-      right: auto;
+        left: 0;
+        right: auto;
     }
-  }
+}
 
 // border
 
@@ -225,12 +210,13 @@ ul {
     border-left: 1px dashed $border-color !important;
 }
 
-.border-end-dashed{
+.border-end-dashed {
     border-left-style: dashed !important;
 }
 
-.border-end{
-    border-left: var(--vz-border-width) var(--vz-border-style) var(--vz-border-color) ;
+.border-end {
+    border-left: var(--vz-border-width) var(--vz-border-style)
+        var(--vz-border-color);
     border-right: transparent !important;
 }
 
@@ -241,11 +227,10 @@ ul {
     margin-right: 0;
 }
 
-
 // Breadcrumb
 .breadcrumb-item {
     // The separator between breadcrumbs (by default, a forward-slash: "/")
-    +.breadcrumb-item {
+    + .breadcrumb-item {
         padding-right: $breadcrumb-item-padding-x;
         padding-left: 0px;
 
@@ -253,13 +238,21 @@ ul {
             float: right; // Suppress inline spacings and underlining of the separator
             padding-left: $breadcrumb-item-padding-x;
             padding-right: 0px;
-            content: var(--#{$variable-prefix}breadcrumb-divider, escape-svg($breadcrumb-divider)) #{"/* rtl:"} var(--#{$variable-prefix}breadcrumb-divider, escape-svg($breadcrumb-divider-flipped)) #{"*/"};
+            content: var(
+                    --#{$variable-prefix}breadcrumb-divider,
+                    escape-svg($breadcrumb-divider)
+                )
+                #{"/* rtl:"}
+                var(
+                    --#{$variable-prefix}breadcrumb-divider,
+                    escape-svg($breadcrumb-divider-flipped)
+                )
+                #{"*/"};
         }
     }
 }
 
-
-//Buttons 
+//Buttons
 
 // Switch - Right
 
@@ -279,7 +272,6 @@ ul {
 .form-switch .form-check-input:checked {
     background-position: left center !important;
 }
-
 
 //button with icon
 .btn-label {
@@ -319,34 +311,31 @@ ul {
 
 // Floating Labels
 
-.form-floating>label{
+.form-floating > label {
     left: auto;
     right: 0;
     transform-origin: 100% 0;
 }
 
-
-.form-floating>.form-control-plaintext~label, 
-.form-floating>.form-control:focus~label, 
-.form-floating>.form-control:not(:placeholder-shown)~label, 
-.form-floating>.form-select~label{
-    transform: scale(.85) translateY(-.5rem) translateX(-.15rem);
+.form-floating > .form-control-plaintext ~ label,
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+    transform: scale(0.85) translateY(-0.5rem) translateX(-0.15rem);
 }
-
 
 // switch
 
-.form-switch-md{
+.form-switch-md {
     padding-right: 2.5rem;
 }
 
-.was-validated .form-control:invalid, .form-control.is-invalid {
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
     padding-left: calc(1.5em + 1rem);
     background-position: left calc(0.375em + 0.25rem) center;
     padding-right: 0.9rem;
 }
-
-
 
 .form-switch-md {
     .form-check-input {
@@ -366,17 +355,15 @@ ul {
     padding-right: 2.5em !important;
 }
 
-.form-switch .form-check-input{
+.form-switch .form-check-input {
     margin-right: -2.5em;
 }
 
-
-
-.form-switch .form-check-input{
+.form-switch .form-check-input {
     background-position: right center;
 }
 
-.form-select{
+.form-select {
     background-position: left 0.9rem center;
     padding: 0.5rem 0.9rem 0.5rem 2.7rem;
 }
@@ -401,7 +388,7 @@ ul {
         padding-right: 1rem;
     }
     .form-check-input {
-        &:checked+.form-check-label {
+        &:checked + .form-check-label {
             &:before {
                 left: 6px;
                 right: auto;
@@ -409,7 +396,6 @@ ul {
         }
     }
 }
-
 
 .list-inline-item:not(:last-child) {
     margin-left: 0.5rem;
@@ -421,14 +407,15 @@ ul {
     margin-left: auto;
 }
 
-.btn-group > .btn:nth-child(n + 3), .btn-group > :not(.btn-check) + .btn{
+.btn-group > .btn:nth-child(n + 3),
+.btn-group > :not(.btn-check) + .btn {
     border-top-right-radius: 0 !important;
-    border-bottom-right-radius: 0 !important; 
+    border-bottom-right-radius: 0 !important;
     border-top-left-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem; 
+    border-bottom-left-radius: 0.25rem;
 }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle){
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-top-right-radius: 0.25rem;
@@ -449,24 +436,22 @@ ul {
 //     margin-right: -1px;
 // }
 
-
 // .btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
 //     border-radius: 0px;
 //     border-top-right-radius: $btn-border-radius;
 //     border-bottom-right-radius: $btn-border-radius;
 // }
 
-
 // Dropdown
 
 .dropdown-toggle::after {
-    margin-right: .255em;
+    margin-right: 0.255em;
     margin-left: auto;
 }
 
 // Nav
 
-.nav{
+.nav {
     padding-right: 0;
 }
 
@@ -514,23 +499,22 @@ ul {
     }
 }
 
-// Accordion 
+// Accordion
 
 // rtl
 
 .custom-accordionwithicon {
-    .accordion-button::after{
+    .accordion-button::after {
         transform: rotate(180deg);
     }
 }
-
 
 .accordion-button::after {
     margin-right: auto;
     margin-left: 0px;
 }
 
-.accordion-button{
+.accordion-button {
     text-align: right;
 }
 
@@ -550,7 +534,7 @@ ul {
 
 //modal
 .modal-header .btn-close {
-    margin: -.625rem auto -.625rem -.625rem
+    margin: -0.625rem auto -0.625rem -0.625rem;
 }
 
 //Offcanvas
@@ -561,15 +545,15 @@ ul {
         right: 0;
         left: 0px;
         border-left: 1px solid var(--vz-border-color);
-        transform: translateX(100%)
+        transform: translateX(100%);
     }
-    
+
     &.offcanvas-end {
         top: 0;
         left: 0;
         right: auto !important;
         border-right: 1px solid var(--vz-border-color);
-        transform: translateX(-100%)
+        transform: translateX(-100%);
     }
 }
 
@@ -583,7 +567,6 @@ ul {
         }
     }
 }
-
 
 @mixin progress-variant($bg) {
     .progress-bar {
@@ -601,17 +584,15 @@ ul {
     }
 }
 
-@each $color,
-$value in $theme-colors {
+@each $color, $value in $theme-colors {
     .progress-#{$color} {
         @include progress-variant($value);
     }
 }
 
-
 .toast-header {
     .btn-close {
-        margin-left: $toast-padding-x * -.5;
+        margin-left: $toast-padding-x * -0.5;
         margin-right: $toast-padding-x;
     }
 }
@@ -634,27 +615,27 @@ $value in $theme-colors {
     padding-right: 0px;
 }
 
-.list-group-horizontal-md>.list-group-item:first-child {
+.list-group-horizontal-md > .list-group-item:first-child {
     border-bottom-right-radius: $border-radius;
     border-top-right-radius: $border-radius;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
 
-.list-group-horizontal-md>.list-group-item:last-child {
+.list-group-horizontal-md > .list-group-item:last-child {
     border-top-left-radius: $border-radius;
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
 }
 
-.list-group-horizontal-md>.list-group-item+.list-group-item {
+.list-group-horizontal-md > .list-group-item + .list-group-item {
     border-top-width: 1px;
     border-right-width: 0;
     border-left-width: 1px;
 }
 
-.list-group-horizontal-md>.list-group-item+.list-group-item.active {
+.list-group-horizontal-md > .list-group-item + .list-group-item.active {
     margin-right: -1px;
     border-right-width: 1px;
 }
@@ -689,7 +670,6 @@ $value in $theme-colors {
                 right: auto;
             }
         }
-
     }
 
     // ribbon circle
@@ -764,11 +744,9 @@ $value in $theme-colors {
                 }
             }
         }
-
     }
 
-    @each $color,
-    $value in $theme-colors {
+    @each $color, $value in $theme-colors {
         .ribbon-#{$color} {
             &.ribbon-shape {
                 &::before {
@@ -800,14 +778,12 @@ $value in $theme-colors {
         }
     }
 
-
     // Icon ribbon
 
     .icon-ribbon {
         right: 24px;
         left: auto;
     }
-
 
     /* Ribbon two */
     .ribbon-two {
@@ -836,10 +812,8 @@ $value in $theme-colors {
         }
     }
 
-    @each $color,
-    $value in $theme-colors {
+    @each $color, $value in $theme-colors {
         .ribbon-two-#{$color} {
-
             span {
                 &:before {
                     border-right: 3px solid darken(($value), 15%);
@@ -851,7 +825,6 @@ $value in $theme-colors {
             }
         }
     }
-
 }
 
 .ribbon-box {
@@ -900,10 +873,9 @@ $value in $theme-colors {
     }
 }
 
-
 .form-icon {
     .form-control-icon {
-        padding-right: $input-padding-x*3;
+        padding-right: $input-padding-x * 3;
         padding-left: $input-padding-x;
     }
 
@@ -914,7 +886,7 @@ $value in $theme-colors {
 
     &.right {
         .form-control-icon {
-            padding-left: $input-padding-x*3;
+            padding-left: $input-padding-x * 3;
             padding-right: $input-padding-x;
         }
 
@@ -925,15 +897,18 @@ $value in $theme-colors {
     }
 }
 
-
-.input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+.input-group:not(.has-validation)
+    > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: $border-radius;
     border-top-right-radius: $border-radius;
 }
 
-.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+.input-group
+    > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(
+        .valid-feedback
+    ):not(.invalid-tooltip):not(.invalid-feedback) {
     margin-right: -1px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -941,18 +916,19 @@ $value in $theme-colors {
     border-top-left-radius: $border-radius;
 }
 
-.input-group.has-validation>:nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu) {
+.input-group.has-validation
+    > :nth-last-child(n + 3):not(.dropdown-toggle):not(.dropdown-menu) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: $border-radius;
     border-top-right-radius: $border-radius;
 }
 
-.dropdown-menu{
+.dropdown-menu {
     text-align: right;
 }
 
-code[class*="language-"], pre[class*="language-"]{
+code[class*="language-"],
+pre[class*="language-"] {
     text-align: right;
 }
-

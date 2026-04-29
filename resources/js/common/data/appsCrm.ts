@@ -721,4 +721,4 @@ const deals = [
     },
 ];
 
-export {crmcontacts, companies, leads, deals};
+export { crmcontacts, companies, leads, deals };

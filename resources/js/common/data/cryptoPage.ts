@@ -41,7 +41,6 @@ import dashCoin from "../../../images/svg/crypto-icons/dash.svg";
 import neoCoin from "../../../images/svg/crypto-icons/neo.svg";
 import enzymeCoin from "../../../images/svg/crypto-icons/mln.svg";
 
-
 const transactions = [
     {
         icon: "ri-arrow-right-up-fill",
@@ -58,7 +57,7 @@ const transactions = [
         amount: "-142.35 BTC",
         amount1: "$697.88k",
         status: "Processing",
-        category:"BTC"
+        category: "BTC",
     },
     {
         icon: "ri-arrow-left-down-fill",
@@ -75,7 +74,7 @@ const transactions = [
         amount: "+342.35 ETH",
         amount1: "$14565.35",
         status: "Success",
-        category:"ETH"
+        category: "ETH",
     },
     {
         icon: "ri-arrow-left-down-fill",
@@ -92,7 +91,7 @@ const transactions = [
         amount: "+174.23 EUR",
         amount1: "$354.14",
         status: "Failed",
-        category:"EUR"
+        category: "EUR",
     },
     {
         icon: "ri-arrow-right-up-fill",
@@ -109,7 +108,7 @@ const transactions = [
         amount: "-365.00 GBP",
         amount1: "$7532.21",
         status: "Success",
-        category:"GBP"
+        category: "GBP",
     },
     {
         icon: "ri-arrow-left-down-fill",
@@ -126,7 +125,7 @@ const transactions = [
         amount: "+341.74 JPY",
         amount1: "$748.10",
         status: "Processing",
-        category:"JPY"
+        category: "JPY",
     },
     {
         icon: "ri-arrow-right-up-fill",
@@ -143,7 +142,7 @@ const transactions = [
         amount: "-240.74 XRP",
         amount1: "$3254.20",
         status: "Failed",
-        category:"BTC"
+        category: "BTC",
     },
     {
         icon: "ri-arrow-left-down-fill",
@@ -160,7 +159,7 @@ const transactions = [
         amount: "+298.72 LTC",
         amount1: "$149.32",
         status: "Success",
-        category:"ETH"
+        category: "ETH",
     },
     {
         icon: "ri-arrow-right-up-fill",
@@ -177,7 +176,7 @@ const transactions = [
         amount: "-365.13 XMR",
         amount1: "$754.91",
         status: "Failed",
-        category:"EUR"
+        category: "EUR",
     },
     {
         icon: "ri-arrow-left-down-fill",
@@ -194,7 +193,7 @@ const transactions = [
         amount: "+174.09 XPM",
         amount1: "$657.28",
         status: "Processing",
-        category:"JPY"
+        category: "JPY",
     },
     {
         icon: "ri-arrow-left-down-fill",
@@ -211,7 +210,7 @@ const transactions = [
         amount: "-142.35 PPT",
         amount1: "$398.35",
         status: "Success",
-        category:"USD"
+        category: "USD",
     },
 ];
 
@@ -586,10 +585,12 @@ const watchlist = [
         percentageClass: "success",
         coinNameAbbr: "BTC",
         chartsColor: "#0ab39c",
-        series: [{
-            name: "Bitcoin",
-            data: [85, 68, 35, 90, 8, 11, 26, 54]
-        }],
+        series: [
+            {
+                name: "Bitcoin",
+                data: [85, 68, 35, 90, 8, 11, 26, 54],
+            },
+        ],
     },
     {
         id: 2,
@@ -598,12 +599,14 @@ const watchlist = [
         price: "$65.64",
         percentage: "-3.42%",
         percentageClass: "danger",
-        coinNameAbbr: "LTC", 
+        coinNameAbbr: "LTC",
         chartsColor: "#f06548",
-        series: [{
-            name: "Litecoin",
-            data: [25, 50, 41, 87, 12, 36, 9, 54]
-        }]
+        series: [
+            {
+                name: "Litecoin",
+                data: [25, 50, 41, 87, 12, 36, 9, 54],
+            },
+        ],
     },
     {
         id: 3,
@@ -612,12 +615,14 @@ const watchlist = [
         price: "$3,748.66",
         percentage: "+0.42%",
         percentageClass: "danger",
-        coinNameAbbr: "ETH",   
+        coinNameAbbr: "ETH",
         chartsColor: "#f06548",
-        series: [{
-            name: "Ethereum",
-            data: [36, 21, 65, 22, 35, 50, 29, 44]
-        }],
+        series: [
+            {
+                name: "Ethereum",
+                data: [36, 21, 65, 22, 35, 50, 29, 44],
+            },
+        ],
     },
     {
         id: 4,
@@ -628,10 +633,12 @@ const watchlist = [
         percentageClass: "danger",
         coinNameAbbr: "XMR",
         chartsColor: "#f06548",
-        series: [{
-            name: "Binance",
-            data: [30, 58, 29, 89, 12, 36, 9, 54]
-        }],
+        series: [
+            {
+                name: "Binance",
+                data: [30, 58, 29, 89, 12, 36, 9, 54],
+            },
+        ],
     },
     {
         id: 5,
@@ -642,10 +649,12 @@ const watchlist = [
         percentageClass: "success",
         coinNameAbbr: "DASH",
         chartsColor: "#0ab39c",
-        series: [{
-            name: "Dash",
-            data: [24, 68, 39, 86, 29, 42, 11, 58]
-        }],
+        series: [
+            {
+                name: "Dash",
+                data: [24, 68, 39, 86, 29, 42, 11, 58],
+            },
+        ],
     },
     {
         id: 6,
@@ -656,10 +665,12 @@ const watchlist = [
         percentageClass: "success",
         coinNameAbbr: "MKR",
         chartsColor: "#0ab39c",
-        series: [{
-            name: "Dash",
-            data: [13, 76, 12, 85, 25, 60, 9, 54]
-        }],
+        series: [
+            {
+                name: "Dash",
+                data: [13, 76, 12, 85, 25, 60, 9, 54],
+            },
+        ],
     },
     {
         id: 7,
@@ -670,10 +681,12 @@ const watchlist = [
         percentageClass: "success",
         coinNameAbbr: "NEO",
         chartsColor: "#0ab39c",
-        series: [{
-            name: "Neo",
-            data: [9, 66, 41, 89, 12, 36, 25, 54]
-        }],
+        series: [
+            {
+                name: "Neo",
+                data: [9, 66, 41, 89, 12, 36, 25, 54],
+            },
+        ],
     },
 ];
 
@@ -887,7 +900,8 @@ const icoWidgetsList = [
     },
     {
         id: 2,
-        title: "Ended ICOs", titleClass: "danger",
+        title: "Ended ICOs",
+        titleClass: "danger",
         subItem: [
             {
                 id: 2,
@@ -926,7 +940,8 @@ const icoWidgetsList = [
     },
     {
         id: 3,
-        title: "Upcoming ICOs", titleClass: "primary",
+        title: "Upcoming ICOs",
+        titleClass: "primary",
         subItem: [
             {
                 id: 2,
@@ -952,7 +967,8 @@ const icoWidgetsList = [
     },
     {
         id: 4,
-        title: "Trading ICOs", titleClass: "info",
+        title: "Trading ICOs",
+        titleClass: "info",
         subItem: [
             {
                 id: 2,
@@ -1006,11 +1022,13 @@ const icoWidgetsList = [
     },
 ];
 
-export { transactions, buysellWidgets, market, CryptoOrders, watchlist, marketStatus, CryptoicoWidgets, icoWidgetsList };
-
-
-
-
-
-
-
+export {
+    transactions,
+    buysellWidgets,
+    market,
+    CryptoOrders,
+    watchlist,
+    marketStatus,
+    CryptoicoWidgets,
+    icoWidgetsList,
+};

@@ -75,7 +75,10 @@ const allTask = [
         task: "Error message when placing an orders?",
         creater: "Robert McMahon",
         // subItem: [avatar3, avatar1],
-        subItem: [{ id: 1, img: avatar3 }, { id: 2, img: avatar1 }],
+        subItem: [
+            { id: 1, img: avatar3 },
+            { id: 2, img: avatar1 },
+        ],
         dueDate: "25 Jan, 2022",
         status: "Inprogress",
         statusClass: "secondary",
@@ -89,7 +92,11 @@ const allTask = [
         task: "Profile Page Satructure",
         creater: "Mary Cousar",
         // subItem: [avatar10, avatar9, avatar5],
-        subItem: [{ id: 1, img: avatar10 }, { id: 2, img: avatar9 }, { id: 3, img: avatar5 }],
+        subItem: [
+            { id: 1, img: avatar10 },
+            { id: 2, img: avatar9 },
+            { id: 3, img: avatar5 },
+        ],
         dueDate: "20 Dec, 2021",
         status: "New",
         statusClass: "info",
@@ -103,7 +110,12 @@ const allTask = [
         task: "Apologize for shopping Error!",
         creater: "Nathan Cole",
         // subItem: [avatar5, avatar6, avatar7, avatar8],
-        subItem: [{ id: 1, img: avatar5 }, { id: 2, img: avatar6 }, { id: 3, img: avatar7 }, { id: 4, img: avatar8 }],
+        subItem: [
+            { id: 1, img: avatar5 },
+            { id: 2, img: avatar6 },
+            { id: 3, img: avatar7 },
+            { id: 4, img: avatar8 },
+        ],
         dueDate: "23 Oct, 2021",
         status: "Completed",
         statusClass: "success",
@@ -131,7 +143,11 @@ const allTask = [
         task: "Make a creating an account profile",
         creater: "Henry Baird",
         // subItem: [avatar3, avatar10, avatar9],
-        subItem: [{ id: 1, img: avatar3 }, { id: 2, img: avatar10 }, { id: 3, img: avatar9 }],
+        subItem: [
+            { id: 1, img: avatar3 },
+            { id: 2, img: avatar10 },
+            { id: 3, img: avatar9 },
+        ],
         dueDate: "17 Oct, 2021",
         status: "Inprogress",
         statusClass: "secondary",
@@ -145,7 +161,10 @@ const allTask = [
         task: "Change email option process",
         creater: "Tonya Noble",
         // subItem: [avatar6, avatar7],
-        subItem: [{ id: 1, img: avatar6 }, { id: 2, img: avatar7 }],
+        subItem: [
+            { id: 1, img: avatar6 },
+            { id: 2, img: avatar7 },
+        ],
         dueDate: "04 Dec, 2021",
         status: "Completed",
         statusClass: "success",
@@ -159,7 +178,12 @@ const allTask = [
         task: "User research",
         creater: "Donald Palmer",
         // subItem: [avatar10, avatar9, avatar8, avatar1],
-        subItem: [{ id: 1, img: avatar10 }, { id: 2, img: avatar9 }, { id: 3, img: avatar8 }, { id: 4, img: avatar1 }],
+        subItem: [
+            { id: 1, img: avatar10 },
+            { id: 2, img: avatar9 },
+            { id: 3, img: avatar8 },
+            { id: 4, img: avatar1 },
+        ],
         dueDate: "11 Oct, 2021",
         status: "New",
         statusClass: "info",
@@ -173,7 +197,10 @@ const allTask = [
         task: "Benner design for FB & Twitter",
         creater: "Carter",
         // subItem: [avatar5, avatar4],
-        subItem: [{ id: 1, img: avatar5 }, { id: 2, img: avatar4 }],
+        subItem: [
+            { id: 1, img: avatar5 },
+            { id: 2, img: avatar4 },
+        ],
         dueDate: "16 Dec, 2021",
         status: "Pending",
         statusClass: "warning",
@@ -187,7 +214,11 @@ const allTask = [
         task: "Brand logo design",
         creater: "David Nichols",
         // subItem: [avatar6, avatar7, avatar8],
-        subItem: [{ id: 1, img: avatar6 }, { id: 2, img: avatar7 }, { id: 3, img: avatar8 }],
+        subItem: [
+            { id: 1, img: avatar6 },
+            { id: 2, img: avatar7 },
+            { id: 3, img: avatar8 },
+        ],
         dueDate: "29 Dec, 2021",
         status: "Pending",
         statusClass: "warning",
@@ -215,7 +246,10 @@ const allTask = [
         task: "Edit customer testimonial",
         creater: "Nathan Cole",
         // subItem: [avatar7, avatar8],
-        subItem: [{ id: 1, img: avatar7 }, { id: 2, img: avatar8 }],
+        subItem: [
+            { id: 1, img: avatar7 },
+            { id: 2, img: avatar8 },
+        ],
         dueDate: "02 Jan, 2021",
         status: "Inprogress",
         statusClass: "secondary",
@@ -240,9 +274,7 @@ const kanbanBoardData = [
                 date: "03 Jan, 2022",
                 progressBarColor: "danger",
                 progressBarText: "secondary",
-                tags: [
-                    { tag: "Admin" }
-                ],
+                tags: [{ tag: "Admin" }],
                 members: [
                     { id: 1, img: avatar6 },
                     { id: 2, img: avatar5 },
@@ -261,7 +293,7 @@ const kanbanBoardData = [
                 tags: [
                     { tag: "Layout" },
                     { tag: "Admin" },
-                    { tag: "Dashboard" }
+                    { tag: "Dashboard" },
                 ],
                 members: [
                     { id: 1, img: avatar7 },
@@ -271,8 +303,8 @@ const kanbanBoardData = [
                 view: "14",
                 message: "32",
                 file: "05",
-            }
-        ]
+            },
+        ],
     },
     {
         id: 2,
@@ -286,10 +318,7 @@ const kanbanBoardData = [
                 title: "Admin Layout Design",
                 desc: "Landing page template with clean, minimal and modern design.",
                 date: "07 Jan, 2022",
-                tags: [
-                    { tag: "Design" },
-                    { tag: "Website" },
-                ],
+                tags: [{ tag: "Design" }, { tag: "Website" }],
                 members: [
                     { id: 1, img: avatar10 },
                     { id: 2, img: avatar3 },
@@ -305,10 +334,7 @@ const kanbanBoardData = [
                 title: "Marketing & Sales",
                 desc: "Sales and marketing are two business functions within an organization.",
                 date: "27 Dec, 2021",
-                tags: [
-                    { tag: "Marketing" },
-                    { tag: "Business" },
-                ],
+                tags: [{ tag: "Marketing" }, { tag: "Business" }],
                 members: [
                     { id: 1, img: avatar9 },
                     { id: 2, img: avatar8 },
@@ -316,8 +342,8 @@ const kanbanBoardData = [
                 view: "24",
                 message: "10",
                 file: "10",
-            }
-        ]
+            },
+        ],
     },
     {
         id: 3,
@@ -333,11 +359,7 @@ const kanbanBoardData = [
                 progressBar: "55%",
                 date: "22 Dec, 2021",
                 progressBarColor: "warning",
-                tags: [
-                    { tag: "Logo" },
-                    { tag: "Design" },
-                    { tag: "UI/UX" },
-                ],
+                tags: [{ tag: "Logo" }, { tag: "Design" }, { tag: "UI/UX" }],
                 members: [
                     { id: 1, img: avatar5 },
                     { id: 2, img: avatar7 },
@@ -357,10 +379,7 @@ const kanbanBoardData = [
                 progressBar: "0%",
                 date: "24 Oct, 2021",
                 progressBarColor: "primary",
-                tags: [
-                    { tag: "Design" },
-                    { tag: "Website" },
-                ],
+                tags: [{ tag: "Design" }, { tag: "Website" }],
                 members: [
                     { id: 1, img: avatar10 },
                     { id: 2, img: avatar9 },
@@ -371,8 +390,8 @@ const kanbanBoardData = [
                 file: "23",
                 isTaskIdHeader: true,
                 isProgessBarFooter: true,
-            }
-        ]
+            },
+        ],
     },
     {
         id: 4,
@@ -388,12 +407,8 @@ const kanbanBoardData = [
                 progressBar: "100%",
                 date: "16 Nov, 2021",
                 progressBarColor: "success",
-                tags: [
-                    { tag: "Ecommerce" },
-                ],
-                members: [
-                    { id: 1, img: avatar1 },
-                ],
+                tags: [{ tag: "Ecommerce" }],
+                members: [{ id: 1, img: avatar1 }],
                 view: "08",
                 message: "54",
                 file: "28",
@@ -409,10 +424,7 @@ const kanbanBoardData = [
                 progressBar: "67%",
                 date: "05 Jan, 2022",
                 progressBarColor: "warning",
-                tags: [
-                    { tag: "Product" },
-                    { tag: "Analysis" },
-                ],
+                tags: [{ tag: "Product" }, { tag: "Analysis" }],
                 members: [
                     { id: 1, img: avatar5 },
                     { id: 2, img: avatar6 },
@@ -447,8 +459,8 @@ const kanbanBoardData = [
                 file: "37",
                 isTaskIdHeader: true,
                 isProgessBarFooter: true,
-            }
-        ]
+            },
+        ],
     },
     {
         id: 5,
@@ -465,10 +477,7 @@ const kanbanBoardData = [
                 date: "3 Day",
                 progressBarColor: "danger",
                 progressBarText: "info",
-                tags: [
-                    { tag: "Design" },
-                    { tag: "Website" },
-                ],
+                tags: [{ tag: "Design" }, { tag: "Website" }],
                 members: [
                     { id: 1, img: avatar8 },
                     { id: 2, img: avatar7 },
@@ -478,8 +487,8 @@ const kanbanBoardData = [
                 message: "10",
                 file: "10",
                 isTaskId: true,
-            }
-        ]
+            },
+        ],
     },
     {
         id: 6,
@@ -495,10 +504,7 @@ const kanbanBoardData = [
                 progressBar: "55%",
                 date: "07 Jan, 2022",
                 progressBarColor: "warning",
-                tags: [
-                    { tag: "UI/UX" },
-                    { tag: "Graphic" },
-                ],
+                tags: [{ tag: "UI/UX" }, { tag: "Graphic" }],
                 members: [
                     { id: 1, img: avatar3 },
                     { id: 2, img: avatar2 },
@@ -509,8 +515,8 @@ const kanbanBoardData = [
                 bgImage: bgImage2,
                 isTaskIdHeader: true,
                 isProgessBarFooter: true,
-            }
-        ]
+            },
+        ],
     },
 ];
 

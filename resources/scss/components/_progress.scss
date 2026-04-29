@@ -1,6 +1,6 @@
-// 
+//
 // _progress.scss
-// 
+//
 
 // Progress height small
 .progress-sm {
@@ -69,7 +69,6 @@
             right: 2px;
             top: 50%;
             transform: translateY(-50%);
-
         }
     }
 }
@@ -106,14 +105,13 @@
     }
 }
 
-
 .progress-step-arrow {
     height: 3.25rem;
 
     .progress-bar {
         position: relative;
         overflow: initial;
-        font-size: .875rem;
+        font-size: 0.875rem;
         color: $white;
         &::after {
             content: "";
@@ -126,17 +124,16 @@
     }
 }
 
-
 @mixin progress-variant($bg) {
     .progress-bar {
         background-color: $bg;
-        &::after { 
+        &::after {
             border-left-color: $bg;
         }
         &:nth-child(2) {
             background-color: rgba($bg, 0.1) !important;
             color: $bg !important;
-            &::after { 
+            &::after {
                 border-left-color: rgba($bg, 0.1);
             }
         }
@@ -148,4 +145,3 @@
         @include progress-variant($value);
     }
 }
-

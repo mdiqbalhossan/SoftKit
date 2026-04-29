@@ -73,7 +73,6 @@
     }
 }
 
-
 // left Icon accordion
 
 .lefticon-accordion {
@@ -122,10 +121,9 @@
     }
 }
 
-//accordion Color 
+//accordion Color
 
-@each $color,
-$value in $theme-colors {
+@each $color, $value in $theme-colors {
     .accordion-#{$color} {
         .accordion-item {
             border-color: rgba($value, 0.6);
@@ -160,9 +158,9 @@ $value in $theme-colors {
 }
 
 // rtl
-[dir="rtl"]{
+[dir="rtl"] {
     .custom-accordionwithicon {
-        .accordion-button::after{
+        .accordion-button::after {
             transform: rotate(180deg);
         }
     }

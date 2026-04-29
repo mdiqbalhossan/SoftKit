@@ -33,7 +33,7 @@ const tileBoxs1 = [
         decimals: 2,
         prefix: "$",
         suffix: "k",
-        color:"success"
+        color: "success",
     },
     {
         id: 2,
@@ -53,7 +53,7 @@ const tileBoxs1 = [
         prefix: "",
         separator: ",",
         suffix: "",
-        color:"white"
+        color: "white",
     },
     {
         id: 3,
@@ -69,7 +69,7 @@ const tileBoxs1 = [
         decimals: 2,
         prefix: "",
         suffix: "M",
-        color:"warning"
+        color: "warning",
     },
     {
         id: 4,
@@ -85,7 +85,7 @@ const tileBoxs1 = [
         prefix: "$",
         separator: ",",
         suffix: "k",
-        color:"primary"
+        color: "primary",
     },
 ];
 
@@ -153,7 +153,7 @@ const tileBoxs3 = [
         badge: "ri-arrow-up-line",
         percentage: "16.24 %",
         iconClass: "info-subtle",
-        color:"info",
+        color: "info",
         feaIcon: "users",
         subCounter: [
             {
@@ -173,7 +173,7 @@ const tileBoxs3 = [
         badge: "ri-arrow-down-line",
         percentage: "3.96 %",
         iconClass: "info-subtle",
-        color:"info",
+        color: "info",
         feaIcon: "activity",
         subCounter: [
             {
@@ -224,7 +224,7 @@ const tileBoxs3 = [
         badge: "ri-arrow-up-line",
         percentage: "7.05 %",
         iconClass: "info-subtle",
-        color:"info",
+        color: "info",
         feaIcon: "external-link",
         subCounter: [
             {
@@ -261,7 +261,7 @@ const tileBoxes4 = [
         id: 2,
         icon: "bx bxs-user-account",
         iconClass: "warning-subtle",
-        color:"warning",
+        color: "warning",
         label: "Number of Users",
         labelClass: "muted",
         counter: 7522,
@@ -297,7 +297,7 @@ const tileBoxes4 = [
         id: 4,
         icon: "bx bx-store-alt",
         iconClass: "info-subtle",
-        color:"info",
+        color: "info",
         label: "Number of Stores",
         labelClass: "muted",
         counter: 405,
@@ -318,29 +318,29 @@ const tileBoxes5 = [
         id: 1,
         img: image3,
         title: "Marketing Director",
-        class : "",
-        year: "(2-4 Yrs Exp.)"
+        class: "",
+        year: "(2-4 Yrs Exp.)",
     },
     {
         id: 2,
         img: image4,
-        class : "",
+        class: "",
         title: "Sr. Web Designer",
-        year: "(2+ Yrs Exp.)"
+        year: "(2+ Yrs Exp.)",
     },
     {
         id: 3,
         img: image6,
-        class : "bg-primary-subtle text-primary shadow-none bg-opacity-10",
+        class: "bg-primary-subtle text-primary shadow-none bg-opacity-10",
         title: "Marketing Director",
-        year: "(2+ Yrs Exp.)"
+        year: "(2+ Yrs Exp.)",
     },
     {
         id: 4,
         img: image8,
-        class : "bg-info-subtle shadow-none bg-opacity-10",
+        class: "bg-info-subtle shadow-none bg-opacity-10",
         title: "Sr. Web Designer",
-        year: "(2+ Yrs Exp.)"
+        year: "(2+ Yrs Exp.)",
     },
 ];
 
@@ -553,7 +553,6 @@ const widgetsAudiences = [
         ],
         caption: "Conversion Rate",
         percentage: "60%",
-
     },
     {
         id: 3,
@@ -587,7 +586,7 @@ const widgetsPortfolio = [
         badgeClass: "primary",
         price: "$19,405.12",
         priceClass: "success",
-        coinNameClass:"primary"
+        coinNameClass: "primary",
     },
     {
         id: 2,
@@ -598,7 +597,7 @@ const widgetsPortfolio = [
         badgeClass: "info",
         price: "$40552.18",
         priceClass: "danger",
-        coinNameClass:"info"
+        coinNameClass: "info",
     },
     {
         id: 3,
@@ -609,7 +608,7 @@ const widgetsPortfolio = [
         badgeClass: "warning",
         price: "$15824.58",
         priceClass: "success",
-        coinNameClass:"warning"
+        coinNameClass: "warning",
     },
     {
         id: 4,
@@ -620,7 +619,7 @@ const widgetsPortfolio = [
         badgeClass: "success",
         price: "$30635.84",
         priceClass: "success",
-        coinNameClass:"success"
+        coinNameClass: "success",
     },
 ];
 
@@ -634,5 +633,5 @@ export {
     widgetsTasks,
     widgetsAudiences,
     widgetsPortfolio,
-    otherWidgets2
+    otherWidgets2,
 };

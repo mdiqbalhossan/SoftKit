@@ -29,11 +29,11 @@
     margin: 0 auto;
     height: $header-height;
     padding: 0 $grid-gutter-width 0 calc(#{$grid-gutter-width} * 0.5)
-    /*rtl: 0 0 0 calc(#{$grid-gutter-width} * 0.5) */
-    ;
+        /*rtl: 0 0 0 calc(#{$grid-gutter-width} * 0.5) */;
 
     @media (max-width: 767.98px) {
-        padding: 0 calc(#{$grid-gutter-width} * 0.5) 0 calc(#{$grid-gutter-width} * 0.5);
+        padding: 0 calc(#{$grid-gutter-width} * 0.5) 0
+            calc(#{$grid-gutter-width} * 0.5);
     }
 
     .topbar-head-dropdown {
@@ -59,7 +59,10 @@
         color: var(--#{$prefix}header-item-sub-color);
         transition: all 0.5s ease;
 
-        &:hover, &:focus, &:active, &.active {
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
             background-color: var(--#{$prefix}header-item-bg);
         }
 
@@ -68,7 +71,6 @@
             width: 36px;
         }
     }
-
 
     .user-name-sub-text {
         color: var(--#{$prefix}header-item-sub-color);
@@ -351,10 +353,14 @@
         }
 
         @media (max-width: 1024.1px) {
-            padding: calc(45px + #{$grid-gutter-width} * 1.8) calc(#{$grid-gutter-width} * 0.5) $footer-height calc(#{$grid-gutter-width} * 0.5);
+            padding: calc(45px + #{$grid-gutter-width} * 1.8)
+                calc(#{$grid-gutter-width} * 0.5) $footer-height
+                calc(#{$grid-gutter-width} * 0.5);
         }
 
-        padding: calc(45px + #{$grid-gutter-width}) calc(#{$grid-gutter-width} * 0.5) $footer-height calc(#{$grid-gutter-width} * 0.5);
+        padding: calc(45px + #{$grid-gutter-width})
+            calc(#{$grid-gutter-width} * 0.5) $footer-height
+            calc(#{$grid-gutter-width} * 0.5);
     }
 
     &[data-layout-width="boxed"] {
@@ -367,7 +373,6 @@
 }
 
 [data-layout="vertical"] {
-
     &:is([data-sidebar-size="sm"], [data-sidebar-size="sm-hover"]) {
         #page-topbar {
             @media (min-width: 768px) {
@@ -388,7 +393,9 @@
 [data-layout="twocolumn"] {
     #page-topbar {
         @media (min-width: 768px) {
-            left: calc(#{$twocolumn-menu-iconview-width} + #{$twocolumn-menu-width});
+            left: calc(
+                #{$twocolumn-menu-iconview-width} + #{$twocolumn-menu-width}
+            );
         }
     }
 

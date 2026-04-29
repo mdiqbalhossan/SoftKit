@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 //import Components
-import Header from './Header';
-import Sidebar from './Sidebar';
-import Footer from './Footer';
-import RightSidebar from '../Components/Common/RightSidebar';
-import { FlashVelzonToasts } from '../Components/Common/VelzonToast';
+import Header from "./Header";
+import Sidebar from "./Sidebar";
+import Footer from "./Footer";
+import RightSidebar from "../Components/Common/RightSidebar";
+import { FlashVelzonToasts } from "../Components/Common/VelzonToast";
 import { useBootstrapTableActionTooltips } from "../hooks/useBootstrapTableActionTooltips";
 
 //import actions
@@ -20,24 +20,26 @@ import {
     changeLeftsidebarSizeType,
     changeLeftsidebarViewType,
     changeSidebarImageType,
-    changeSidebarVisibility
+    changeSidebarVisibility,
 } from "../slices/thunk";
 
 //redux
 import { useSelector, useDispatch } from "react-redux";
-import { createSelector } from 'reselect';
-import { Head, usePage } from '@inertiajs/react';
+import { createSelector } from "reselect";
+import { Head, usePage } from "@inertiajs/react";
 
-const Layout = ({children} : any) => {
+const Layout = ({ children }: any) => {
     useBootstrapTableActionTooltips();
-    const { site } = usePage().props as { site?: { favicon_url?: string | null } };
+    const { site } = usePage().props as {
+        site?: { favicon_url?: string | null };
+    };
     const [headerClass, setHeaderClass] = useState<any>("");
-    const dispatch : any = useDispatch();
+    const dispatch: any = useDispatch();
 
-    const selectLayoutState = (state : any) => state.Layout;
+    const selectLayoutState = (state: any) => state.Layout;
     const selectLayoutProperties = createSelector(
         selectLayoutState,
-        (layout:any) => ({
+        (layout: any) => ({
             layoutType: layout.layoutType,
             leftSidebarType: layout.leftSidebarType,
             layoutModeType: layout.layoutModeType,
@@ -49,7 +51,7 @@ const Layout = ({children} : any) => {
             leftSidebarImageType: layout.leftSidebarImageType,
             preloader: layout.preloader,
             sidebarVisibilitytype: layout.sidebarVisibilitytype,
-        })
+        }),
     );
     // Inside your component
     const {
@@ -62,8 +64,8 @@ const Layout = ({children} : any) => {
         leftsidbarSizeType,
         leftSidebarViewType,
         leftSidebarImageType,
-        sidebarVisibilitytype
-    }:any = useSelector(selectLayoutProperties);
+        sidebarVisibilitytype,
+    }: any = useSelector(selectLayoutProperties);
 
     /*
     layout settings
@@ -81,7 +83,7 @@ const Layout = ({children} : any) => {
             leftSidebarImageType ||
             sidebarVisibilitytype
         ) {
-            window.dispatchEvent(new Event('resize'));
+            window.dispatchEvent(new Event("resize"));
             dispatch(changeLeftsidebarViewType(leftSidebarViewType));
             dispatch(changeLeftsidebarSizeType(leftsidbarSizeType));
             dispatch(changeSidebarTheme(leftSidebarType));
@@ -93,7 +95,8 @@ const Layout = ({children} : any) => {
             dispatch(changeSidebarImageType(leftSidebarImageType));
             dispatch(changeSidebarVisibility(sidebarVisibilitytype));
         }
-    }, [layoutType,
+    }, [
+        layoutType,
         leftSidebarType,
         layoutModeType,
         layoutWidthType,
@@ -103,8 +106,9 @@ const Layout = ({children} : any) => {
         leftSidebarViewType,
         leftSidebarImageType,
         sidebarVisibilitytype,
-        dispatch]);
-    // class add remove in header 
+        dispatch,
+    ]);
+    // class add remove in header
     useEffect(() => {
         window.addEventListener("scroll", scrollNavigation, true);
     });
@@ -119,11 +123,17 @@ const Layout = ({children} : any) => {
     }
 
     useEffect(() => {
-        const humberIcon = document.querySelector(".hamburger-icon") as HTMLElement;
-        if (sidebarVisibilitytype === 'show' || layoutType === "vertical" || layoutType === "twocolumn") {
-            humberIcon.classList.remove('open');
+        const humberIcon = document.querySelector(
+            ".hamburger-icon",
+        ) as HTMLElement;
+        if (
+            sidebarVisibilitytype === "show" ||
+            layoutType === "vertical" ||
+            layoutType === "twocolumn"
+        ) {
+            humberIcon.classList.remove("open");
         } else {
-            humberIcon && humberIcon.classList.add('open');
+            humberIcon && humberIcon.classList.add("open");
         }
     }, [sidebarVisibilitytype, layoutType]);
 
@@ -138,9 +148,7 @@ const Layout = ({children} : any) => {
             </Head>
             <div id="layout-wrapper">
                 <Header headerClass={headerClass} />
-                <Sidebar
-                    layoutType={layoutType}
-                />
+                <Sidebar layoutType={layoutType} />
                 <div className="main-content">
                     {children}
                     <Footer />
@@ -149,7 +157,6 @@ const Layout = ({children} : any) => {
             <RightSidebar />
             <FlashVelzonToasts />
         </React.Fragment>
-
     );
 };
 

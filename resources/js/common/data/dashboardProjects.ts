@@ -18,7 +18,7 @@ const projectsWidgets = [
         icon: "ri-arrow-down-s-line",
         percentage: "5.02 %",
         caption: "Projects this month",
-        subCounter: [{ id: 1, counter: 825, suffix: "" }]
+        subCounter: [{ id: 1, counter: 825, suffix: "" }],
     },
     {
         id: 2,
@@ -29,7 +29,7 @@ const projectsWidgets = [
         icon: "ri-arrow-up-s-line",
         percentage: "3.58 %",
         caption: "Leads this month",
-        subCounter: [{ id: 1, counter: 7522, suffix: ""}]
+        subCounter: [{ id: 1, counter: 7522, suffix: "" }],
     },
     {
         id: 3,
@@ -40,8 +40,11 @@ const projectsWidgets = [
         icon: "ri-arrow-down-s-line",
         percentage: "10.35 %",
         caption: "Work this month",
-        subCounter: [{ id: 1, counter: 168, suffix: "h" }, { id: 1, counter: 40, suffix: "m" }]
-    }
+        subCounter: [
+            { id: 1, counter: 168, suffix: "h" },
+            { id: 1, counter: 40, suffix: "m" },
+        ],
+    },
 ];
 
 const overviewCounter = [
@@ -80,7 +83,7 @@ const overviewCounter = [
         prefix: "",
         separator: ",",
         suffix: "h",
-        counterClass: "success"
+        counterClass: "success",
     },
 ];
 
@@ -222,7 +225,7 @@ const teamMembers = [
         hours: "110",
         tasks: "258",
         series: "50",
-        chartsColor: "#F54927"
+        chartsColor: "#F54927",
     },
     {
         id: 2,
@@ -232,7 +235,7 @@ const teamMembers = [
         hours: "83",
         tasks: "105",
         series: "45",
-        chartsColor: "#F54927"
+        chartsColor: "#F54927",
     },
     {
         id: 3,
@@ -242,7 +245,7 @@ const teamMembers = [
         hours: "58",
         tasks: "75",
         series: "75",
-        chartsColor: "#F54927"
+        chartsColor: "#F54927",
     },
     {
         id: 4,
@@ -252,7 +255,7 @@ const teamMembers = [
         hours: "96",
         tasks: "85",
         series: "25",
-        chartsColor: "#f7b84b"
+        chartsColor: "#f7b84b",
     },
     {
         id: 5,
@@ -262,7 +265,7 @@ const teamMembers = [
         hours: "76",
         tasks: "69",
         series: "60",
-        chartsColor: "#F54927"
+        chartsColor: "#F54927",
     },
     {
         id: 6,
@@ -272,7 +275,7 @@ const teamMembers = [
         hours: "123",
         tasks: "658",
         series: "85",
-        chartsColor: "#0ab39c"
+        chartsColor: "#0ab39c",
     },
     {
         id: 7,
@@ -282,7 +285,7 @@ const teamMembers = [
         hours: "117",
         tasks: "125",
         series: "70",
-        chartsColor: "#F54927"
+        chartsColor: "#F54927",
     },
 ];
 
@@ -304,7 +307,8 @@ const dashboardChat = [
         id: 3,
         isLeft: true,
         img: avatar2,
-        message: "Yeah everything is fine. Our next meeting tomorrow at 10.00 AM",
+        message:
+            "Yeah everything is fine. Our next meeting tomorrow at 10.00 AM",
         time: "09:10 am",
     },
     {
@@ -322,71 +326,112 @@ const dashboardChat = [
     },
 ];
 
+const allProjectData: any = [
+    {
+        name: "Number of Projects",
+        type: "bar",
+        data: [34, 65, 46, 68, 49, 61, 42, 44, 78, 52, 63, 67],
+    },
+    {
+        name: "Revenue",
+        type: "area",
+        data: [
+            89.25, 98.58, 68.74, 108.87, 77.54, 84.03, 51.24, 28.57, 92.57,
+            42.36, 88.51, 36.57,
+        ],
+    },
+    {
+        name: "Active Projects",
+        type: "bar",
+        data: [8, 12, 7, 17, 21, 11, 5, 9, 7, 29, 12, 35],
+    },
+];
 
-const allProjectData :any= [{
-    name: 'Number of Projects',
-    type: 'bar',
-    data: [34, 65, 46, 68, 49, 61, 42, 44, 78, 52, 63, 67]
-}, {
-    name: 'Revenue',
-    type: 'area',
-    data: [89.25, 98.58, 68.74, 108.87, 77.54, 84.03, 51.24, 28.57, 92.57, 42.36, 88.51, 36.57]
-}, {
-    name: 'Active Projects',
-    type: 'bar',
-    data: [8, 12, 7, 17, 21, 11, 5, 9, 7, 29, 12, 35]
-}];
+const monthProjectData: any = [
+    {
+        name: "Number of Projects",
+        type: "bar",
+        data: [14, 45, 56, 78, 79, 81, 62, 44, 88, 52, 63, 87],
+    },
+    {
+        name: "Revenue",
+        type: "area",
+        data: [
+            119.25, 128.58, 148.74, 148.87, 17.54, 154.03, 71.24, 78.57, 92.57,
+            42.36, 88.51, 76.57,
+        ],
+    },
+    {
+        name: "Active Projects",
+        type: "bar",
+        data: [18, 22, 17, 47, 71, 31, 5, 9, 7, 29, 22, 75],
+    },
+];
 
-const monthProjectData :any= [{
-    name: 'Number of Projects',
-    type: 'bar',
-    data: [14, 45, 56, 78, 79, 81, 62, 44, 88, 52, 63, 87]
-}, {
-    name: 'Revenue',
-    type: 'area',
-    data: [119.25, 128.58, 148.74, 148.87, 17.54, 154.03, 71.24, 78.57, 92.57, 42.36, 88.51, 76.57]
-}, {
-    name: 'Active Projects',
-    type: 'bar',
-    data: [18, 22, 17, 47, 71, 31, 5, 9, 7, 29, 22, 75]
-}];
+const halfyearProjectData: any = [
+    {
+        name: "Number of Projects",
+        type: "bar",
+        data: [34, 75, 66, 78, 29, 41, 32, 44, 58, 22, 43, 77],
+    },
+    {
+        name: "Revenue",
+        type: "area",
+        data: [
+            109.25, 48.58, 38.74, 78.87, 57.54, 44.03, 21.24, 18.57, 92.57,
+            42.36, 48.51, 56.57,
+        ],
+    },
+    {
+        name: "Active Projects",
+        type: "bar",
+        data: [38, 22, 27, 47, 61, 41, 15, 89, 27, 49, 32, 75],
+    },
+];
 
-const halfyearProjectData :any= [{
-    name: 'Number of Projects',
-    type: 'bar',
-    data: [34, 75, 66, 78, 29, 41, 32, 44, 58, 22, 43, 77]
-}, {
-    name: 'Revenue',
-    type: 'area',
-    data: [109.25, 48.58, 38.74, 78.87, 57.54, 44.03, 21.24, 18.57, 92.57, 42.36, 48.51, 56.57]
-}, {
-    name: 'Active Projects',
-    type: 'bar',
-    data: [38, 22, 27, 47, 61, 41, 15, 89, 27, 49, 32, 75]
-}];
-
-const yearProjectData :any= [{
-    name: 'Number of Projects',
-    type: 'bar',
-    data: [14, 45, 16, 38, 29, 21, 12, 14, 58, 22, 23, 47]
-}, {
-    name: 'Revenue',
-    type: 'area',
-    data: [59.25, 68.58, 48.74, 78.87, 57.54, 64.03, 21.24, 18.57, 52.57, 22.36, 68.51, 16.57]
-}, {
-    name: 'Active Projects',
-    type: 'bar',
-    data: [38, 32, 27, 37, 41, 51, 35, 29, 17, 59, 32, 45]
-}];
+const yearProjectData: any = [
+    {
+        name: "Number of Projects",
+        type: "bar",
+        data: [14, 45, 16, 38, 29, 21, 12, 14, 58, 22, 23, 47],
+    },
+    {
+        name: "Revenue",
+        type: "area",
+        data: [
+            59.25, 68.58, 48.74, 78.87, 57.54, 64.03, 21.24, 18.57, 52.57,
+            22.36, 68.51, 16.57,
+        ],
+    },
+    {
+        name: "Active Projects",
+        type: "bar",
+        data: [38, 32, 27, 37, 41, 51, 35, 29, 17, 59, 32, 45],
+    },
+];
 
 // Project Status
-const allTimeData :any= [225, 152, 178, 189];
+const allTimeData: any = [225, 152, 178, 189];
 
-const lastWeekData :any= [145, 62, 68, 79];
+const lastWeekData: any = [145, 62, 68, 79];
 
-const lastMonthData :any= [155, 82, 78, 99];
+const lastMonthData: any = [155, 82, 78, 99];
 
-const lastquarterData :any= [185, 142, 158, 149];
+const lastquarterData: any = [185, 142, 158, 149];
 
-
-export { projectsWidgets, overviewCounter, activeProjects, projectTasks, teamMembers, allProjectData, monthProjectData, halfyearProjectData, yearProjectData, allTimeData, lastWeekData, lastMonthData, lastquarterData, dashboardChat };
+export {
+    projectsWidgets,
+    overviewCounter,
+    activeProjects,
+    projectTasks,
+    teamMembers,
+    allProjectData,
+    monthProjectData,
+    halfyearProjectData,
+    yearProjectData,
+    allTimeData,
+    lastWeekData,
+    lastMonthData,
+    lastquarterData,
+    dashboardChat,
+};

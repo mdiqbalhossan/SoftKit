@@ -3,7 +3,6 @@
 //
 
 .card {
-
     &::before,
     &::after {
         content: "";
@@ -14,29 +13,28 @@
     }
 
     &::before {
-        border-color: var(--#{$prefix}border-color) var(--#{$prefix}border-color) transparent transparent;
+        border-color: var(--#{$prefix}border-color)
+            var(--#{$prefix}border-color) transparent transparent;
         right: -3px;
         top: -3px;
         border-radius: 0 3px 0 0;
     }
 
     &::after {
-        border-color: transparent transparent var(--#{$prefix}border-color) var(--#{$prefix}border-color);
+        border-color: transparent transparent var(--#{$prefix}border-color)
+            var(--#{$prefix}border-color);
         left: -3px;
         bottom: -3px;
         border-radius: 0 0 0 3px;
     }
 
     &.card-border-effect-none {
-
         &::before,
         &::after {
             display: none;
         }
     }
 }
-
-
 
 body {
     background-image: var(--#{$prefix}body-bg-image);
@@ -47,7 +45,7 @@ body {
         position: absolute;
         inset: 0;
         z-index: -1;
-        background-color: rgba($white, 0.30);
+        background-color: rgba($white, 0.3);
     }
 }
 
@@ -59,7 +57,11 @@ body {
     }
 }
 
-[data-layout="vertical"][data-sidebar-size="sm"] .navbar-menu .navbar-nav .nav-item:hover>.menu-dropdown {
+[data-layout="vertical"][data-sidebar-size="sm"]
+    .navbar-menu
+    .navbar-nav
+    .nav-item:hover
+    > .menu-dropdown {
     background-color: $white;
 }
 
@@ -105,7 +107,6 @@ body {
 }
 
 @media (min-width: 1350px) {
-
     .file-manager-sidebar,
     .email-detail-content,
     .file-manager-detail-content {
@@ -135,22 +136,24 @@ body {
     }
 
     &[data-layout="vertical"][data-sidebar="dark"][data-sidebar-size="sm"] {
-        .navbar-menu .navbar-nav .nav-item:hover>.menu-dropdown {
+        .navbar-menu .navbar-nav .nav-item:hover > .menu-dropdown {
             background-color: var(--#{$prefix}secondary-bg);
         }
     }
 
     &[data-layout="vertical"][data-sidebar-size="sm"] {
-        .navbar-menu .navbar-nav .nav-item:hover>a.menu-link {
+        .navbar-menu .navbar-nav .nav-item:hover > a.menu-link {
             background-color: var(--#{$prefix}secondary-bg);
         }
     }
 }
 
-[data-layout="horizontal"] .navbar-nav .nav-item .nav-link[data-bs-toggle=collapse]:after {
+[data-layout="horizontal"]
+    .navbar-nav
+    .nav-item
+    .nav-link[data-bs-toggle="collapse"]:after {
     color: currentColor;
 }
-
 
 @media (max-width: 767.98px) {
     [data-topbar="light"] {
@@ -184,7 +187,6 @@ body {
         }
     }
 }
-
 
 //theme dark
 @if $enable-dark-mode {

@@ -22,14 +22,15 @@ const mailbox = [
         type: "primary",
         category: "all",
         label: "theme",
-        img: avatar6
+        img: avatar6,
     },
     {
         id: 2,
         forId: "flexCheck17",
         name: "Susanna",
         number: "",
-        subject: "Since you asked... and i'm inconceivably bored at the train station",
+        subject:
+            "Since you asked... and i'm inconceivably bored at the train station",
         badge: "Freelance",
         badgeClass: "",
         teaser: "Alright thanks. I'll have to re-book that somehow, i'll get back to you.",
@@ -37,7 +38,7 @@ const mailbox = [
         type: "primary",
         category: "all",
         label: "friend",
-        img: avatar2
+        img: avatar2,
     },
     {
         id: 3,
@@ -51,7 +52,7 @@ const mailbox = [
         type: "primary",
         category: "all",
         label: "theme",
-        img: avatar3
+        img: avatar3,
     },
     {
         id: 4,
@@ -66,7 +67,7 @@ const mailbox = [
         type: "primary",
         category: "all",
         label: "theme",
-        img: avatar4
+        img: avatar4,
     },
     {
         id: 5,
@@ -81,7 +82,7 @@ const mailbox = [
         type: "primary",
         category: "inbox",
         label: "support",
-        img: avatar5
+        img: avatar5,
     },
     {
         id: 6,
@@ -94,7 +95,7 @@ const mailbox = [
         type: "primary",
         category: "inbox",
         label: "friend",
-        img: userDummy
+        img: userDummy,
     },
     {
         id: 7,
@@ -110,7 +111,7 @@ const mailbox = [
         type: "primary",
         category: "all",
         label: "family",
-        img: avatar7
+        img: avatar7,
     },
     {
         id: 8,
@@ -123,7 +124,7 @@ const mailbox = [
         type: "primary",
         category: "draft",
         label: "social",
-        img: avatar8
+        img: avatar8,
     },
     {
         id: 9,
@@ -136,7 +137,7 @@ const mailbox = [
         type: "primary",
         category: "starred",
         label: "support",
-        img: avatar9
+        img: avatar9,
     },
     {
         id: 10,
@@ -151,7 +152,7 @@ const mailbox = [
         type: "primary",
         category: "starred",
         label: "support",
-        img: avatar10
+        img: avatar10,
     },
     {
         id: 11,
@@ -164,7 +165,7 @@ const mailbox = [
         type: "primary",
         category: "inbox",
         label: "social",
-        img: avatar6
+        img: avatar6,
     },
     {
         id: 12,
@@ -179,7 +180,7 @@ const mailbox = [
         type: "primary",
         category: "inbox",
         label: "friend",
-        img: avatar7
+        img: avatar7,
     },
     {
         id: 13,
@@ -187,13 +188,12 @@ const mailbox = [
         name: "Tobias Berggren",
         number: "",
         subject: "Let's go fishing!",
-        teaser:
-            "Hey, You wanna join me and Fred at the lake tomorrow? It'll be awesome.",
+        teaser: "Hey, You wanna join me and Fred at the lake tomorrow? It'll be awesome.",
         date: "Feb 23",
         type: "primary",
         category: "inbox",
         label: "family",
-        img: avatar8
+        img: avatar8,
     },
     {
         id: 14,
@@ -206,7 +206,7 @@ const mailbox = [
         type: "primary",
         category: "important",
         label: "support",
-        img: avatar9
+        img: avatar9,
     },
     {
         id: 15,
@@ -222,7 +222,7 @@ const mailbox = [
         type: "primary",
         category: "all",
         label: "theme",
-        img: avatar10
+        img: avatar10,
     },
     {
         id: 16,
@@ -235,7 +235,7 @@ const mailbox = [
         type: "primary",
         category: "starred",
         label: "theme",
-        img: userDummy
+        img: userDummy,
     },
     {
         id: 17,
@@ -248,7 +248,7 @@ const mailbox = [
         type: "promotions",
         category: "spam",
         label: "social",
-        img: userDummy
+        img: userDummy,
     },
     {
         id: 18,
@@ -261,7 +261,7 @@ const mailbox = [
         type: "primary",
         category: "sent",
         label: "theme",
-        img: avatar6
+        img: avatar6,
     },
     {
         id: 19,
@@ -275,7 +275,7 @@ const mailbox = [
         type: "social",
         category: "inbox",
         label: "support",
-        img: avatar2
+        img: avatar2,
     },
     {
         id: 20,
@@ -283,7 +283,8 @@ const mailbox = [
         forId: "flexCheck22",
         name: "me, Susanna",
         number: "(7)",
-        subject: "Since you asked... and i'm inconceivably bored at the train station",
+        subject:
+            "Since you asked... and i'm inconceivably bored at the train station",
         badge: "Freelance",
         badgeClass: "warning",
         teaser: "Alright thanks. I'll have to re-book that somehow, i'll get back to you.",
@@ -291,7 +292,7 @@ const mailbox = [
         type: "social",
         category: "all",
         label: "freelance",
-        img: avatar4
+        img: avatar4,
     },
     {
         id: 21,
@@ -304,7 +305,7 @@ const mailbox = [
         type: "social",
         category: "trash",
         label: "social",
-        img: userDummy
+        img: userDummy,
     },
     {
         id: 18,
@@ -317,7 +318,7 @@ const mailbox = [
         type: "promotions",
         category: "draft",
         label: "freelance",
-        img: avatar5
+        img: avatar5,
     },
     {
         id: 19,
@@ -332,7 +333,7 @@ const mailbox = [
         type: "primary",
         category: "sent",
         label: "support",
-        img: avatar2
+        img: avatar2,
     },
 ];
 

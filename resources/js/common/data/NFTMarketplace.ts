@@ -34,7 +34,7 @@ const expolreNow = [
         price: "14.617",
         isActive: false,
         fileType: "gif",
-        sales: "On Auction"
+        sales: "On Auction",
     },
     {
         id: 2,
@@ -46,7 +46,7 @@ const expolreNow = [
         price: "67.36",
         isActive: true,
         fileType: "jpg",
-        sales: "Has Offers"
+        sales: "Has Offers",
     },
     {
         id: 3,
@@ -58,7 +58,7 @@ const expolreNow = [
         price: "394.7",
         isActive: true,
         fileType: "jpg",
-        sales: "On Auction"
+        sales: "On Auction",
     },
     {
         id: 4,
@@ -70,7 +70,7 @@ const expolreNow = [
         price: "3.167",
         isActive: false,
         fileType: "gif",
-        sales: "Has Offers"
+        sales: "Has Offers",
     },
     {
         id: 5,
@@ -82,7 +82,7 @@ const expolreNow = [
         price: "97.8",
         isActive: true,
         fileType: "jpg",
-        sales: "On Auction"
+        sales: "On Auction",
     },
     {
         id: 6,
@@ -94,7 +94,7 @@ const expolreNow = [
         price: "745.14",
         isActive: false,
         fileType: "jpg",
-        sales: "Has Offers"
+        sales: "Has Offers",
     },
     {
         id: 7,
@@ -106,7 +106,7 @@ const expolreNow = [
         price: "34.81",
         isActive: true,
         fileType: "jpg",
-        sales: "On Auction"
+        sales: "On Auction",
     },
     {
         id: 8,
@@ -118,7 +118,7 @@ const expolreNow = [
         price: "563.81",
         isActive: true,
         fileType: "gif",
-        sales: "On Auction"
+        sales: "On Auction",
     },
     {
         id: 9,
@@ -130,7 +130,7 @@ const expolreNow = [
         price: "34.81",
         isActive: true,
         fileType: "jpg",
-        sales: "Has Offers"
+        sales: "Has Offers",
     },
     {
         id: 10,
@@ -142,7 +142,7 @@ const expolreNow = [
         price: "14.167",
         isActive: false,
         fileType: "gif",
-        sales: "Has Offers"
+        sales: "Has Offers",
     },
     {
         id: 11,
@@ -154,7 +154,7 @@ const expolreNow = [
         price: "267.36",
         isActive: true,
         fileType: "mp4",
-        sales: "Has Offers"
+        sales: "Has Offers",
     },
     {
         id: 12,
@@ -166,7 +166,7 @@ const expolreNow = [
         price: "324.26",
         isActive: true,
         fileType: "gif",
-        sales: "On Auction"
+        sales: "On Auction",
     },
     {
         id: 13,
@@ -178,7 +178,7 @@ const expolreNow = [
         price: "245.8",
         isActive: false,
         fileType: "jpg",
-        sales: "On Auction"
+        sales: "On Auction",
     },
     {
         id: 14,
@@ -190,7 +190,7 @@ const expolreNow = [
         price: "340.14",
         isActive: true,
         fileType: "mp4",
-        sales: "On Auction"
+        sales: "On Auction",
     },
     {
         id: 15,
@@ -202,7 +202,7 @@ const expolreNow = [
         price: "41.658",
         isActive: false,
         fileType: "mp3",
-        sales: "Has Offers"
+        sales: "Has Offers",
     },
 ];
 
@@ -671,7 +671,13 @@ const topCreator = [
         products: "123",
         isFollow: false,
     },
-    { id: 3, img: avatar5, name: "Henry Baird", products: "46", isFollow: true },
+    {
+        id: 3,
+        img: avatar5,
+        name: "Henry Baird",
+        products: "46",
+        isFollow: true,
+    },
     {
         id: 4,
         img: avatar10,
@@ -698,13 +704,21 @@ const topCollection = [
                 id: 1,
                 isChildren: [
                     { id: 1, img: Img6 },
-                    { id: 2, img: "https://img.themesbrand.com/velzon/images/img-2.gif", imgClass: "mt-1" },
+                    {
+                        id: 2,
+                        img: "https://img.themesbrand.com/velzon/images/img-2.gif",
+                        imgClass: "mt-1",
+                    },
                 ],
             },
             {
                 id: 2,
                 isChildren: [
-                    { id: 1, img: "https://img.themesbrand.com/velzon/images/img-5.gif", imgClass: "mb-1" },
+                    {
+                        id: 1,
+                        img: "https://img.themesbrand.com/velzon/images/img-5.gif",
+                        imgClass: "mb-1",
+                    },
                     { id: 2, img: Img3 },
                 ],
             },
@@ -719,13 +733,21 @@ const topCollection = [
                 id: 1,
                 isChildren: [
                     { id: 1, img: Img5 },
-                    { id: 2, img: "https://img.themesbrand.com/velzon/images/img-1.gif", imgClass: "mt-1" },
+                    {
+                        id: 2,
+                        img: "https://img.themesbrand.com/velzon/images/img-1.gif",
+                        imgClass: "mt-1",
+                    },
                 ],
             },
             {
                 id: 2,
                 isChildren: [
-                    { id: 1, img: "https://img.themesbrand.com/velzon/images/img-4.gif", imgClass: "mb-1" },
+                    {
+                        id: 1,
+                        img: "https://img.themesbrand.com/velzon/images/img-4.gif",
+                        imgClass: "mb-1",
+                    },
                     { id: 2, img: Img4 },
                 ],
             },
@@ -740,13 +762,21 @@ const topCollection = [
                 id: 1,
                 isChildren: [
                     { id: 1, img: Img2 },
-                    { id: 2, img: "https://img.themesbrand.com/velzon/images/img-3.gif", imgClass: "mt-1" },
+                    {
+                        id: 2,
+                        img: "https://img.themesbrand.com/velzon/images/img-3.gif",
+                        imgClass: "mt-1",
+                    },
                 ],
             },
             {
                 id: 2,
                 isChildren: [
-                    { id: 1, img: "https://img.themesbrand.com/velzon/images/img-1.gif", imgClass: "mb-1" },
+                    {
+                        id: 1,
+                        img: "https://img.themesbrand.com/velzon/images/img-1.gif",
+                        imgClass: "mb-1",
+                    },
                     { id: 2, img: Img1 },
                 ],
             },
@@ -761,13 +791,21 @@ const topCollection = [
                 id: 1,
                 isChildren: [
                     { id: 1, img: Img3 },
-                    { id: 2, img: "https://img.themesbrand.com/velzon/images/img-5.gif", imgClass: "mt-1" },
+                    {
+                        id: 2,
+                        img: "https://img.themesbrand.com/velzon/images/img-5.gif",
+                        imgClass: "mt-1",
+                    },
                 ],
             },
             {
                 id: 2,
                 isChildren: [
-                    { id: 1, img: "https://img.themesbrand.com/velzon/images/img-2.gif", imgClass: "mb-1" },
+                    {
+                        id: 1,
+                        img: "https://img.themesbrand.com/velzon/images/img-2.gif",
+                        imgClass: "mb-1",
+                    },
                     { id: 2, img: Img5 },
                 ],
             },
@@ -782,13 +820,21 @@ const topCollection = [
                 id: 1,
                 isChildren: [
                     { id: 1, img: Img2 },
-                    { id: 2, img: "https://img.themesbrand.com/velzon/images/img-3.gif", imgClass: "mt-1" },
+                    {
+                        id: 2,
+                        img: "https://img.themesbrand.com/velzon/images/img-3.gif",
+                        imgClass: "mt-1",
+                    },
                 ],
             },
             {
                 id: 2,
                 isChildren: [
-                    { id: 1, img: "https://img.themesbrand.com/velzon/images/img-1.gif", imgClass: "mb-1" },
+                    {
+                        id: 1,
+                        img: "https://img.themesbrand.com/velzon/images/img-1.gif",
+                        imgClass: "mb-1",
+                    },
                     { id: 2, img: Img1 },
                 ],
             },
@@ -803,13 +849,21 @@ const topCollection = [
                 id: 1,
                 isChildren: [
                     { id: 1, img: Img5 },
-                    { id: 2, img: "https://img.themesbrand.com/velzon/images/img-1.gif", imgClass: "mt-1" },
+                    {
+                        id: 2,
+                        img: "https://img.themesbrand.com/velzon/images/img-1.gif",
+                        imgClass: "mt-1",
+                    },
                 ],
             },
             {
                 id: 2,
                 isChildren: [
-                    { id: 1, img: "https://img.themesbrand.com/velzon/images/img-4.gif", imgClass: "mb-1" },
+                    {
+                        id: 1,
+                        img: "https://img.themesbrand.com/velzon/images/img-4.gif",
+                        imgClass: "mb-1",
+                    },
                     { id: 2, img: Img4 },
                 ],
             },
@@ -824,13 +878,21 @@ const topCollection = [
                 id: 1,
                 isChildren: [
                     { id: 1, img: Img6 },
-                    { id: 2, img: "https://img.themesbrand.com/velzon/images/img-2.gif", imgClass: "mt-1" },
+                    {
+                        id: 2,
+                        img: "https://img.themesbrand.com/velzon/images/img-2.gif",
+                        imgClass: "mt-1",
+                    },
                 ],
             },
             {
                 id: 2,
                 isChildren: [
-                    { id: 1, img: "https://img.themesbrand.com/velzon/images/img-5.gif", imgClass: "mb-1" },
+                    {
+                        id: 1,
+                        img: "https://img.themesbrand.com/velzon/images/img-5.gif",
+                        imgClass: "mb-1",
+                    },
                     { id: 2, img: Img3 },
                 ],
             },
@@ -845,13 +907,21 @@ const topCollection = [
                 id: 1,
                 isChildren: [
                     { id: 1, img: Img3 },
-                    { id: 2, img: "https://img.themesbrand.com/velzon/images/img-5.gif", imgClass: "mt-1" },
+                    {
+                        id: 2,
+                        img: "https://img.themesbrand.com/velzon/images/img-5.gif",
+                        imgClass: "mt-1",
+                    },
                 ],
             },
             {
                 id: 2,
                 isChildren: [
-                    { id: 1, img: "https://img.themesbrand.com/velzon/images/img-2.gif", imgClass: "mb-1" },
+                    {
+                        id: 1,
+                        img: "https://img.themesbrand.com/velzon/images/img-2.gif",
+                        imgClass: "mb-1",
+                    },
                     { id: 2, img: Img5 },
                 ],
             },
@@ -869,13 +939,21 @@ const marketPlacewidget = [
                 id: 1,
                 isChildren: [
                     { id: 1, img: Img5 },
-                    { id: 2, img: "https://img.themesbrand.com/velzon/images/img-1.gif", imgClass: "mt-1" },
+                    {
+                        id: 2,
+                        img: "https://img.themesbrand.com/velzon/images/img-1.gif",
+                        imgClass: "mt-1",
+                    },
                 ],
             },
             {
                 id: 2,
                 isChildren: [
-                    { id: 1, img: "https://img.themesbrand.com/velzon/images/img-4.gif", imgClass: "mb-1" },
+                    {
+                        id: 1,
+                        img: "https://img.themesbrand.com/velzon/images/img-4.gif",
+                        imgClass: "mb-1",
+                    },
                     { id: 2, img: Img4 },
                 ],
             },
@@ -890,13 +968,21 @@ const marketPlacewidget = [
                 id: 1,
                 isChildren: [
                     { id: 1, img: Img6 },
-                    { id: 2, img: "https://img.themesbrand.com/velzon/images/img-2.gif", imgClass: "mt-1" },
+                    {
+                        id: 2,
+                        img: "https://img.themesbrand.com/velzon/images/img-2.gif",
+                        imgClass: "mt-1",
+                    },
                 ],
             },
             {
                 id: 2,
                 isChildren: [
-                    { id: 1, img: "https://img.themesbrand.com/velzon/images/img-5.gif", imgClass: "mb-1" },
+                    {
+                        id: 1,
+                        img: "https://img.themesbrand.com/velzon/images/img-5.gif",
+                        imgClass: "mb-1",
+                    },
                     { id: 2, img: Img3 },
                 ],
             },
@@ -911,13 +997,21 @@ const marketPlacewidget = [
                 id: 1,
                 isChildren: [
                     { id: 1, img: Img2 },
-                    { id: 2, img: "https://img.themesbrand.com/velzon/images/img-3.gif", imgClass: "mt-1" },
+                    {
+                        id: 2,
+                        img: "https://img.themesbrand.com/velzon/images/img-3.gif",
+                        imgClass: "mt-1",
+                    },
                 ],
             },
             {
                 id: 2,
                 isChildren: [
-                    { id: 1, img: "https://img.themesbrand.com/velzon/images/img-1.gif", imgClass: "mb-1" },
+                    {
+                        id: 1,
+                        img: "https://img.themesbrand.com/velzon/images/img-1.gif",
+                        imgClass: "mb-1",
+                    },
                     { id: 2, img: Img1 },
                 ],
             },

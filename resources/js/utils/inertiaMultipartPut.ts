@@ -6,23 +6,25 @@
  * Resets the form transform on finish so later submits are unaffected.
  */
 export function submitInertiaMultipartPut(
-  form: {
-    transform: (fn: (data: Record<string, unknown>) => Record<string, unknown>) => void;
-    post: (url: string, options?: Record<string, unknown>) => void;
-  },
-  url: string,
-  options: Record<string, unknown> = {},
-): void {
-  const { onFinish: userOnFinish, ...rest } = options;
-
-  form.transform((data) => ({ ...data, _method: "put" }));
-  form.post(url, {
-    ...rest,
-    onFinish: () => {
-      form.transform((data) => ({ ...data }));
-      if (typeof userOnFinish === "function") {
-        userOnFinish();
-      }
+    form: {
+        transform: (
+            fn: (data: Record<string, unknown>) => Record<string, unknown>,
+        ) => void;
+        post: (url: string, options?: Record<string, unknown>) => void;
     },
-  });
+    url: string,
+    options: Record<string, unknown> = {},
+): void {
+    const { onFinish: userOnFinish, ...rest } = options;
+
+    form.transform((data) => ({ ...data, _method: "put" }));
+    form.post(url, {
+        ...rest,
+        onFinish: () => {
+            form.transform((data) => ({ ...data }));
+            if (typeof userOnFinish === "function") {
+                userOnFinish();
+            }
+        },
+    });
 }

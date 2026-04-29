@@ -20,7 +20,7 @@ const invoiceWidgets = [
         feaIcon: "file-text",
         decimals: 1,
         prefix: "$",
-        suffix: "k"
+        suffix: "k",
     },
     {
         id: 2,
@@ -34,7 +34,7 @@ const invoiceWidgets = [
         feaIcon: "check-square",
         decimals: 2,
         prefix: "$",
-        suffix: "k"
+        suffix: "k",
     },
     {
         id: 3,
@@ -48,7 +48,7 @@ const invoiceWidgets = [
         feaIcon: "clock",
         decimals: 2,
         prefix: "$",
-        suffix: "k"
+        suffix: "k",
     },
     {
         id: 4,
@@ -62,7 +62,7 @@ const invoiceWidgets = [
         feaIcon: "x-octagon",
         decimals: 1,
         prefix: "$",
-        suffix: "k"
+        suffix: "k",
     },
 ];
 

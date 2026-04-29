@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const FullScreenDropdown: React.FC = () => {
     const [isFullScreenMode, setIsFullScreenMode] = useState<boolean>(true);
 
     const toggleFullscreen = () => {
-        let document : any = window.document;
+        let document: any = window.document;
         document.body.classList.add("fullscreen-enable");
 
         if (
@@ -52,7 +52,13 @@ const FullScreenDropdown: React.FC = () => {
                     type="button"
                     className="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle"
                 >
-                    <i className={isFullScreenMode ? 'bx bx-fullscreen fs-22' : "bx bx-exit-fullscreen fs-22"}></i>
+                    <i
+                        className={
+                            isFullScreenMode
+                                ? "bx bx-fullscreen fs-22"
+                                : "bx bx-exit-fullscreen fs-22"
+                        }
+                    ></i>
                 </button>
             </div>
         </>

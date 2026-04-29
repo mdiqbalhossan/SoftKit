@@ -31,7 +31,7 @@ const ecomWidgets = [
         icon: "bx bx-dollar-circle",
         decimals: 2,
         prefix: "$",
-        suffix: "k"
+        suffix: "k",
     },
     {
         id: 2,
@@ -47,7 +47,7 @@ const ecomWidgets = [
         decimals: 0,
         prefix: "",
         separator: ",",
-        suffix: ""
+        suffix: "",
     },
     {
         id: 3,
@@ -62,7 +62,7 @@ const ecomWidgets = [
         icon: "bx bx-user-circle",
         decimals: 2,
         prefix: "",
-        suffix: "M"
+        suffix: "M",
     },
     {
         id: 4,
@@ -76,7 +76,7 @@ const ecomWidgets = [
         icon: "bx bx-wallet",
         decimals: 2,
         prefix: "$",
-        suffix: "k"
+        suffix: "k",
     },
 ];
 
@@ -306,7 +306,7 @@ const topCategories = [
 ];
 
 // Revenue Chart Data
-const allRevenueData :any= [
+const allRevenueData: any = [
     {
         name: "Orders",
         type: "area",
@@ -316,8 +316,8 @@ const allRevenueData :any= [
         name: "Earnings",
         type: "bar",
         data: [
-            89.25, 98.58, 68.74, 108.87, 77.54, 84.03, 51.24, 28.57, 92.57, 42.36,
-            88.51, 36.57,
+            89.25, 98.58, 68.74, 108.87, 77.54, 84.03, 51.24, 28.57, 92.57,
+            42.36, 88.51, 36.57,
         ],
     },
     {
@@ -327,7 +327,7 @@ const allRevenueData :any= [
     },
 ];
 
-const monthRevenueData :any= [
+const monthRevenueData: any = [
     {
         name: "Orders",
         type: "area",
@@ -337,8 +337,8 @@ const monthRevenueData :any= [
         name: "Earnings",
         type: "bar",
         data: [
-            89.25, 98.58, 68.74, 108.87, 77.54, 84.03, 51.24, 28.57, 92.57, 42.36,
-            88.51, 36.57,
+            89.25, 98.58, 68.74, 108.87, 77.54, 84.03, 51.24, 28.57, 92.57,
+            42.36, 88.51, 36.57,
         ],
     },
     {
@@ -348,7 +348,7 @@ const monthRevenueData :any= [
     },
 ];
 
-const halfYearRevenueData :any= [
+const halfYearRevenueData: any = [
     {
         name: "Orders",
         type: "area",
@@ -358,8 +358,8 @@ const halfYearRevenueData :any= [
         name: "Earnings",
         type: "bar",
         data: [
-            89.25, 98.58, 68.74, 108.87, 77.54, 84.03, 51.24, 28.57, 92.57, 42.36,
-            88.51, 36.57,
+            89.25, 98.58, 68.74, 108.87, 77.54, 84.03, 51.24, 28.57, 92.57,
+            42.36, 88.51, 36.57,
         ],
     },
     {
@@ -369,7 +369,7 @@ const halfYearRevenueData :any= [
     },
 ];
 
-const yearRevenueData :any= [
+const yearRevenueData: any = [
     {
         name: "Orders",
         type: "area",
@@ -379,8 +379,8 @@ const yearRevenueData :any= [
         name: "Earnings",
         type: "bar",
         data: [
-            99.25, 88.58, 78.74, 118.87, 87.54, 94.03, 61.24, 58.57, 102.57, 62.36,
-            48.51, 66.57,
+            99.25, 88.58, 78.74, 118.87, 87.54, 94.03, 61.24, 58.57, 102.57,
+            62.36, 48.51, 66.57,
         ],
     },
     {
@@ -390,4 +390,14 @@ const yearRevenueData :any= [
     },
 ];
 
-export { ecomWidgets, bestSellingProducts, topSellers, recentOrders, topCategories, allRevenueData, monthRevenueData, halfYearRevenueData, yearRevenueData };
+export {
+    ecomWidgets,
+    bestSellingProducts,
+    topSellers,
+    recentOrders,
+    topCategories,
+    allRevenueData,
+    monthRevenueData,
+    halfYearRevenueData,
+    yearRevenueData,
+};

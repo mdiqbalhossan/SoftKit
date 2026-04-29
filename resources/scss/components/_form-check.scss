@@ -4,8 +4,7 @@
 
 .form-check {
     position: relative;
-    text-align: left
-        /*rtl: right*/;
+    text-align: left /*rtl: right*/;
 
     .form-check-input {
         cursor: pointer;
@@ -16,11 +15,9 @@
     }
 }
 
-
 // checkbox color
 
-@each $color,
-$value in $theme-colors {
+@each $color, $value in $theme-colors {
     .form-check-#{$color} {
         .form-check-input {
             &:checked {
@@ -71,15 +68,13 @@ $value in $theme-colors {
     }
 }
 
-
 // Checkbox outline
 
-@each $color,
-$value in $theme-colors {
+@each $color, $value in $theme-colors {
     .form-check-outline {
         &.form-check-#{$color} {
             .form-check-input {
-                &:checked[type=checkbox] {
+                &:checked[type="checkbox"] {
                     color: $value;
                     background-color: transparent;
                     border-color: $value;
@@ -93,7 +88,7 @@ $value in $theme-colors {
     .form-check-input {
         position: relative;
 
-        &:checked[type=checkbox] {
+        &:checked[type="checkbox"] {
             background-image: none;
 
             &::before {
@@ -106,18 +101,16 @@ $value in $theme-colors {
                 left: 1px;
             }
         }
-
     }
 }
 
 // Radio
 
-@each $color,
-$value in $theme-colors {
+@each $color, $value in $theme-colors {
     .form-radio-outline {
         &.form-radio-#{$color} {
             .form-check-input {
-                &:checked[type=radio] {
+                &:checked[type="radio"] {
                     color: $value;
                     background-color: transparent;
                     border-color: $value;
@@ -131,7 +124,7 @@ $value in $theme-colors {
     .form-check-input {
         position: relative;
 
-        &:checked[type=radio] {
+        &:checked[type="radio"] {
             background-image: none;
 
             &::before {
@@ -143,7 +136,6 @@ $value in $theme-colors {
                 left: 2.2px;
             }
         }
-
     }
 }
 
@@ -183,12 +175,9 @@ $value in $theme-colors {
     margin-bottom: 0px;
 }
 
-
-@each $color,
-$value in $theme-colors {
+@each $color, $value in $theme-colors {
     .form-switch-#{$color} {
         .form-check-input {
-
             &:checked {
                 background-color: $value;
                 border-color: $value;
@@ -203,7 +192,6 @@ $value in $theme-colors {
                     &::before {
                         color: $value;
                     }
-
                 }
             }
         }
@@ -249,7 +237,7 @@ $value in $theme-colors {
 
 .form-switch-right {
     display: inline-block;
-    padding-right: calc($form-check-padding-start * .5);
+    padding-right: calc($form-check-padding-start * 0.5);
     margin-bottom: 0;
     padding-left: 0 !important;
 
@@ -257,7 +245,7 @@ $value in $theme-colors {
         float: right;
         margin-left: 0;
         margin-right: calc($form-check-padding-start * -1);
-        margin-top: .1em !important;
+        margin-top: 0.1em !important;
     }
 
     label {
@@ -290,11 +278,11 @@ $value in $theme-colors {
     .form-check-input {
         display: none;
 
-        &:checked+.form-check-label {
+        &:checked + .form-check-label {
             border-color: $primary !important;
 
             &:before {
-                content: '\eb80';
+                content: "\eb80";
                 font-family: "remixicon";
                 position: absolute;
                 top: 2px;
@@ -307,7 +295,7 @@ $value in $theme-colors {
 
     &.dark {
         .form-check-input {
-            &:checked+.form-check-label {
+            &:checked + .form-check-label {
                 &:before {
                     color: $white;
                 }

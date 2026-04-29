@@ -1,20 +1,20 @@
 import { useEffect } from "react";
 import { router } from "@inertiajs/react";
 import {
-  disposeTableActionTooltipsIn,
-  initTableActionTooltips,
+    disposeTableActionTooltipsIn,
+    initTableActionTooltips,
 } from "../utils/tableActionTooltips";
 
 function mainContentRoot(): ParentNode {
-  return document.querySelector(".main-content") ?? document.body;
+    return document.querySelector(".main-content") ?? document.body;
 }
 
 function scheduleInit(): void {
-  requestAnimationFrame(() => {
     requestAnimationFrame(() => {
-      initTableActionTooltips(mainContentRoot());
+        requestAnimationFrame(() => {
+            initTableActionTooltips(mainContentRoot());
+        });
     });
-  });
 }
 
 /**
@@ -22,21 +22,21 @@ function scheduleInit(): void {
  * compact restore buttons). Re-runs after each Inertia navigation. Dispose runs before each visit.
  */
 export function useBootstrapTableActionTooltips(): void {
-  useEffect(() => {
-    const offStart = router.on("start", () => {
-      disposeTableActionTooltipsIn(mainContentRoot());
-    });
+    useEffect(() => {
+        const offStart = router.on("start", () => {
+            disposeTableActionTooltipsIn(mainContentRoot());
+        });
 
-    scheduleInit();
+        scheduleInit();
 
-    const offFinish = router.on("finish", () => {
-      scheduleInit();
-    });
+        const offFinish = router.on("finish", () => {
+            scheduleInit();
+        });
 
-    return () => {
-      offStart();
-      offFinish();
-      disposeTableActionTooltipsIn(mainContentRoot());
-    };
-  }, []);
+        return () => {
+            offStart();
+            offFinish();
+            disposeTableActionTooltipsIn(mainContentRoot());
+        };
+    }, []);
 }

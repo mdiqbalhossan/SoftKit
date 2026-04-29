@@ -1,6 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import { usePage } from "@inertiajs/react";
-import { toast, ToastContainer, type ToastContainerProps } from "react-toastify";
+import {
+    toast,
+    ToastContainer,
+    type ToastContainerProps,
+} from "react-toastify";
 
 export type VelzonToastIntent =
     | "created"
@@ -27,7 +31,10 @@ const INTENT_ICONS: Record<VelzonToastIntent, string> = {
     generic: "ri-checkbox-circle-fill",
 };
 
-const INTENT_VARIANT: Record<VelzonToastIntent, "primary" | "success" | "warning" | "danger"> = {
+const INTENT_VARIANT: Record<
+    VelzonToastIntent,
+    "primary" | "success" | "warning" | "danger"
+> = {
     created: "success",
     updated: "success",
     deleted: "danger",
@@ -40,7 +47,13 @@ const INTENT_VARIANT: Record<VelzonToastIntent, "primary" | "success" | "warning
     generic: "success",
 };
 
-function ToastBody({ message, iconClass }: { message: string; iconClass: string }) {
+function ToastBody({
+    message,
+    iconClass,
+}: {
+    message: string;
+    iconClass: string;
+}) {
     return (
         <div className="d-flex align-items-center">
             <div className="flex-shrink-0 me-2">
@@ -84,7 +97,12 @@ export function inferIntentFromMessage(message: string): VelzonToastIntent {
     if (m.includes("restored")) {
         return "restored";
     }
-    if (m.includes("trash") || m.includes("archived") || m.includes("deleted") || m.includes("delete ")) {
+    if (
+        m.includes("trash") ||
+        m.includes("archived") ||
+        m.includes("deleted") ||
+        m.includes("delete ")
+    ) {
         return "deleted";
     }
     if (m.includes("updated") || m.includes("saved")) {
@@ -150,19 +168,27 @@ export function FlashVelzonToasts() {
 }
 
 /** One toast per distinct validation payload (first message shown). */
-export function useVelzonToastFromValidationErrors(errors: Record<string, string | undefined>) {
+export function useVelzonToastFromValidationErrors(
+    errors: Record<string, string | undefined>,
+) {
     const lastKey = useRef("");
     const signature = JSON.stringify(errors);
 
     useEffect(() => {
-        const parsed = JSON.parse(signature) as Record<string, string | undefined>;
+        const parsed = JSON.parse(signature) as Record<
+            string,
+            string | undefined
+        >;
         const entries = Object.entries(parsed).filter(
             ([, v]) => typeof v === "string" && (v as string).length > 0,
         ) as [string, string][];
         if (!entries.length) {
             return;
         }
-        const key = entries.map(([k, v]) => `${k}:${v}`).sort().join("|");
+        const key = entries
+            .map(([k, v]) => `${k}:${v}`)
+            .sort()
+            .join("|");
         if (key === lastKey.current) {
             return;
         }

@@ -1,13 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
 const UiContent: React.FC = () => {
     useEffect(() => {
-        const checkboxElements = document.getElementsByClassName("code-switcher");
+        const checkboxElements =
+            document.getElementsByClassName("code-switcher");
         Array.from(checkboxElements).forEach(function (checkbox) {
-            checkbox.addEventListener('change', function () {
-                const card = checkbox.closest('.card') as HTMLElement | null;
-                const preview = card?.querySelector(".live-preview") as HTMLElement | null;
-                const code = card?.querySelector(".code-view") as HTMLElement | null;
+            checkbox.addEventListener("change", function () {
+                const card = checkbox.closest(".card") as HTMLElement | null;
+                const preview = card?.querySelector(
+                    ".live-preview",
+                ) as HTMLElement | null;
+                const code = card?.querySelector(
+                    ".code-view",
+                ) as HTMLElement | null;
 
                 if (card && preview && code) {
                     if ((checkbox as HTMLInputElement).checked) {
@@ -24,11 +29,7 @@ const UiContent: React.FC = () => {
         });
     }, []);
 
-    return (
-        <div>
-            {/* Add your UI content here */}
-        </div>
-    );
+    return <div>{/* Add your UI content here */}</div>;
 };
 
 export default UiContent;

@@ -21,23 +21,25 @@ import img5 from "../../../images/nft/gif/img-5.gif";
 import img05 from "../../../images/nft/img-05.jpg";
 import img06 from "../../../images/nft/img-06.jpg";
 
-
 const connectData = [
     {
         img: metamask,
         title: "Metamask",
-        textContent: "MetaMask is a popular cryptocurrency wallet known for its ease of use, availability on both desktops.",
+        textContent:
+            "MetaMask is a popular cryptocurrency wallet known for its ease of use, availability on both desktops.",
     },
     {
         img: coinbase,
         title: "Coinbase Wallet",
-        textContent: "Coinbase Wallet is a self-custody wallet that gives you complete control of your crypto for your Wallet.",
+        textContent:
+            "Coinbase Wallet is a self-custody wallet that gives you complete control of your crypto for your Wallet.",
         bgColor: true,
     },
     {
         img: binance,
         title: "Binance",
-        textContent: "Binance is considered a safe exchange that allows user account protection via the use of Two Authentication.",
+        textContent:
+            "Binance is considered a safe exchange that allows user account protection via the use of Two Authentication.",
     },
 ];
 
@@ -79,7 +81,8 @@ const featuresData = [
     {
         img: wallet,
         title: "Set up your wallet",
-        textConent: "You have to choose whether to use a hot wallet a cold wallet.",
+        textConent:
+            "You have to choose whether to use a hot wallet a cold wallet.",
     },
     {
         img: money,
@@ -89,14 +92,16 @@ const featuresData = [
     {
         img: add,
         title: "Add your NFT's",
-        textConent: "Go to your profile icon and top right corner creation page.",
+        textConent:
+            "Go to your profile icon and top right corner creation page.",
     },
     {
         img: sell,
         title: "Sell Your NFT's",
-        textConent: "Create a collection in Opensea and give Add items and art.",
+        textConent:
+            "Create a collection in Opensea and give Add items and art.",
     },
-]
+];
 
 const productData = [
     {
@@ -206,4 +211,10 @@ const topCreatorData = [
     },
 ];
 
-export {connectData, discoverItemsData, featuresData, productData, topCreatorData}
+export {
+    connectData,
+    discoverItemsData,
+    featuresData,
+    productData,
+    topCreatorData,
+};

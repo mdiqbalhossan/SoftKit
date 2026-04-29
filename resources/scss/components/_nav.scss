@@ -3,8 +3,8 @@
 //
 
 :is(.nav-tabs, .nav-pills) {
-    >li {
-        >a {
+    > li {
+        > a {
             color: var(--#{$prefix}body-color);
             font-weight: $font-weight-medium;
         }
@@ -12,15 +12,14 @@
 }
 
 .nav-pills {
-    >a {
+    > a {
         color: var(--#{$prefix}body-color);
         font-weight: $font-weight-medium;
     }
 }
 
 .nav-pills {
-
-    :is(.nav-link.active, .show>.nav-link) {
+    :is(.nav-link.active, .show > .nav-link) {
         box-shadow: $element-shadow;
     }
 }
@@ -85,7 +84,7 @@
 //Navtab custom
 .navtab-bg {
     li {
-        >a {
+        > a {
             background-color: $gray-300;
             margin: 0 5px;
         }
@@ -257,8 +256,7 @@
     }
 }
 
-@each $color,
-$value in $theme-colors {
+@each $color, $value in $theme-colors {
     .nav-border-top-#{$color} {
         .nav-link {
             &.active {
@@ -298,8 +296,7 @@ $value in $theme-colors {
     }
 }
 
-@each $color,
-$value in $theme-colors {
+@each $color, $value in $theme-colors {
     .nav-custom-#{$color} {
         background-color: $value;
     }
@@ -309,8 +306,7 @@ $value in $theme-colors {
     background-color: var(--#{$prefix}light);
 }
 
-@each $color,
-$value in $theme-colors {
+@each $color, $value in $theme-colors {
     .nav-#{$color} {
         .nav-link {
             &.active {
@@ -511,8 +507,7 @@ $value in $theme-colors {
     }
 }
 
-@each $color,
-$value in $theme-colors {
+@each $color, $value in $theme-colors {
     .nav-#{$color} {
         &.nav-custom-outline {
             .nav-link {
@@ -576,4 +571,3 @@ $value in $theme-colors {
         }
     }
 }
-
