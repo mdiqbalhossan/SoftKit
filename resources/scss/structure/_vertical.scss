@@ -937,6 +937,129 @@
     }
 }
 
+// Light sidebar — rounded hover row, left accent bar when active (outline-icon / SaaS pattern)
+[data-sidebar="light"] .navbar-menu {
+    .simplebar-scrollbar:before {
+        background: #d1d5db;
+        opacity: 1;
+        border-radius: 4px;
+    }
+
+    .navbar-brand-box {
+        padding-bottom: 0.35rem;
+    }
+
+    .navbar-nav {
+        padding-top: 0.35rem;
+
+        > .nav-item {
+            margin: 0.125rem 0.65rem;
+        }
+
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+            border-radius: 0.5rem;
+            transition:
+                background-color 0.15s ease,
+                color 0.15s ease;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 4px;
+                height: 1.5rem;
+                border-radius: 0 4px 4px 0;
+                background-color: transparent;
+                transition: background-color 0.15s ease;
+            }
+
+            &:hover {
+                background-color: $vertical-menu-item-hover-bg;
+                color: $vertical-menu-item-hover-color;
+            }
+
+            &.active,
+            &[data-bs-toggle="collapse"][aria-expanded="true"] {
+                &::before {
+                    background-color: $vertical-menu-item-active-color;
+                    opacity: 1;
+                }
+            }
+
+            i {
+                font-size: 1.125rem;
+                font-weight: 400;
+            }
+
+            svg {
+                stroke-width: 1.5;
+            }
+
+            &:hover .icon-dual {
+                color: #1f2937;
+                fill: rgba(31, 41, 55, 0.08);
+            }
+
+            &.active .icon-dual,
+            &[data-bs-toggle="collapse"][aria-expanded="true"] .icon-dual {
+                color: #e11d48;
+                fill: rgba(225, 29, 72, 0.14);
+            }
+        }
+
+        .nav-sm {
+            padding-left: calc(#{$vertical-menu-item-icon-width} + 0.15rem);
+
+            .nav-link {
+                border-radius: 0.5rem;
+
+                &:hover {
+                    background-color: $vertical-menu-item-hover-bg;
+                    color: $vertical-menu-item-hover-color;
+                }
+            }
+        }
+
+        .nav-link .badge {
+            border-radius: 50rem;
+            font-size: 0.625rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            padding: 0.2rem 0.45rem;
+            text-transform: uppercase;
+            background-color: #fff1f2 !important;
+            color: #e11d48 !important;
+            border: 1px solid rgba(225, 29, 72, 0.35);
+        }
+    }
+}
+
+[data-sidebar="light"][data-sidebar-size="sm"]
+    .navbar-menu
+    .navbar-nav
+    > .nav-item,
+[data-sidebar="light"][data-sidebar-size="md"]
+    .navbar-menu
+    .navbar-nav
+    > .nav-item {
+    margin: 0;
+}
+
+[data-sidebar="light"] .menu-title {
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    font-size: 0.6875rem;
+
+    span {
+        padding-top: 1rem;
+        padding-bottom: 0.35rem;
+    }
+}
+
 // rtl
 [dir="rtl"] {
     .navbar-menu {
@@ -952,6 +1075,12 @@
             }
         }
     }
+}
+
+[dir="rtl"][data-sidebar="light"] .navbar-menu .navbar-nav .nav-link::before {
+    left: auto;
+    right: 0;
+    border-radius: 4px 0 0 4px;
 }
 
 @if $sidebar-gradient-mode {

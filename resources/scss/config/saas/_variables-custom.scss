@@ -8,30 +8,34 @@ $vertical-menu-width-md: 180px;
 $vertical-menu-width-sm: 70px;
 
 $vertical-menu-z-index: 1002;
-$vertical-menu-item-font-size: 0.925rem;
-$vertical-menu-item-font-family: $font-family-primary;
-$vertical-menu-sub-item-font-family: $font-family-primary;
-$vertical-menu-item-padding-x: 1.5rem;
-$vertical-menu-item-padding-y: 0.625rem;
+// Sidebar typography: Inter (modern SaaS / line-icon dashboards)
+$font-family-vertical-menu:
+    "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+$vertical-menu-item-font-size: 0.9375rem;
+$vertical-menu-item-font-family: $font-family-vertical-menu;
+$vertical-menu-sub-item-font-family: $font-family-vertical-menu;
+$vertical-menu-item-padding-x: 1.25rem;
+$vertical-menu-item-padding-y: 0.7rem;
 $vertical-menu-sub-item-font-size: 0.875rem;
 $vertical-menu-item-icon-width: 1.75rem;
-$vertical-menu-sub-item-padding-x: 1.5rem;
+$vertical-menu-sub-item-padding-x: 1.25rem;
 $vertical-menu-sub-item-padding-y: 0.55rem;
 
-// Light Menu
+// Light Menu — neutral text, rose accent (#E11D48), soft hover surface (#F3F4F6)
 $vertical-menu-bg: $white;
-$vertical-menu-border: $white;
-$vertical-menu-item-color: darken($gray-600, 10%);
-$vertical-menu-item-bg: rgba($primary, 0.15);
-$vertical-menu-item-hover-color: $primary;
-$vertical-menu-item-active-color: $primary;
-$vertical-menu-item-active-bg: rgba($primary, 0.15);
-$vertical-menu-sub-item-color: darken($gray-600, 4%);
-$vertical-menu-sub-item-hover-color: $primary;
-$vertical-menu-sub-item-active-color: $primary;
-$vertical-menu-title-color: #919da9;
-$vertical-menu-box-shadow: 0 2px 4px rgba(15, 34, 58, 0.12);
-$vertical-menu-dropdown-box-shadow: 0 2px 4px rgba(15, 34, 58, 0.12);
+$vertical-menu-border: #f3f4f6;
+$vertical-menu-item-color: #1f2937;
+$vertical-menu-item-bg: transparent;
+$vertical-menu-item-hover-color: #1f2937;
+$vertical-menu-item-hover-bg: #f3f4f6;
+$vertical-menu-item-active-color: #e11d48;
+$vertical-menu-item-active-bg: transparent;
+$vertical-menu-sub-item-color: #6b7280;
+$vertical-menu-sub-item-hover-color: #1f2937;
+$vertical-menu-sub-item-active-color: #e11d48;
+$vertical-menu-title-color: #6b7280;
+$vertical-menu-box-shadow: none;
+$vertical-menu-dropdown-box-shadow: 0 8px 28px rgba(15, 23, 42, 0.08);
 
 //sidebar dark
 $dark-vertical-menu-bg: #38454a;
@@ -166,5 +170,38 @@ $timeline-color: var(--#{$prefix}secondary-bg);
 //auth pages
 $auth-bg-cover: linear-gradient(-45deg, $primary 50%, $success);
 
-$input-bg-custom: $body-secondary-bg;
-$input-border-custom: $border-color-translucent;
+// Form controls: white field, #E0E0E0 border, burgundy focus, ~7px radius, 10px/15px padding
+$input-bg-custom: $white;
+$input-border-custom: #e0e0e0;
+
+$input-padding-y: 0.625rem;
+$input-padding-x: 0.9375rem;
+
+$input-height-inner: add($input-line-height * 1em, $input-padding-y * 2);
+$input-height-inner-half: add($input-line-height * 0.5em, $input-padding-y);
+$input-height-inner-quarter: add(
+    $input-line-height * 0.25em,
+    $input-padding-y * 0.5
+);
+
+$input-height: add(
+    $input-line-height * 1em,
+    add($input-padding-y * 2, $input-height-border, false)
+);
+
+$input-border-radius: 0.4375rem;
+$input-border-radius-sm: 0.375rem;
+$input-border-radius-lg: 0.5rem;
+
+$input-focus-border-color: #b01e4d;
+$input-focus-box-shadow: none;
+
+$input-placeholder-color: $gray-500;
+
+$form-select-focus-border-color: $input-focus-border-color;
+$form-select-focus-box-shadow: none;
+$form-select-feedback-icon-size: $input-height-inner-half
+    $input-height-inner-half;
+
+$form-check-input-focus-border: $input-focus-border-color;
+$form-check-input-focus-box-shadow: none;

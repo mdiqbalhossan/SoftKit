@@ -62,7 +62,7 @@ function SiteSettingsIndex(props: { settings: Settings; timezones: string[] }) {
 
     return (
         <React.Fragment>
-            <Head title="Site settings | Admin" />
+            <Head title="Site settings" />
             <div className="page-content">
                 <Container fluid>
                     <BreadCrumb
@@ -70,7 +70,7 @@ function SiteSettingsIndex(props: { settings: Settings; timezones: string[] }) {
                         pageTitle="Administration"
                     />
                     <Row>
-                        <Col xl={10} lg={11}>
+                        <Col xl={12} lg={12}>
                             <Form onSubmit={submit}>
                                 <Card className="mb-4">
                                     <Card.Header className="border-0">
@@ -88,7 +88,7 @@ function SiteSettingsIndex(props: { settings: Settings; timezones: string[] }) {
                                     </Card.Header>
                                     <Card.Body>
                                         <Row>
-                                            <Col lg={12}>
+                                            <Col lg={6}>
                                                 <div className="mb-3">
                                                     <Form.Label
                                                         htmlFor="site-title"
@@ -126,7 +126,7 @@ function SiteSettingsIndex(props: { settings: Settings; timezones: string[] }) {
                                                     )}
                                                 </div>
                                             </Col>
-                                            <Col lg={12}>
+                                            <Col lg={6}>
                                                 <div className="mb-3">
                                                     <Form.Label
                                                         htmlFor="contact-person"
